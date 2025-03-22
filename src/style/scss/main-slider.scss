@@ -1,0 +1,325 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+.main {
+  &__slider {
+    &--section {
+      width: 100%;
+      padding: 4px 8px;
+
+      .splide__arrow {
+        width: 5rem;
+        height: 5rem;
+        opacity: 0.6;
+
+        &--prev {
+          left: -60px;
+        }
+
+        &--next {
+          right: -60px;
+        }
+
+        svg {
+          fill: var(--primary);
+        }
+      }
+    }
+
+    &--right {
+      width: 100%;
+      @include flex(column, nowrap, start, start);
+
+      @include respond-to(tablet) {
+        width: 70%;
+      }
+
+      @include respond-to(desktop) {
+        width: 50%;
+      }
+    }
+
+    &--headline-news {
+      width: 100%;
+      height: 22px;
+      padding: 0 8px;
+      @include flex(row, nowrap, center, start, 8px);
+    }
+
+    &--image {
+      width: 100%;
+      @include flex(row, nowrap, center, center);
+      position: relative;
+      background-color: #fff;
+      padding: 3px;
+      border: 1px solid var(--stroke);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &--cards {
+      width: 100%;
+      margin-top: 8px;
+      @include flex(row, wrap, start, start, 4px);
+
+      @include respond-to(desktop) {
+        flex-flow: row nowrap;
+      }
+    }
+
+    &--card {
+      width: 100%;
+      height: 100px;
+      @include flex(row, nowrap, center, start, 4px);
+      background-color: #fff;
+      padding: 12px;
+      border: 1px solid var(--stroke);
+      border-radius: 2px;
+      cursor: pointer;
+
+      @include respond-to(desktop) {
+        width: 50%;
+      }
+
+      &:hover {
+        .main__slider--card-content span {
+          color: var(--primary);
+        }
+      }
+
+      &-content {
+        @include flex(column, nowrap, start, start);
+
+        span:first-child {
+          color: var(--secondary);
+          font: {
+            size: 15px;
+            family: nassim-normal;
+          }
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    &--left {
+      width: 100%;
+      @include flex(column, nowrap, start, start, 8px);
+
+      @include respond-to(tablet) {
+        width: 30%;
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      @include respond-to(desktop) {
+        width: 50%;
+      }
+    }
+
+    &--latest {
+      &-news {
+        width: 100%;
+        @include flex(column, nowrap, start, start);
+        display: none;
+
+        @include respond-to(desktop) {
+          width: 222px;
+          display: flex;
+        }
+
+        @include respond-to(large) {
+          width: 295px;
+        }
+      }
+
+      &-top {
+        width: 100%;
+        @include flex(row, nowrap, center, start, 4px);
+
+        i {
+          margin-left: 4px;
+        }
+      }
+
+      &-bottom {
+        width: 100%;
+        @include flex(column, nowrap, start, start, 2px);
+        background-color: #fff;
+        padding: 0 4px;
+
+        li {
+          max-width: 100%;
+          width: 100%;
+          list-style-type: none;
+          border-bottom: 1px solid var(--stroke);
+          padding: 4px;
+          font-family: nassim-normal;
+          @include flex(row, nowrap, center, start, 4px);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          cursor: pointer;
+
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+
+    &--topics {
+      display: none;
+
+      @include respond-to(tablet) {
+        width: 100%;
+        @include flex(column, nowrap, start, start);
+
+        &-top {
+          width: 100%;
+          @include flex(row, nowrap, center, start, 8px);
+          color: var(--primary);
+          border-bottom: 3px solid var(--header-bottom-color);
+          padding: 2px;
+
+          span {
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: translateX(-10px);
+            }
+          }
+        }
+
+        &-content {
+          width: 100%;
+          height: 197px;
+          overflow: hidden;
+          text-align: justify;
+          background-color: #fff;
+          border: 1px solid var(--stroke);
+          padding: 8px;
+
+          li {
+            display: inline-block;
+            list-style-type: none;
+            font: {
+              family: nassim-normal;
+              size: 15px;
+            }
+            cursor: pointer;
+            color: var(--hover-chart-5);
+
+            &:hover {
+              color: var(--primary);
+            }
+
+            &:nth-child(even) {
+              color: var(--secondary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__splide--container {
+    width: 100%;
+    @include flex(column, nowrap, start, start, 12px);
+
+    @include respond-to(tablet) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__slide--ads {
+    &-container {
+      width: 100%;
+      @include flex(column, nowrap, start, start, 4px);
+      padding: 0 4px;
+
+      @include respond-to(tablet) {
+        width: 100%;
+      }
+
+      @include respond-to(desktop) {
+        width: 222px;
+      }
+
+      @include respond-to(large) {
+        width: 295px;
+      }
+    }
+
+    &-number {
+      display: none;
+
+      @include respond-to(tablet) {
+        width: 100%;
+        @include flex(row, nowrap, center, space-between, 4px);
+        color: var(--secondary);
+        font-size: 15px;
+        cursor: pointer;
+        line-height: 24px;
+
+        span {
+          &:first-child {
+            @include flex(row, nowrap, center, start, 8px);
+          }
+
+          &:last-child {
+            color: var(--secondary);
+            font-size: 20px;
+          }
+        }
+
+        &:hover span {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+
+.headline-slider {
+  min-width: 200px;
+  @include flex(row, nowrap, center, start);
+  color: var(--hover-chart-5);
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font: {
+    size: 17px;
+    family: nassim-normal;
+  }
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.main__slider--ads-image {
+  width: 100%;
+  @include flex(row, nowrap, center, center);
+
+  img {
+    width: 295px;
+    height: 295px;
+
+    @include respond-to(tablet) {
+      width: 222px;
+      height: 222px;
+    }
+
+    @include respond-to(large) {
+      width: 295px;
+      height: 295px;
+    }
+  }
+}

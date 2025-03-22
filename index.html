@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خبرگزاری اقتصادی ایران | Economic News Agency</title>
+    <link rel="icon" href="./public/images/favicon.png" type="image/png" />
+
+    <link
+      href="./src/lib/bootstarp/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link href="./src/lib/splide/dist/css/splide.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/style/css/global.css" />
+    <link rel="stylesheet" href="./src/style/css/header.css" />
+    <link rel="stylesheet" href="./src/style/css/main-slider.css" />
+  </head>
+  <body>
+    <header>
+      <section class="header__section--top">
+        <div class="top__right--container">
+          <div class="top__right--date">
+            <i class="fa-solid fa-calendar-days fa-xs"></i>
+            <span>شنبه ۱۸ اسفند ۱۴۰۳</span>
+            <i class="fa-solid fa-clock fa-xs"></i>
+            <span>۱۲:۰۰:۰۰</span>
+          </div>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle top__right--login"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-user fa-xs"></i>
+              ورود / عضویت
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item dropdown__input--container">
+                <input
+                  type="text"
+                  placeholder="نام کاربری یا آدرس ایمیل"
+                  class="login__dropdown--input"
+                />
+                <input
+                  type="password"
+                  placeholder="رمز عبور"
+                  class="login__dropdown--input"
+                />
+              </li>
+              <li class="dropdown__terms--container dropdown-item">
+                <input type="checkbox" id="terms-of-services-checkbox" />
+                <label for="terms-of-services-checkbox"
+                  >مرا به خاطر بسپار</label
+                >
+              </li>
+              <li class="dropdown__login--container dropdown-item">
+                <button class="dropdown__login--button1">ورود</button>
+                <button class="dropdown__login--button2">عضویت</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="top__left--container">
+          <ul class="top__left--menu">
+            <li><i class="fa-solid fa-coins fa-xs"></i> قیمت طلا و سکه</li>
+            <li><i class="fa-solid fa-droplet fa-xs"></i> نفت و سوخت</li>
+            <li><i class="fa-solid fa-database fa-xs"></i> فلزات پایه</li>
+            <li>
+              <i class="fa-solid fa-circle-half-stroke fa-xs"></i> کالاهای جهانی
+            </li>
+            <li><i class="fa-solid fa-chart-pie fa-xs"></i> بورس جهانی</li>
+            <li><i class="fa-solid fa-box-archive fa-xs"></i> آرشیو</li>
+          </ul>
+          <div class="top__left--search">
+            <input
+              type="text"
+              class="top__left--search"
+              placeholder="جستجو ..."
+            />
+            <i
+              class="fa-solid fa-magnifying-glass fa-sm"
+              style="color: var(--primary)"
+            ></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="header__section--middle">
+        <nav class="navbar navbar-expand-lg">
+          <div class="bars-container order-1">
+            <button
+              class="navbar-bars"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars fa-lg"></i>
+            </button>
+
+            <img
+              src="./public/images/logo.png"
+              alt=" logo"
+              class="logo-image"
+            />
+          </div>
+
+          <div
+            class="collapse navbar-collapse order-3 order-lg-2"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  اخبار و رویداد‌ها
+                </a>
+                <ul class="dropdown-menu">
+                  <div class="dropdown__menu--container">
+                    <div class="dropdown__menu--wrapper">
+                      <p class="dropdown__menu--title">دسته‌بندی عمومی</p>
+
+                      <div class="dropdown__menu--items">
+                        <span>عناوین کل سرویس</span>
+                        <span>سیاست</span>
+                        <span>فرهنگ</span>
+                        <span>ورزش</span>
+                        <span>جامعه</span>
+                        <span>فناوری</span>
+                        <span>سلامت</span>
+                        <span>استانها</span>
+                        <span>گفتگو</span>
+                        <span>یادداشت</span>
+                        <span>توئیت</span>
+                        <span>اینستاگرام</span>
+                        <span>پژوهش</span>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__menu--wrapper">
+                      <p class="dropdown__menu--title">
+                        دسته‌بندی تخصصی اقتصاد
+                      </p>
+
+                      <div class="dropdown__menu--middle-items">
+                        <span>عناوین کل سرویس</span>
+                        <span>جهان</span>
+                        <span>اکو | ECO</span>
+                        <span>کلان و بودجه</span>
+                        <span>بانک</span>
+                        <span>بیمه</span>
+                        <span>کارگزاری های برتر</span>
+                        <span>نفت و گاز</span>
+                        <span>پتروشیمی </span>
+                        <span>صنعت آب و برق</span>
+                        <span>صنایع و معادن</span>
+                        <span>تجارت و بازرگانی</span>
+                        <span> کار و تعاون</span>
+                        <span>اقتصاد شهری</span>
+                        <span>اقتصاددیجیتالی</span>
+                        <span>کشاورزی و دامپروری</span>
+                        <span>اخبارشرکت ها</span>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__menu--wrapper">
+                      <p class="dropdown__menu--title">دسته‌بندی ویژه</p>
+
+                      <div class="dropdown__menu--items">
+                        <span>عناوین کل سرویس</span>
+                        <span>بازار سرمایه</span>
+                        <span>چهره‌های شاخص</span>
+                        <span>اقتصاد دانش بنیان</span>
+                        <span>اقتصاد فرهنگ و هنر</span>
+                        <span>اقتصاد ورزش</span>
+                        <span>خودرو</span>
+                        <span>راه و شهرسازی</span>
+                        <span>اقتصاد سبز</span>
+                        <span>توریسم و گردشگری</span>
+                        <span>سبک زندگی</span>
+                        <span>راهنمای بازار</span>
+                        <span>اقتصاد سلامت</span>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  نرخ‌ها و داده‌ها
+                </a>
+                <ul class="dropdown-menu">
+                  <div class="dropdown__menu--container">
+                    <ul class="dropdown__menu--items2">
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        ارز ها
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        قیمت طلا و سکه
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        نفت و سوخت
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        فلزات پایه
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        کالاهای جهانی
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        بورس جهانی
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  استان‌ها
+                </a>
+                <ul class="dropdown-menu">
+                  <div class="dropdown__menu--container">
+                    <ul class="dropdown__menu--items2">
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        آذربایجان شرقی
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        آذربایجان غربی
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        اردبیل
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        اصفهان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        البرز
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        ایلام
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        بوشهر
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        تهران
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        چهارمحال و بختیاری
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        خراسان جنوبی
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        خراسان رضوی
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        خراسان شمالی
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        خوزستان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        زنجان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        سمنان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        سیستان و بلوچستان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        فارس
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        قزوین
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        قم
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        کردستان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        کرمان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        کرمانشاه
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        کهگیلویه و بویراحمد
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        گلستان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        گیلان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        لرستان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        مازندران
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        مرکزی
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        هرمزگان
+                      </li>
+
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        همدان
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        یزد
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  مناطق آزاد
+                </a>
+                <ul class="dropdown-menu">
+                  <div class="dropdown__menu--container">
+                    <ul class="dropdown__menu--items3">
+                      <li>
+                        <img src="./public/images/maku.png" alt="maku logo" />
+                      </li>
+                      <li>
+                        <img src="./public/images/kish.png" alt="kish logo" />
+                      </li>
+                      <li>
+                        <img src="./public/images/qeshm.png" alt="qeshm logo" />
+                      </li>
+                      <li>
+                        <img
+                          src="./public/images/chabahar.png"
+                          alt="chabahar logo"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="./public/images/anzali.png"
+                          alt="anzali logo"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="./public/images/arvand.png"
+                          alt="arvand logo"
+                        />
+                      </li>
+                      <li>
+                        <img src="./public/images/aras.png" alt="aras logo" />
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  چند رسانه‌ای
+                </a>
+                <ul class="dropdown-menu">
+                  <div class="dropdown__menu--container">
+                    <ul class="dropdown__menu--items4">
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i> فیلم
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i> صوت
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i> کلیپ
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i> تیزر
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i> عکس
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i>
+                        اینفوگرافی
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-chevron-left fa-sm"></i> کاریکاتور
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#"> نیازمندی‌ها</a>
+              </li>
+
+              <li class="nav-item d-lg-none">
+                <a
+                  class="nav-link"
+                  href="#"
+                  style="display: flex; align-items: center; gap: 8px"
+                >
+                  <i class="fas fa-search fa-xs"></i> جستجو
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <img
+            src="./public/images/rmdn-2-1648994762.jpg"
+            alt="ramadan logo"
+            class="ramadan-image order-2 order-lg-3"
+          />
+        </nav>
+      </section>
+
+      <section class="header__section--bottom">
+        <div class="header__bottom--container">
+          <!-- فلش جهت چپ و راست (در صورت نیاز) -->
+          <span id="header-bottom-right">
+            <i class="fa-solid fa-angle-right"></i>
+          </span>
+
+          <ul
+            class="bottom__slider--container"
+            id="header-bottom-slider-container"
+          >
+            <!-- آیتم دسته‌بندی تخصصی -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn bottom-bars">
+                <i class="fa fa-bars fa-sm" style="color: #b01927"></i>
+              </button>
+            </li>
+
+            <!-- آیتم اوراسیا | EAEU با زیرمنو -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">اوراسیا | EAEU</button>
+
+              <div class="bottom__item--container">
+                <div>
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-home fa-xs"></i>
+                      </span>
+
+                      <span>صفحه اصلی اوراسیا | EAEU</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <span>ایران و روسیه</span>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <span>ارمنستان و بلاروس</span>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <span>قزاقستان و قرقیزستان</span>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span
+                        class="bottom__item--icon fa-xs"
+                        style="color: orange"
+                      >
+                        <i class="fa fa-rss"></i>
+                      </span>
+                      <span>عناوین کل اخبار</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم جهان -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">جهان</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم اکو | ECO با زیرمنو -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">اکو | ECO</button>
+
+              <div class="bottom__item--container">
+                <div>
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-home fa-xs"></i>
+                      </span>
+
+                      <span>صفحه اصلی اکو | ECO</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/iran-log-1-1699529252.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>ایران | ECO IRAN</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/turk-log-1699528084.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>ترکیه | Turkiye</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/azar-log-1699529273.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>آذربایجان | Azerbaijan</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/turkaman-log-1699529290.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>ترکمنستان | Turkmenistan</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/tajikestan-1699529979.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>تاجیکستان | Tajikistan</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/gazag-log-1699529436.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>قزاقستان | Kazakhstan</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/girgiz-log-1699529461.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>قرقیزستان | Kyrgyzstan</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/uzbakestan-1699529925.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>ازبکستان | Uzbekistan</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/afghan-log-1699529504.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>افغانستان | Afghanistan</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/small-icon/pakistan-log-1699529529.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>پاکستان | Pakistan</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-rss fa-xs" style="color: orange"></i>
+                      </span>
+                      <span>عناوین کل اخبار</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم کلان و بودجه -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">کلان و بودجه</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم بانک با زیرمنو -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">بانک</button>
+
+              <div class="bottom__item--container">
+                <div>
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-home fa-xs"></i>
+                      </span>
+                      <span>صفحه اصلی بانک</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/bn-mrz.jpg" alt="" />
+                      </span>
+                      <span>بانک مرکزی</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/meli.jpg" alt="" />
+                      </span>
+                      <span>بانک ملّی ایران</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/melat.jpg" alt="" />
+                      </span>
+                      <span>بانک ملّت</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/tejarat.jpg" alt="" />
+                      </span>
+                      <span>بانک تجارت</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/saderat.jpg" alt="" />
+                      </span>
+                      <span>بانک صادرات ایران</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/banks/iran-zamin.jpg"
+                          alt=""
+                        />
+                      </span>
+                      <span>بانک ایران زمین</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/pasargad.jpg" alt="" />
+                      </span>
+                      <span>بانک پاسارگاد</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/ayndeh.jpg" alt="" />
+                      </span>
+                      <span>بانک آینده</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/parsian.jpg" alt="" />
+                      </span>
+                      <span>بانک پارسیان</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/eghtesad.jpg" alt="" />
+                      </span>
+                      <span>بانک اقتصادنوین</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/dey.jpg" alt="" />
+                      </span>
+                      <span>بانک دی</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/khavar.jpg" alt="" />
+                      </span>
+                      <span>بانک خاورمیانه</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/saman.jpg" alt="" />
+                      </span>
+                      <span>بانک سامان</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/sina.jpg" alt="" />
+                      </span>
+                      <span>بانک سینا</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks//sarmaye.jpg" alt="" />
+                      </span>
+                      <span>بانک سرمایه</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/kar-afrin.jpg" alt="" />
+                      </span>
+                      <span>بانک کارآفرین</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/gardesh.jpg" alt="" />
+                      </span>
+                      <span>بانک گردشگری</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks//resalat.jpg" alt="" />
+                      </span>
+                      <span>بانک رسالت</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/toseE.jpg" alt="" />
+                      </span>
+                      <span>بانک توسعه تعاون</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/banks/toseE-saderat.jpg"
+                          alt=""
+                        />
+                      </span>
+                      <span>بانک توسعه صادرات ایران</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks//mehr.png" alt="" />
+                      </span>
+                      <span>قرض الحسنه مهر ایران</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/sanat.jpg" alt="" />
+                      </span>
+                      <span>بانک صنعت و معدن</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/sepah.jpg" alt="" />
+                      </span>
+                      <span>بانک سپه</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/maskan.jpg" alt="" />
+                      </span>
+                      <span>بانک مسکن</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/banks/keshavarzi.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>بانک کشاورزی</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/refah.jpg" alt="" />
+                      </span>
+                      <span>رفاه کارگران</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/post-bank.jpg" alt="" />
+                      </span>
+                      <span>پست بانک</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/moshtarak.jpg" alt="" />
+                      </span>
+                      <span>بانک مشترک ایران و ونزوئلا</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/shahr.png" alt="" />
+                      </span>
+                      <span>بانک شهر</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/shahr.png" alt="" />
+                      </span>
+                      <span>صندوق توسعه ملّی</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img src="./public/images/banks/melal.jpg" alt="" />
+                      </span>
+                      <span>مؤسسه ملل</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/banks/amoozesh-bankdari.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>مؤسسه آموزش بانکداری</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-rss fa-xs" style="color: orange"></i>
+                      </span>
+                      <span>عناوین کل اخبار</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم بیمه با زیرمنو -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">بیمه</button>
+
+              <div class="bottom__item--container">
+                <div>
+                  <!-- صفحه اصلی بیمه -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-home fa-xs"></i>
+                      </span>
+                      <span>صفحه اصلی بیمه</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه مرکزی -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/mrkzi.jpg"
+                          alt="بیمه مرکزی"
+                        />
+                      </span>
+                      <span>بیمه مرکزی</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه توسعه -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/toseE.jpg"
+                          alt="بیمه توسعه"
+                        />
+                      </span>
+                      <span>بیمه توسعه</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه تجارت نو -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/tejart-no.jpg"
+                          alt="بیمه تجارت نو"
+                        />
+                      </span>
+                      <span>بیمه تجارت نو</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- ازکی -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/azki.jpg"
+                          alt="ازکی"
+                        />
+                      </span>
+                      <span>ازکی</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه ایران -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/iran.jpg"
+                          alt="بیمه ایران"
+                        />
+                      </span>
+                      <span>بیمه ایران</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه آسیا -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/asia.jpg"
+                          alt="بیمه آسیا"
+                        />
+                      </span>
+                      <span>بیمه آسیا</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه البرز -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/alborz.jpg"
+                          alt="بیمه البرز"
+                        />
+                      </span>
+                      <span>بیمه البرز</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه دانا -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/dana.jpg"
+                          alt="بیمه دانا"
+                        />
+                      </span>
+                      <span>بیمه دانا</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه معلم -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/moalem.jpg"
+                          alt="بیمه معلم"
+                        />
+                      </span>
+                      <span>بیمه معلم</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه پارسیان -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/parsian.jpg"
+                          alt="بیمه پارسیان"
+                        />
+                      </span>
+                      <span>بیمه پارسیان</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه سینا -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/sina.jpg"
+                          alt="بیمه سینا"
+                        />
+                      </span>
+                      <span>بیمه سینا</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه رازی -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/razi.jpg"
+                          alt="بیمه رازی"
+                        />
+                      </span>
+                      <span>بیمه رازی</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه سامان -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/saman.jpg"
+                          alt="بیمه سامان"
+                        />
+                      </span>
+                      <span>بیمه سامان</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه دی -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/dey.jpg"
+                          alt="بیمه دی"
+                        />
+                      </span>
+                      <span>بیمه دی</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه ملت -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/melat.jpg"
+                          alt="بیمه ملت"
+                        />
+                      </span>
+                      <span>بیمه ملت</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه نوین -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/novin.jpg"
+                          alt="بیمه نوین"
+                        />
+                      </span>
+                      <span>بیمه نوین</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه پاسارگاد -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/pasargad.jpg"
+                          alt="بیمه پاسارگاد"
+                        />
+                      </span>
+                      <span>بیمه پاسارگاد</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه کوثر -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/kosar.jpg"
+                          alt="بیمه کوثر"
+                        />
+                      </span>
+                      <span>بیمه کوثر</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه ما -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/ma.jpg"
+                          alt="بیمه ما"
+                        />
+                      </span>
+                      <span>بیمه ما</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه آرمان -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/arman.jpg"
+                          alt="بیمه آرمان"
+                        />
+                      </span>
+                      <span>بیمه آرمان</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه تعاون -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/taAwon.jpg"
+                          alt="بیمه تعاون"
+                        />
+                      </span>
+                      <span>بیمه تعاون</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه سرمد -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/sarmad.jpg"
+                          alt="بیمه سرمد"
+                        />
+                      </span>
+                      <span>بیمه سرمد</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه اتکایی ایرانیان -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/eteka.jpg"
+                          alt="بیمه اتکایی ایرانیان"
+                        />
+                      </span>
+                      <span>بیمه اتکایی ایرانیان</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه اتکایی امین -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/eteka-amin.png"
+                          alt="بیمه اتکایی امین"
+                        />
+                      </span>
+                      <span>بیمه اتکایی امین</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه حافظ -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/hafez.png"
+                          alt="بیمه حافظ"
+                        />
+                      </span>
+                      <span>بیمه حافظ</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه امید -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/omid.jpg"
+                          alt="بیمه امید"
+                        />
+                      </span>
+                      <span>بیمه امید</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه ایران میهن -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/iran-mihan.jpg"
+                          alt="بیمه ایران میهن"
+                        />
+                      </span>
+                      <span>بیمه ایران میهن</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه متقابل کیش -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/kish.jpg"
+                          alt="بیمه متقابل کیش"
+                        />
+                      </span>
+                      <span>بیمه متقابل کیش</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه آسماری -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/asmari.jpg"
+                          alt="بیمه آسماری"
+                        />
+                      </span>
+                      <span>بیمه آسماری</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه حکمت صبا -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/hekmat.jpg"
+                          alt="بیمه حکمت صبا"
+                        />
+                      </span>
+                      <span>بیمه حکمت صبا</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- بیمه زندگی خاورمیانه -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/insurance/khavar.jpg"
+                          alt="بیمه زندگی خاورمیانه"
+                        />
+                      </span>
+                      <span>بیمه زندگی خاورمیانه</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- عناوین کل اخبار -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-rss fa-xs" style="color: orange"></i>
+                      </span>
+                      <span>عناوین کل اخبار</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم کارگزاری های برتر با زیرمنو -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">کارگزاری های برتر</button>
+
+              <div class="bottom__item--container">
+                <div>
+                  <!-- صفحه اصلی کارگزاری های برتر -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-home"></i>
+                      </span>
+                      <span>صفحه اصلی کارگزاری های برتر</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری مفید -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/mofid.png"
+                          alt="کارگزاری مفید"
+                        />
+                      </span>
+                      <span>کارگزاری مفید</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری فارابی -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/farabi.png"
+                          alt="کارگزاری فارابی"
+                        />
+                      </span>
+                      <span>کارگزاری فارابی</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری آگاه -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/agah.png"
+                          alt="کارگزاری آگاه"
+                        />
+                      </span>
+                      <span>کارگزاری آگاه</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری کاریزما -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/karizma.png"
+                          alt="کارگزاری کاریزما"
+                        />
+                      </span>
+                      <span>کارگزاری کاریزما</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری مبین سرمایه -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/mobin-sarmaye.png"
+                          alt="کارگزاری مبین سرمایه"
+                        />
+                      </span>
+                      <span>کارگزاری مبین سرمایه</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری پاسارگاد -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/pasragad.png"
+                          alt="کارگزاری پاسارگاد"
+                        />
+                      </span>
+                      <span>کارگزاری پاسارگاد</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری حافظ -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/hafez.png"
+                          alt="کارگزاری حافظ"
+                        />
+                      </span>
+                      <span>کارگزاری حافظ</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری اقتصاد بیدار -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/eghtesad-bidar.png"
+                          alt="کارگزاری اقتصاد بیدار"
+                        />
+                      </span>
+                      <span>کارگزاری اقتصاد بیدار</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری نهایت نگر -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/nahayat.png"
+                          alt="کارگزاری نهایت نگر"
+                        />
+                      </span>
+                      <span>کارگزاری نهایت نگر</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری پارسیان -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/parsian.png"
+                          alt="کارگزاری پارسیان"
+                        />
+                      </span>
+                      <span>کارگزاری پارسیان</span>
+                    </div>
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- کارگزاری سهم آشنا -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <img
+                          src="./public/images/brokers/shm-ashna.png"
+                          alt="کارگزاری سهم آشنا"
+                        />
+                      </span>
+                      <span>کارگزاری سهم آشنا</span>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <!-- عناوین کل اخبار -->
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-rss fa-xs" style="color: orange"></i>
+                      </span>
+                      <span>عناوین کل اخبار</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم نفت و گاز -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">نفت و گاز</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم پتروشیمی با زیرمنو -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">پتروشیمی</button>
+
+              <div class="bottom__item--container">
+                <div>
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-home fa-xs"></i>
+                      </span>
+                      <span>صفحه اصلی پتروشیمی</span>
+                    </div>
+
+                    <div>
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span
+                        ><img
+                          src="./public/images/petrochemicals/khorasan.png"
+                          alt=""
+                      /></span>
+                      <span>پتروشیمی خراسان</span>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <span class="divider"></span>
+                    </div>
+                  </div>
+
+                  <div class="bottom__item--name">
+                    <div>
+                      <span class="bottom__item--icon">
+                        <i class="fa fa-rss fa-xs" style="color: orange"></i>
+                      </span>
+                      <span>عناوین کل اخبار</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم صنعت آب و برق -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">صنعت آب و برق</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم صنایع و معادن -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">صنایع و معادن</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم تجارت و بازرگانی -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">تجارت و بازرگانی</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم کار و تعاون -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">کار و تعاون</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم اقتصاد شهری -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">اقتصاد شهری</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم اقتصاددیجیتالی -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">اقتصاددیجیتالی</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم کشاورزی و دامپروری -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">کشاورزی و دامپروری</button>
+            </li>
+
+            <li class="bottom__slider--item">
+              <span class="divider"></span>
+            </li>
+
+            <!-- آیتم اخبارشرکت ها -->
+            <li class="bottom__slider--item">
+              <button class="bottom__item--btn">اخبارشرکت ها</button>
+            </li>
+          </ul>
+
+          <!-- فلش جهت چپ و راست (در صورت نیاز) -->
+          <span id="header-bottom-left">
+            <i class="fa-solid fa-angle-left"></i>
+          </span>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="main__slider--section">
+        <section
+          class="splide"
+          aria-label="Splide Basic HTML Example"
+          id="main-slider"
+        >
+          <div class="splide__track">
+            <ul class="splide__list" dir="rtl"></ul>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script
+      src="./src/lib/bootstarp/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="./src/lib/font-awesome/dist/js/fontAwesome.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./src/lib/splide/dist/js/splide.min.js" defer></script>
+
+    <script src="./src/js/main.js" type="module"></script>
+  </body>
+</html>

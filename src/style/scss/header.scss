@@ -1,0 +1,384 @@
+@use "variables" as *;
+@use "mixin" as *;
+@use "header-bottom-menu-hover" as *;
+
+// Header Layout Components
+.header__section {
+  &--top {
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 4px 0;
+    @include flex(row, nowrap, center, space-between, 50px);
+  }
+
+  &--middle {
+    width: 100%;
+    @include flex(row, nowrap, center, center);
+    background: {
+      color: var(--primary);
+      image: url("../../public/images/header-overlay.png");
+      repeat: no-repeat;
+      position: center;
+    }
+    margin: 0 auto;
+
+    @include respond-to(desktop) {
+      position: relative;
+    }
+  }
+
+  &--bottom {
+    width: 100%;
+    @include flex(row, nowrap, center, center);
+    background-color: var(--stroke);
+    position: relative;
+  }
+}
+
+// Top Section Components
+.top {
+  &__right {
+    &--container {
+      @include flex(row, nowrap, center, start, 16px);
+      padding-right: 8px;
+    }
+
+    &--date {
+      display: none;
+
+      @include respond-to(tablet) {
+        @include flex(row, nowrap, center, start, 4px);
+        font: {
+          family: yekan;
+          size: 12px;
+        }
+      }
+    }
+
+    &--login {
+      width: 110px;
+      font-size: 13px;
+      background-color: var(--secondary);
+      color: var(--bg-color);
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 2px 0;
+      @include flex(row, nowrap, center, center, 4px);
+    }
+  }
+
+  &__left {
+    &--container {
+      @include flex(row, nowrap, center, end, 8px);
+      padding-left: 8px;
+      overflow: hidden;
+    }
+
+    &--menu {
+      @include flex(row, nowrap, center, start, 8px);
+      font-size: 11px;
+      list-style-type: none;
+      overflow-x: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        @include flex(row, nowrap, center, center, 4px);
+        padding: 4px;
+        cursor: pointer;
+        min-width: fit-content;
+
+        @include respond-to(desktop) {
+          &:hover {
+            background-color: var(--stroke);
+          }
+        }
+      }
+
+      @include respond-to(tablet) {
+        display: none;
+      }
+
+      @include respond-to(desktop) {
+        overflow-x: visible;
+        display: flex;
+        font-size: 13px;
+      }
+    }
+
+    &--search {
+      display: none;
+
+      @include respond-to(tablet) {
+        display: block;
+        background-color: var(--stroke);
+        padding: 2px 8px;
+        @include flex(row, nowrap, center, space-between);
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+// Navbar Components
+.navbar {
+  width: 100%;
+  max-width: 1246px;
+  align-items: center !important;
+  padding: 0;
+
+  &-bars {
+    background-color: var(--primary);
+    color: var(--bg-color);
+    padding: 8px 12px 4px;
+    border: 1px solid var(--menu-color);
+    border-radius: 2px;
+
+    &:hover {
+      background-color: var(--menu-color);
+    }
+
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+
+  &-collapse {
+    width: 100%;
+    margin-top: 4px;
+    background-color: var(--menu-color);
+    padding-top: 8px;
+
+    @include respond-to(desktop) {
+      width: 100%;
+      margin-right: 8px;
+      background-color: transparent;
+    }
+  }
+
+  &-nav {
+    justify-content: start;
+
+    @include respond-to(desktop) {
+      width: 100%;
+      @include flex(row, nowrap, center, start, 4px);
+    }
+  }
+}
+
+// Navigation Items
+.nav-item {
+  padding: 0;
+  margin: 0;
+
+  @include respond-to(desktop) {
+    position: static;
+  }
+
+  &:hover {
+    .nav-link {
+      background-color: var(--menu-item-hover);
+      border-radius: 2px;
+
+      @include respond-to(desktop) {
+        background-color: var(--menu-color-hover);
+        box-shadow: 0 0 2px 2px var(--menu-color-hover) inset;
+        backdrop-filter: blur(5px);
+      }
+    }
+
+    .dropdown-menu {
+      @include respond-to(desktop) {
+        display: block;
+      }
+    }
+  }
+}
+
+.nav-link {
+  color: var(--bg-color);
+  font-size: 1.2rem;
+  padding: 12px 8px;
+
+  @include respond-to(desktop) {
+    padding: 24px 0;
+    transition: all 0.2s ease;
+  }
+
+  &::after {
+    vertical-align: middle;
+  }
+
+  &:focus,
+  &:hover,
+  &:visited {
+    color: var(--bg-color) !important;
+  }
+}
+
+// Dropdown Components
+.dropdown {
+  &-menu {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-bottom: 5px solid var(--primary);
+    border-radius: 0;
+
+    @include respond-to(desktop) {
+      width: 101vw;
+      position: absolute;
+      top: 99%;
+      left: calc(50% - 50vw);
+      background-color: #111111;
+    }
+  }
+
+  &__menu {
+    &--container {
+      width: 100%;
+      @include flex(column, nowrap, center, start);
+      color: var(--bg-color);
+
+      @include respond-to(desktop) {
+        max-width: 1246px;
+        width: 100%;
+        flex-direction: row;
+        align-items: start;
+        justify-content: center;
+        gap: 12px;
+        margin: 0 auto;
+      }
+    }
+
+    &--wrapper {
+      width: 100%;
+      @include flex(column, nowrap, center, start);
+      border: 8px solid var(--menu-wrapper);
+
+      @include respond-to(desktop) {
+        border: none;
+        background-color: var(--menu-color);
+        margin-top: 12px;
+      }
+    }
+
+    &--title {
+      width: 100%;
+      text-align: center;
+      @include flex(row, nowrap, center, center);
+      margin: 0;
+      padding: 4px;
+      background-color: var(--menu-wrapper);
+    }
+
+    &--items {
+      width: 100%;
+      @include flex(row, wrap, center, start);
+      background-color: var(--menu-color);
+      padding: 8px;
+
+      span {
+        width: 50%;
+        text-align: start;
+        font: {
+          size: 15px;
+          family: nassim-normal;
+        }
+        padding: 4px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+}
+
+// Bottom Section Components
+.header__bottom {
+  &--container {
+    width: 100%;
+    max-width: 1246px;
+    padding: 0 4px;
+    margin: 0 auto;
+    @include flex(row, nowrap, center, space-between);
+  }
+}
+
+.bottom {
+  &__slider {
+    &--container {
+      width: 100%;
+      @include flex(row, nowrap, center, start, 8px);
+      overflow-x: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &--item {
+      min-width: 5px;
+      white-space: nowrap;
+      list-style-type: none;
+      @include flex(column, nowrap, center, center);
+      flex-shrink: 0;
+      cursor: pointer;
+
+      &:hover {
+        .bottom__item--container {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__item {
+    &--btn {
+      width: 100%;
+      font: {
+        size: 16px;
+        family: nassim-normal;
+        weight: 400;
+      }
+      background-color: inherit;
+      @include flex(row, nowrap, center, center, 8px);
+      padding: 4px 2px;
+    }
+
+    &--container {
+      display: none;
+
+      &.active {
+        width: 100vw;
+        @include flex(column, wrap, center, start, 8px);
+        position: absolute;
+        top: 32px;
+        left: 0;
+        background-color: var(--header-bottom-color);
+        border-bottom: 1px solid var(--secondary);
+        z-index: 10;
+      }
+    }
+  }
+}
+
+// Responsive Images
+.logo-image,
+.ramadan-image {
+  max-width: 140px;
+
+  @include respond-to(desktop) {
+    max-width: fit-content;
+  }
+}

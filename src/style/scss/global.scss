@@ -1,0 +1,150 @@
+@use "variables" as *;
+
+:root {
+  --bg-color: #{$bg-color};
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --stroke: #{$stroke};
+  --divider: #{$divider};
+
+  --menu-color: #{$menu-color};
+  --menu-color-hover: #{$menu-color-hover};
+  --menu-item-hover: #{$menu-item-hover};
+  --menu-wrapper: #{$menu-wrapper};
+  --header-bottom-color: #{$header-bottom-color};
+
+  --chart-1: #{$chart-1};
+  --chart-2: #{$chart-2};
+  --chart-3: #{$chart-3};
+  --chart-4: #{$chart-4};
+  --chart-5: #{$chart-5};
+  --chart-6: #{$chart-6};
+  --chart-7: #{$chart-7};
+  --chart-8: #{$chart-8};
+
+  --hover-chart-1: #{$hover-chart-1};
+  --hover-chart-2: #{$hover-chart-2};
+  --hover-chart-3: #{$hover-chart-3};
+  --hover-chart-4: #{$hover-chart-4};
+  --hover-chart-5: #{$hover-chart-5};
+  --hover-chart-6: #{$hover-chart-6};
+  --hover-chart-7: #{$hover-chart-7};
+  --hover-chart-8: #{$hover-chart-8};
+  --hover-chart-9: #{$hover-chart-9};
+  --hover-chart-10: #{$hover-chart-10};
+  --hover-chart-11: #{$hover-chart-11};
+}
+
+@font-face {
+  font-family: "nassim-normal";
+  src: url("../../../public/font/nassim-normal.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "nassim-bold";
+  src: url("../../../public/font/nassim-bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "yekan";
+  src: url("../../../public/font/yekan-normal.woff") format("woff");
+  font-weight: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "nassim-bold";
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+footer {
+  @extend main;
+}
+
+.splide {
+  &__arrow {
+    width: 1rem;
+    height: 1rem;
+    background-color: inherit;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 4px;
+    }
+  }
+}
+
+.divider {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: var(--divider);
+}
+
+.image {
+  &-tooltip {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 2px;
+  }
+
+  &-overlay {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: clamp(16px, 2vw, 30px);
+    color: var(--bg-color);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
