@@ -22,7 +22,7 @@
   }
 }
 
-@mixin hover($bg, $color, $transition: none, $duration: 0, $ease: ease) {
+@mixin hover($bg, $color: #000, $transition: none, $duration: 0, $ease: ease) {
   transition: $transition $duration $ease;
   color: $color;
 

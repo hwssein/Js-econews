@@ -5,7 +5,7 @@ const headerBottomSliderContainer = document.getElementById(
 const headerBottomScrollHandler = (direction) => {
   headerBottomSliderContainer.scrollBy({
     top: 0,
-    left: direction === "right" ? -100 : 100,
+    left: direction === "right" ? -170 : 170,
     behavior: "smooth",
   });
 };

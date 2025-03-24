@@ -1,26 +1,21 @@
 @use "variables" as *;
 @use "mixin" as *;
 @use "header-bottom-menu-hover" as *;
+@use "sass:color";
+@use "sass:map";
 
-// Header Layout Components
 .header__section {
   &--top {
+    @include flex(row, nowrap, center, space-between, 50px);
     width: 100%;
     max-width: 1246px;
     margin: 0 auto;
-    padding: 4px 0;
-    @include flex(row, nowrap, center, space-between, 50px);
   }
 
   &--middle {
-    width: 100%;
     @include flex(row, nowrap, center, center);
-    background: {
-      color: var(--primary);
-      image: url("../../public/images/header-overlay.png");
-      repeat: no-repeat;
-      position: center;
-    }
+    width: 100%;
+    background-color: var(--primary);
     margin: 0 auto;
 
     @include respond-to(desktop) {
@@ -29,19 +24,83 @@
   }
 
   &--bottom {
-    width: 100%;
     @include flex(row, nowrap, center, center);
+    width: 100%;
     background-color: var(--stroke);
     position: relative;
   }
 }
 
-// Top Section Components
+// __________ HEADER -- TOP - RIGHT __________
+
 .top {
   &__right {
     &--container {
       @include flex(row, nowrap, center, start, 16px);
       padding-right: 8px;
+
+      .dropdown-menu {
+        width: 192px;
+        max-width: fit-content;
+        background-color: #fff;
+        border: 1px solid var(--stroke);
+        padding: 12px;
+
+        .dropdown__input--container {
+          @include flex(column, nowrap, center, start, 0px);
+          padding: 0;
+
+          input {
+            width: 100%;
+            border: 1px solid var(--stroke);
+            padding: 8px 4px;
+            font-family: nassim-normal;
+            font-size: 13px;
+
+            &:focus {
+              box-shadow: 0 0 5px 0px var(--primary);
+              border: 1px solid var(--primary);
+            }
+          }
+        }
+
+        .dropdown__terms--container {
+          width: 100%;
+          @include flex(row, nowrap, center, start, 8px);
+          font-size: 13px;
+          padding: 8px 0;
+
+          label {
+            font-family: nassim-normal;
+          }
+        }
+
+        .dropdown__login--container {
+          width: 100%;
+          @include flex(row, nowrap, center, center, 0);
+          padding: 0;
+
+          .dropdown__login--button1,
+          .dropdown__login--button2 {
+            width: 80px;
+            padding: 6px 12px;
+            background-color: var(--primary);
+            color: #fff;
+            font-family: nassim-normal;
+            font-size: 14px;
+          }
+          .dropdown__login--button1 {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+          }
+          .dropdown__login--button2 {
+            background-color: var(--bg-color);
+            color: #000;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+        }
+      }
     }
 
     &--date {
@@ -49,9 +108,9 @@
 
       @include respond-to(tablet) {
         @include flex(row, nowrap, center, start, 4px);
-        font: {
-          family: yekan;
-          size: 12px;
+        span {
+          font-family: yekan;
+          font-size: 12px;
         }
       }
     }
@@ -63,10 +122,12 @@
       color: var(--bg-color);
       border-radius: 2px;
       cursor: pointer;
-      padding: 2px 0;
+      padding: 3px 0;
       @include flex(row, nowrap, center, center, 4px);
     }
   }
+
+  // __________ HEADER -- TOP - LEFT __________
 
   &__left {
     &--container {
@@ -76,9 +137,8 @@
     }
 
     &--menu {
-      @include flex(row, nowrap, center, start, 8px);
+      @include flex(row, nowrap, center, start, 12px);
       font-size: 11px;
-      list-style-type: none;
       overflow-x: scroll;
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -89,14 +149,16 @@
 
       li {
         @include flex(row, nowrap, center, center, 4px);
-        padding: 4px;
+        padding: 8px 4px;
         cursor: pointer;
         min-width: fit-content;
 
+        &:first-child {
+          border-right: 1px solid var(--stroke);
+        }
+
         @include respond-to(desktop) {
-          &:hover {
-            background-color: var(--stroke);
-          }
+          @include hover(var(--stroke));
         }
       }
 
@@ -117,15 +179,17 @@
       @include respond-to(tablet) {
         display: block;
         background-color: var(--stroke);
-        padding: 2px 8px;
+        padding: 3px 8px;
         @include flex(row, nowrap, center, space-between);
         font-size: 13px;
+        font-family: tahoma;
       }
     }
   }
 }
 
-// Navbar Components
+// __________ HEADER -- MIDDLE - NAVBAR __________
+
 .navbar {
   width: 100%;
   max-width: 1246px;
@@ -133,6 +197,8 @@
   padding: 0;
 
   &-bars {
+    margin: 4px 8px;
+    margin-left: 8px;
     background-color: var(--primary);
     color: var(--bg-color);
     padding: 8px 12px 4px;
@@ -149,29 +215,32 @@
   }
 
   &-collapse {
+    margin: 0;
     width: 100%;
-    margin-top: 4px;
     background-color: var(--menu-color);
-    padding-top: 8px;
 
     @include respond-to(desktop) {
       width: 100%;
       margin-right: 8px;
       background-color: transparent;
+      background-image: url("../../../public/images/header-overlay.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
   }
 
   &-nav {
-    justify-content: start;
-
     @include respond-to(desktop) {
       width: 100%;
+      padding: 0;
       @include flex(row, nowrap, center, start, 4px);
     }
   }
 }
 
-// Navigation Items
+// __________ HEADER -- MIDDLE - NAVBAR ITEMS __________
+
 .nav-item {
   padding: 0;
   margin: 0;
@@ -198,187 +267,409 @@
       }
     }
   }
-}
 
-.nav-link {
-  color: var(--bg-color);
-  font-size: 1.2rem;
-  padding: 12px 8px;
+  .dropdown {
+    &-menu {
+      width: 100vw;
+      position: absolute;
+      top: 98%;
+      right: calc(50% - 50vw);
+      background-color: #111111;
+      border: none;
+      border-radius: 0;
+      border-bottom: 5px solid var(--primary);
+      padding: 0;
+      margin: 0;
+    }
+    &__menu {
+      &--container {
+        width: 100%;
+        @include flex(column, nowrap, center, start);
+        color: var(--bg-color);
 
-  @include respond-to(desktop) {
-    padding: 24px 0;
-    transition: all 0.2s ease;
+        @include respond-to(desktop) {
+          max-width: 1246px;
+          width: 100%;
+          @include flex(row, nowrap, start, center, 12px);
+          margin: 0 auto;
+          padding: 0 8px;
+          margin-bottom: 8px;
+        }
+      }
+      &--wrapper {
+        width: 100%;
+        @include flex(column, nowrap, center, start);
+        border: 8px solid var(--menu-wrapper);
+
+        @include respond-to(desktop) {
+          border: none;
+          background-color: var(--menu-color);
+          margin-top: 12px;
+        }
+      }
+      &--title {
+        width: 100%;
+        text-align: center;
+        @include flex(row, nowrap, center, center);
+        margin: 0;
+        padding: 4px;
+        background-color: var(--menu-wrapper);
+        cursor: pointer;
+
+        @include hover(var(--primary), #fff, all, 0.3s, ease);
+      }
+      &--items {
+        width: 100%;
+        @include flex(row, wrap, center, start, 5px);
+        background-color: var(--menu-color);
+        padding: 8px;
+
+        span {
+          width: 49%;
+          text-align: start;
+          font-size: 15px;
+          font-family: nassim-normal;
+          padding: 0px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            padding-right: 6px;
+            background-color: var(--primary);
+          }
+        }
+      }
+      &--middle-items {
+        @extend .dropdown__menu--items;
+
+        span {
+          width: 32%;
+          text-align: start;
+          font-size: 15px;
+          font-family: nassim-normal;
+          padding: 0px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            padding-right: 6px;
+            background-color: var(--primary);
+          }
+        }
+      }
+      &--items2 {
+        width: 100%;
+        background-color: var(--menu-color);
+        padding: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 8px;
+
+        li {
+          @include flex(row, nowrap, center, start, 8px);
+          width: 100%;
+          padding: 4px;
+          margin: 4px;
+          border-left: 1px solid var(--menu-wrapper);
+          transition: all 0.2s ease;
+          cursor: pointer;
+
+          &:last-child {
+            border: none;
+          }
+          &:hover {
+            background-color: var(--primary);
+            i {
+              color: var(--bg-color) !important;
+            }
+          }
+
+          i {
+            color: var(--primary);
+            transition: all 0.2s ease;
+          }
+        }
+
+        @include respond-to(desktop) {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          background-color: #111111;
+        }
+      }
+      &--items3 {
+        @extend .dropdown__menu--items;
+        justify-content: space-between;
+        gap: 0;
+
+        li {
+          width: 49.8%;
+          @include flex();
+          background-color: #fff;
+          border-radius: 8px;
+          margin: 4px 0;
+          cursor: pointer;
+        }
+
+        @include respond-to(desktop) {
+          justify-content: center;
+          gap: 16px;
+          background-color: #111111;
+
+          li {
+            width: auto;
+            border: 5px solid #fff;
+            transition: all 0.1s ease;
+
+            &:hover {
+              border-color: var(--primary);
+            }
+          }
+        }
+      }
+      &--items4 {
+        @extend .dropdown__menu--items2;
+
+        @include respond-to(desktop) {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          background-color: #111111;
+        }
+      }
+    }
   }
 
-  &::after {
-    vertical-align: middle;
-  }
-
-  &:focus,
-  &:hover,
-  &:visited {
-    color: var(--bg-color) !important;
-  }
-}
-
-// Dropdown Components
-.dropdown {
-  &-menu {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-bottom: 5px solid var(--primary);
-    border-radius: 0;
+  .nav-link {
+    color: var(--bg-color);
+    font-size: 1.2rem;
+    padding: 12px 8px;
 
     @include respond-to(desktop) {
-      width: 101vw;
-      position: absolute;
-      top: 99%;
-      left: calc(50% - 50vw);
-      background-color: #111111;
-    }
-  }
-
-  &__menu {
-    &--container {
-      width: 100%;
-      @include flex(column, nowrap, center, start);
-      color: var(--bg-color);
-
-      @include respond-to(desktop) {
-        max-width: 1246px;
-        width: 100%;
-        flex-direction: row;
-        align-items: start;
-        justify-content: center;
-        gap: 12px;
-        margin: 0 auto;
-      }
+      padding: 25px 0;
+      transition: all 0.2s ease;
     }
 
-    &--wrapper {
-      width: 100%;
-      @include flex(column, nowrap, center, start);
-      border: 8px solid var(--menu-wrapper);
-
-      @include respond-to(desktop) {
-        border: none;
-        background-color: var(--menu-color);
-        margin-top: 12px;
-      }
+    &::after {
+      vertical-align: middle;
     }
 
-    &--title {
-      width: 100%;
-      text-align: center;
-      @include flex(row, nowrap, center, center);
-      margin: 0;
-      padding: 4px;
-      background-color: var(--menu-wrapper);
-    }
-
-    &--items {
-      width: 100%;
-      @include flex(row, wrap, center, start);
-      background-color: var(--menu-color);
-      padding: 8px;
-
-      span {
-        width: 50%;
-        text-align: start;
-        font: {
-          size: 15px;
-          family: nassim-normal;
-        }
-        padding: 4px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        &:hover {
-          background-color: var(--primary);
-        }
-      }
+    &:focus,
+    &:hover,
+    &:visited {
+      color: var(--bg-color) !important;
     }
   }
 }
 
-// Bottom Section Components
+// __________ HEADER -- BOTTOM __________
+
 .header__bottom {
   &--container {
     width: 100%;
-    max-width: 1246px;
+    max-width: 1275px;
     padding: 0 4px;
     margin: 0 auto;
     @include flex(row, nowrap, center, space-between);
   }
-}
 
-.bottom {
-  &__slider {
-    &--container {
-      width: 100%;
-      @include flex(row, nowrap, center, start, 8px);
-      overflow-x: scroll;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-
-    &--item {
-      min-width: 5px;
-      white-space: nowrap;
-      list-style-type: none;
-      @include flex(column, nowrap, center, center);
-      flex-shrink: 0;
-      cursor: pointer;
-
-      &:hover {
-        .bottom__item--container {
-          display: flex;
-        }
-      }
+  &--right-icon {
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 8px 4px;
+    @include flex();
+    &:hover {
+      background-color: var(--bg-color);
     }
   }
+  &--left-icon {
+    @extend .header__bottom--right-icon;
+  }
+}
 
-  &__item {
-    &--btn {
+.bottom__slider {
+  &--container {
+    width: 100%;
+    @include flex(row, nowrap, center, flex-start, 4px);
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &--item {
+    min-width: 5px;
+    white-space: nowrap;
+    list-style-type: none;
+    @include flex(column, nowrap, center, center);
+    flex-shrink: 0;
+    cursor: pointer;
+
+    .bottom__item--btn {
       width: 100%;
-      font: {
-        size: 16px;
-        family: nassim-normal;
-        weight: 400;
-      }
+      font-size: 16px;
+      font-family: nassim-normal;
+      font-weight: 400;
       background-color: inherit;
       @include flex(row, nowrap, center, center, 8px);
-      padding: 4px 2px;
+      padding: 6px 2px;
     }
 
-    &--container {
+    .bottom__item--container {
       display: none;
+    }
 
-      &.active {
+    .bottom-bars {
+      padding: 16px 4px;
+      &:hover {
+        background-color: var(--header-bottom-color);
+      }
+    }
+
+    &:hover {
+      .bottom__item--container {
         width: 100vw;
-        @include flex(column, wrap, center, start, 8px);
+        @include flex();
         position: absolute;
         top: 32px;
         left: 0;
         background-color: var(--header-bottom-color);
         border-bottom: 1px solid var(--secondary);
         z-index: 10;
+
+        > div {
+          width: 100%;
+          max-width: 1246px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          padding: 8px;
+
+          @include respond-to(desktop) {
+            grid-template-columns: repeat(4, 1fr);
+          }
+
+          @include respond-to(large) {
+            grid-template-columns: repeat(6, 1fr);
+          }
+        }
+      }
+    }
+
+    &:nth-child(2):hover .bottom__item--btn {
+      color: #000;
+    }
+
+    $button-hover-items: (
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    );
+    @each $item in $button-hover-items {
+      &:nth-child(#{$item}):hover .bottom__item--btn {
+        color: var(--bg-color);
+      }
+    }
+
+    $name-hover-items: (6, 8, 10, 12, 14, 18);
+    @each $item in $name-hover-items {
+      &:nth-child(#{$item}) .bottom__item--name:hover span {
+        color: var(--bg-color);
+      }
+    }
+
+    $bg-colors: (
+      2: var(--header-bottom-color),
+      4: var(--hover-chart-1),
+      6: var(--header-bottom-color),
+      8: var(--hover-chart-2),
+      10: var(--hover-chart-1),
+      12: var(--hover-chart-3),
+      14: var(--hover-chart-4),
+      16: var(--hover-chart-5),
+      18: var(--hover-chart-6),
+      20: var(--hover-chart-7),
+      22: var(--hover-chart-8),
+      24: var(--hover-chart-9),
+      26: var(--hover-chart-1),
+      28: var(--hover-chart-10),
+      30: var(--hover-chart-11),
+      32: var(--hover-chart-10),
+      34: var(--primary),
+    );
+
+    @each $item, $color in $bg-colors {
+      &:nth-child(#{$item}):hover {
+        background-color: $color;
+      }
+    }
+
+    $name-bg-colors: (
+      10: var(--hover-chart-1),
+      12: var(--hover-chart-3),
+      14: var(--hover-chart-4),
+      18: var(--hover-chart-6),
+    );
+
+    @each $item, $color in $name-bg-colors {
+      &:nth-child(#{$item}) .bottom__item--name:hover {
+        background-color: $color;
       }
     }
   }
 }
 
-// Responsive Images
+.bottom__item--name {
+  width: 100%;
+  @include flex(row, nowrap, center, space-between);
+  padding: 6px 8px;
+  gap: 8px;
+  border-radius: 2px;
+  margin-right: 5px;
+
+  div {
+    @include flex(row, nowrap, center, flex-start, 8px);
+  }
+
+  span {
+    color: var(--menu-wrapper);
+    font-family: nassim-normal;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.bottom__item--icon {
+  @include flex();
+  width: 15px;
+  height: 15px;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
+
+// __________ HEADER -- RESPONSIVE - IMAGE __________
+
 .logo-image,
 .ramadan-image {
   max-width: 140px;
 
   @include respond-to(desktop) {
     max-width: fit-content;
+  }
+}
+.ramadan-image {
+  margin-left: 8px;
+  @include respond-to(desktop) {
+    padding: 0;
   }
 }
