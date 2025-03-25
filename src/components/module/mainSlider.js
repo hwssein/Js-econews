@@ -11,33 +11,39 @@ const mainSliderHandler = (data) => {
 
      <div class="main__slider--right">
 
-      <div class="main__slider--headline-news" dir="rtl">
+      <div class="main__slider--headline-news">
         <span class="d-none d-md-block" style="color:var(--chart-${
           item.id
-        }); min-width:75px; text-align:center">سرخط اخبار:</span>
-
-        <section class="splide" aria-label="Splide Basic HTML Example" id="main-headline-slider">
-          <div class="splide__track">
-		        <ul class="splide__list">
+        }); min-width:75px; text-align:right">
+          سرخط اخبار:
+        </span>
+        
+          <div class="swiper main-headline-slider">
+            <div class="swiper-wrapper">
               ${item.headlineNews
                 .map(
-                  (headline) =>
-                    `    <li class="splide__slide headline-slider">${headline}</li>`
+                  (headline) => `
+                <span class="swiper-slide headline-slider">
+                  ${headline}
+                </span>
+              `
                 )
                 .join("")}
-		        </ul>
+            </div>
           </div>
-        </section>
       </div>
 
      <div class="main__slider--image">
-        <img src="${item.image}" alt="economy image" />
 
+                <div>
+                  <img src="${item.image}" alt="economy image" />
+
+                  <span class="image-overlay">${item.imageTitle}</span>
+                </div>
+  
         <span class="image-tooltip" style="background-color:var(--chart-${
           item.id
         })">${item.subject}</span>
-
-        <span class="image-overlay">${item.imageTitle}</span>
      </div>
 
      <div class="main__slider--cards">
@@ -84,8 +90,8 @@ const mainSliderHandler = (data) => {
           </ul>
         </div>
 
-        <div class="main__slide--ads-container">
-          <div class="main__slide--ads">
+        <div class="main__slider--ads-container">
+          <div class="main__slider--ads">
             <div class="main__slider--ads-number">
               <span><i class="fa-solid fa-table-columns"></i> تبلیغات در سایت:</span>
               <span>۸۸۹۳۰۲۷۰</span>
@@ -114,16 +120,11 @@ const mainSliderHandler = (data) => {
             </ul>
 
             <div>
-            
-            
+    
             </div>
-          
           </div>
-     
         </div>     
-     
     </div>
-       
     </li>
     `;
 
@@ -131,17 +132,14 @@ const mainSliderHandler = (data) => {
   });
 
   setTimeout(() => {
-    const headlineSlider = document.getElementById("main-headline-slider");
-
-    if (headlineSlider)
-      new Splide(headlineSlider, {
-        type: "loop",
-        direction: "ttb",
-        height: "2rem",
-        autoplay: true,
-        pagination: false,
-        arrows: false,
-      }).mount();
+    new Swiper(".main-headline-slider", {
+      direction: "vertical",
+      loop: true,
+      autoplay: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      mousewheel: false,
+    });
   }, 150);
 };
 

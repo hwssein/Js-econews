@@ -5,7 +5,15 @@
   &__slider {
     &--section {
       width: 100%;
+      max-width: 1246px;
       padding: 4px 8px;
+      margin: 0 auto;
+      @include respond-to(tablet) {
+        max-width: 87%;
+      }
+      @include respond-to(large) {
+        max-width: 1246px;
+      }
 
       .splide__arrow {
         width: 5rem;
@@ -13,11 +21,11 @@
         opacity: 0.6;
 
         &--prev {
-          left: -60px;
+          right: -60px;
         }
 
         &--next {
-          right: -60px;
+          left: -60px;
         }
 
         svg {
@@ -41,9 +49,13 @@
 
     &--headline-news {
       width: 100%;
-      height: 22px;
-      padding: 0 8px;
+      height: 30px;
+      padding: 0 4px;
       @include flex(row, nowrap, center, start, 8px);
+
+      @include respond-to(desktop) {
+        height: 22px;
+      }
     }
 
     &--image {
@@ -53,7 +65,10 @@
       background-color: #fff;
       padding: 3px;
       border: 1px solid var(--stroke);
-
+      > div {
+        width: 100%;
+        position: relative;
+      }
       img {
         width: 100%;
       }
@@ -61,10 +76,10 @@
 
     &--cards {
       width: 100%;
-      margin-top: 8px;
-      @include flex(row, wrap, start, start, 4px);
+      margin-top: 10px;
+      @include flex(row, wrap, start, start, 12px);
 
-      @include respond-to(desktop) {
+      @include respond-to(tablet) {
         flex-flow: row nowrap;
       }
     }
@@ -75,7 +90,8 @@
       @include flex(row, nowrap, center, start, 4px);
       background-color: #fff;
       padding: 12px;
-      border: 1px solid var(--stroke);
+      border-bottom: 1px solid var(--stroke);
+      border-left: 1px solid var(--stroke);
       border-radius: 2px;
       cursor: pointer;
 
@@ -92,15 +108,21 @@
       &-content {
         @include flex(column, nowrap, start, start);
 
-        span:first-child {
-          color: var(--secondary);
-          font: {
-            size: 15px;
-            family: nassim-normal;
+        span {
+          &:first-child {
+            color: var(--secondary);
+            font-size: 13px;
+            font-family: nassim-normal;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+
+          &:last-child {
+            width: 100%;
+            font-size: clamp(14px, 2vw, 16px);
+            line-height: 19px;
+          }
         }
       }
     }
@@ -148,16 +170,19 @@
 
       &-bottom {
         width: 100%;
-        @include flex(column, nowrap, start, start, 2px);
+        @include flex(column, nowrap, start, start, 0px);
         background-color: #fff;
-        padding: 0 4px;
+        padding: 0px 5px;
+        border-left: 1px solid var(--stroke);
+        border-bottom: 1px solid var(--stroke);
 
         li {
           max-width: 100%;
+          max-height: 33.09px;
           width: 100%;
           list-style-type: none;
           border-bottom: 1px solid var(--stroke);
-          padding: 4px;
+          padding: 7px 0px 5px;
           font-family: nassim-normal;
           @include flex(row, nowrap, center, start, 4px);
           white-space: nowrap;
@@ -168,6 +193,87 @@
           &:hover {
             color: var(--primary);
           }
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    &--ads-container {
+      width: 100%;
+      @include flex(column, nowrap, center, start, 0px);
+      padding: 0 4px;
+
+      @include respond-to(tablet) {
+        gap: 4px;
+      }
+
+      @include respond-to(desktop) {
+        width: 222px;
+      }
+
+      @include respond-to(large) {
+        width: 295px;
+      }
+    }
+    &--ads {
+      width: 100%;
+      @include flex(column, nowrap, center, start, 4px);
+    }
+    &--ads-number {
+      display: none;
+
+      @include respond-to(tablet) {
+        width: 100%;
+        height: 29px;
+        @include flex(row, nowrap, center, space-between, 0px);
+        overflow: hidden;
+        color: var(--secondary);
+        cursor: pointer;
+
+        span {
+          &:first-child {
+            width: 100%;
+            @include flex(row, nowrap, center, start, 8px);
+            font-size: 15px;
+            white-space: nowrap;
+          }
+          &:last-child {
+            width: 100%;
+            color: var(--secondary);
+            font-size: 20px;
+            @include flex(row, nowrap, center, end, 0px);
+            margin-left: 8px;
+          }
+        }
+
+        &:hover span {
+          color: var(--primary);
+        }
+
+        @include respond-to(desktop) {
+          height: 22px;
+        }
+      }
+    }
+    &--ads-image {
+      width: 100%;
+      @include flex(row, nowrap, center, center);
+
+      img {
+        width: 295px;
+        height: 295px;
+
+        @include respond-to(tablet) {
+          width: 222px;
+          height: 222px;
+        }
+
+        @include respond-to(large) {
+          width: 295px;
+          height: 295px;
         }
       }
     }
@@ -197,11 +303,12 @@
 
         &-content {
           width: 100%;
-          height: 197px;
+          height: 172px;
           overflow: hidden;
           text-align: justify;
           background-color: #fff;
-          border: 1px solid var(--stroke);
+          border-left: 1px solid var(--stroke);
+          border-bottom: 1px solid var(--stroke);
           padding: 8px;
 
           li {
@@ -225,11 +332,15 @@
         }
       }
     }
+
+    &--pagination {
+      width: 100%;
+    }
   }
 
   &__splide--container {
     width: 100%;
-    @include flex(column, nowrap, start, start, 12px);
+    @include flex(column, nowrap, start, start, 16px);
 
     @include respond-to(tablet) {
       flex-flow: row nowrap;
@@ -237,52 +348,9 @@
     }
   }
 
-  &__slide--ads {
-    &-container {
-      width: 100%;
-      @include flex(column, nowrap, start, start, 4px);
-      padding: 0 4px;
-
-      @include respond-to(tablet) {
-        width: 100%;
-      }
-
-      @include respond-to(desktop) {
-        width: 222px;
-      }
-
-      @include respond-to(large) {
-        width: 295px;
-      }
-    }
-
-    &-number {
-      display: none;
-
-      @include respond-to(tablet) {
-        width: 100%;
-        @include flex(row, nowrap, center, space-between, 4px);
-        color: var(--secondary);
-        font-size: 15px;
-        cursor: pointer;
-        line-height: 24px;
-
-        span {
-          &:first-child {
-            @include flex(row, nowrap, center, start, 8px);
-          }
-
-          &:last-child {
-            color: var(--secondary);
-            font-size: 20px;
-          }
-        }
-
-        &:hover span {
-          color: var(--primary);
-        }
-      }
-    }
+  &-headline-slider {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -294,32 +362,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font: {
-    size: 17px;
-    family: nassim-normal;
-  }
+  font-size: 17px;
+  font-family: nassim-normal;
 
   &:hover {
     color: var(--primary);
-  }
-}
-
-.main__slider--ads-image {
-  width: 100%;
-  @include flex(row, nowrap, center, center);
-
-  img {
-    width: 295px;
-    height: 295px;
-
-    @include respond-to(tablet) {
-      width: 222px;
-      height: 222px;
-    }
-
-    @include respond-to(large) {
-      width: 295px;
-      height: 295px;
-    }
   }
 }

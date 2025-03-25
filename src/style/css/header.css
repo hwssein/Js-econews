@@ -236,8 +236,8 @@
   align-items: center;
   justify-content: end;
   gap: 8px;
-  padding-left: 8px;
   overflow: hidden;
+  padding-left: 8px;
 }
 .top__left--menu {
   display: flex;
@@ -795,6 +795,12 @@
 .bottom__slider--item:nth-child(34):hover {
   background-color: var(--primary);
 }
+.bottom__slider--item:nth-child(2) .bottom__item--name:hover {
+  background-color: rgb(195.9, 195.9, 195.9);
+}
+.bottom__slider--item:nth-child(6) .bottom__item--name:hover {
+  background-color: rgb(195.9, 195.9, 195.9);
+}
 .bottom__slider--item:nth-child(10) .bottom__item--name:hover {
   background-color: var(--hover-chart-1);
 }
@@ -846,9 +852,9 @@
 
 .logo-image,
 .ramadan-image {
-  max-width: 140px;
+  max-width: 135px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .logo-image,
   .ramadan-image {
     max-width: fit-content;
@@ -858,7 +864,7 @@
 .ramadan-image {
   margin-left: 8px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .ramadan-image {
     padding: 0;
   }
