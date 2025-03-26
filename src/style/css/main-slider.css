@@ -385,6 +385,8 @@
 }
 .main__slider--pagination {
   width: 100%;
+  margin-top: 16px;
+  padding: 4px 8px;
 }
 .main__splide--container {
   width: 100%;
@@ -409,7 +411,7 @@
   max-width: 400px;
   min-width: 200px;
   height: 100%;
-  color: var(--hover-chart-5);
+  color: rgb(41.3834951456, 77.5, 113.6165048544);
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
@@ -419,6 +421,113 @@
 }
 .headline-slider:hover {
   color: var(--primary);
+}
+
+.slider__pagination--container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.slider__pagination--item {
+  width: 12.5%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 4px;
+  cursor: pointer;
+}
+.slider__pagination--item-btn {
+  width: 100%;
+  height: 6px;
+  background-color: var(--stroke);
+}
+.slider__pagination--item-name {
+  font-family: nassim-normal;
+  font-size: 19px;
+  color: var(--secondary);
+}
+
+.slider__pagination--item[data-id="1"]:hover .slider__pagination--item-btn,
+.slider__pagination--item[data-id="1"].active-slide-btn .slider__pagination--item-btn {
+  background-color: #b22222;
+}
+.slider__pagination--item[data-id="1"]:hover .slider__pagination--item-name,
+.slider__pagination--item[data-id="1"].active-slide-btn .slider__pagination--item-name {
+  color: #b22222;
+}
+
+.slider__pagination--item[data-id="2"]:hover .slider__pagination--item-btn,
+.slider__pagination--item[data-id="2"].active-slide-btn .slider__pagination--item-btn {
+  background-color: #3300cc;
+}
+.slider__pagination--item[data-id="2"]:hover .slider__pagination--item-name,
+.slider__pagination--item[data-id="2"].active-slide-btn .slider__pagination--item-name {
+  color: #3300cc;
+}
+
+.slider__pagination--item[data-id="3"]:hover .slider__pagination--item-btn,
+.slider__pagination--item[data-id="3"].active-slide-btn .slider__pagination--item-btn {
+  background-color: #0040ad;
+}
+.slider__pagination--item[data-id="3"]:hover .slider__pagination--item-name,
+.slider__pagination--item[data-id="3"].active-slide-btn .slider__pagination--item-name {
+  color: #0040ad;
+}
+
+.slider__pagination--item[data-id="4"]:hover .slider__pagination--item-btn,
+.slider__pagination--item[data-id="4"].active-slide-btn .slider__pagination--item-btn {
+  background-color: #7b68ee;
+}
+.slider__pagination--item[data-id="4"]:hover .slider__pagination--item-name,
+.slider__pagination--item[data-id="4"].active-slide-btn .slider__pagination--item-name {
+  color: #7b68ee;
+}
+
+.slider__pagination--item[data-id="5"]:hover .slider__pagination--item-btn,
+.slider__pagination--item[data-id="5"].active-slide-btn .slider__pagination--item-btn {
+  background-color: #ba55d3;
+}
+.slider__pagination--item[data-id="5"]:hover .slider__pagination--item-name,
+.slider__pagination--item[data-id="5"].active-slide-btn .slider__pagination--item-name {
+  color: #ba55d3;
+}
+
+.slider__pagination--item[data-id="6"]:hover .slider__pagination--item-btn,
+.slider__pagination--item[data-id="6"].active-slide-btn .slider__pagination--item-btn {
+  background-color: #ff8c00;
+}
+.slider__pagination--item[data-id="6"]:hover .slider__pagination--item-name,
+.slider__pagination--item[data-id="6"].active-slide-btn .slider__pagination--item-name {
+  color: #ff8c00;
+}
+
+.slider__pagination--item[data-id="7"]:hover .slider__pagination--item-btn,
+.slider__pagination--item[data-id="7"].active-slide-btn .slider__pagination--item-btn {
+  background-color: #f08080;
+}
+.slider__pagination--item[data-id="7"]:hover .slider__pagination--item-name,
+.slider__pagination--item[data-id="7"].active-slide-btn .slider__pagination--item-name {
+  color: #f08080;
+}
+
+.slider__pagination--item[data-id="8"]:hover .slider__pagination--item-btn,
+.slider__pagination--item[data-id="8"].active-slide-btn .slider__pagination--item-btn {
+  background-color: #006600;
+}
+.slider__pagination--item[data-id="8"]:hover .slider__pagination--item-name,
+.slider__pagination--item[data-id="8"].active-slide-btn .slider__pagination--item-name {
+  color: #006600;
+}
+
+.slider__ads--container {
+  width: 100%;
+}
+.slider__ads--container img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main-slider.css.map */

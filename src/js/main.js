@@ -14,7 +14,7 @@ const init = () => {
   mainSliderHandler(mainSliderData);
   mainSliderConfig.mount();
 
-  mainSliderPagination();
+  mainSliderPagination(mainSliderConfig);
 };
 
 headerBottomRightArrow.addEventListener("click", () =>
