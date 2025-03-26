@@ -168,7 +168,11 @@
   flex-flow: column nowrap;
   align-items: start;
   justify-content: start;
-  display: none;
+}
+@media (min-width: 768px) {
+  .main__slider--latest-news {
+    display: none;
+  }
 }
 @media (min-width: 992px) {
   .main__slider--latest-news {

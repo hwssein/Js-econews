@@ -1,0 +1,48 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+.partial {
+  &__market {
+    &--container-responsive {
+      width: 100%;
+      max-width: 1246px;
+      padding: 8px;
+    }
+
+    &--title-responsive {
+      width: 100%;
+      @include flex(row, nowrap, center, space-between, 8px);
+      padding: 4px 0;
+
+      & > span:first-child {
+        font-family: nassim-normal;
+        font-size: 15px;
+        color: var(--secondary);
+        @include flex(row, nowrap, center, start, 8px);
+      }
+
+      & > span:last-child {
+        background-color: var(--stroke);
+        font-family: yekan;
+        font-size: 11px;
+        border-radius: 0 0 2px 2px;
+        padding: 2px 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--secondary);
+          color: var(--bg-color);
+        }
+      }
+    }
+
+    &--table-responsive {
+      width: 100%;
+      @include flex(row, nowrap, center, space-between, 0);
+
+      button {
+        color: red;
+      }
+    }
+  }
+}

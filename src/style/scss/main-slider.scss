@@ -151,7 +151,10 @@
       &-news {
         width: 100%;
         @include flex(column, nowrap, start, start);
-        display: none;
+
+        @include respond-to(tablet) {
+          display: none;
+        }
 
         @include respond-to(desktop) {
           width: 222px;

@@ -1,0 +1,48 @@
+.partial__market--container-responsive {
+  width: 100%;
+  max-width: 1246px;
+  padding: 8px;
+}
+.partial__market--title-responsive {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+}
+.partial__market--title-responsive > span:first-child {
+  font-family: nassim-normal;
+  font-size: 15px;
+  color: var(--secondary);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+}
+.partial__market--title-responsive > span:last-child {
+  background-color: var(--stroke);
+  font-family: yekan;
+  font-size: 11px;
+  border-radius: 0 0 2px 2px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+.partial__market--title-responsive > span:last-child:hover {
+  background-color: var(--secondary);
+  color: var(--bg-color);
+}
+.partial__market--table-responsive {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.partial__market--table-responsive button {
+  color: red;
+}
+
+/*# sourceMappingURL=partial-market.css.map */
