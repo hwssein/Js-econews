@@ -57,7 +57,7 @@
 }
 @media (min-width: 992px) {
   .main__slider--headline-news {
-    height: 22px;
+    height: 24px;
   }
 }
 .main__slider--image {
@@ -86,7 +86,7 @@
 }
 .main__slider--cards {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 14px;
   display: flex;
   flex-flow: row wrap;
   align-items: start;
@@ -100,7 +100,7 @@
 }
 .main__slider--card {
   width: 100%;
-  height: 100px;
+  height: 104px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -183,6 +183,7 @@
 }
 .main__slider--latest-top {
   width: 100%;
+  height: 28px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -211,7 +212,7 @@
   align-items: center;
   justify-content: start;
   gap: 4px;
-  max-height: 33.09px;
+  max-height: 33.5px;
   border-bottom: 1px solid var(--stroke);
   padding: 7px 0px 5px;
   cursor: pointer;
@@ -267,7 +268,7 @@
 @media (min-width: 768px) {
   .main__slider--ads-number {
     width: 100%;
-    height: 29px;
+    height: 24px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -304,7 +305,7 @@
 }
 @media (min-width: 768px) and (min-width: 992px) {
   .main__slider--ads-number {
-    height: 22px;
+    height: 21px;
   }
 }
 .main__slider--ads-image {
@@ -360,7 +361,7 @@
   }
   .main__slider--topics-content {
     width: 100%;
-    height: 172px;
+    height: 175px;
     overflow: hidden;
     text-align: justify;
     background-color: #fff;
