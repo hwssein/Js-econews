@@ -30,3 +30,11 @@
     background-color: $bg;
   }
 }
+
+@mixin image-zoom {
+  transition: all 0.9s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}

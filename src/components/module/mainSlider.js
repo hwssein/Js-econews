@@ -34,7 +34,6 @@ const mainSliderHandler = (data) => {
       </div>
 
      <div class="main__slider--image">
-
                 <div>
                   <img src="${item.image}" alt="economy image" />
 
@@ -56,7 +55,7 @@ const mainSliderHandler = (data) => {
               </div>
 
               <div class="main__slider--card-content">
-                <span>${card?.cardsTitle}</span>
+                <span>${card.cardsTitle ? card.cardsTitle : ""}</span>
                 <span>${card.cardsDescription}</span>
               </div>
             </div>
@@ -82,7 +81,7 @@ const mainSliderHandler = (data) => {
           ${item.latestNews
             .map(
               (news) => `
-            <li><i class="fa-solid fa-circle fa-2xs" style="color:var(--chart-${item.id});"></i> ${news}</li>
+            <li><i class="fa-solid fa-circle fa-2xs" style="color:var(--chart-${item.id});"></i><span> ${news} </span></li>
             `
             )
             .join("")}

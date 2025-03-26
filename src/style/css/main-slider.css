@@ -51,7 +51,7 @@
   padding: 0 4px;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: start;
   justify-content: start;
   gap: 8px;
 }
@@ -74,9 +74,15 @@
 .main__slider--image > div {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .main__slider--image img {
   width: 100%;
+  cursor: pointer;
+  transition: all 0.9s ease-in-out;
+}
+.main__slider--image img:hover {
+  transform: scale(1.02);
 }
 .main__slider--cards {
   width: 100%;
@@ -122,6 +128,7 @@
   justify-content: start;
 }
 .main__slider--card-content span:first-child {
+  width: 150px;
   color: var(--secondary);
   font-size: 13px;
   font-family: nassim-normal;
@@ -198,22 +205,23 @@
   border-bottom: 1px solid var(--stroke);
 }
 .main__slider--latest-bottom li {
-  max-width: 100%;
-  max-height: 33.09px;
   width: 100%;
-  list-style-type: none;
-  border-bottom: 1px solid var(--stroke);
-  padding: 7px 0px 5px;
-  font-family: nassim-normal;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: start;
   gap: 4px;
+  max-height: 33.09px;
+  border-bottom: 1px solid var(--stroke);
+  padding: 7px 0px 5px;
+  cursor: pointer;
+}
+.main__slider--latest-bottom li span {
+  font-family: nassim-normal;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  cursor: pointer;
+  width: 100%;
 }
 .main__slider--latest-bottom li:hover {
   color: var(--primary);
@@ -398,11 +406,9 @@
 }
 
 .headline-slider {
+  max-width: 400px;
   min-width: 200px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: start;
+  height: 100%;
   color: var(--hover-chart-5);
   cursor: pointer;
   white-space: nowrap;
