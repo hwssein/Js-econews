@@ -73,7 +73,7 @@
 }
 .partial__market--table-btn .nav-link.active {
   color: var(--primary);
-  border-top: 3px solid #ee0000;
+  border-top: 3px solid rgb(219.3, 0, 0);
   box-shadow: none;
 }
 .partial__market--table-btn .nav-link.active:hover {
@@ -135,7 +135,7 @@
   font-size: 13px;
 }
 .partial__market--rows-item:first-child {
-  background-color: rgb(234.35, 234.35, 234.35);
+  background-color: rgb(229.9, 229.9, 229.9);
 }
 .partial__market--rows-item:first-child span {
   font-size: 16px;

@@ -615,8 +615,8 @@
     }
 
     $name-bg-colors: (
-      2: darken($header-bottom-color, 2%),
-      6: darken($header-bottom-color, 2%),
+      2: color.scale($header-bottom-color, $lightness: -2%),
+      6: color.scale($header-bottom-color, $lightness: -2%),
       10: var(--hover-chart-1),
       12: var(--hover-chart-3),
       14: var(--hover-chart-4),

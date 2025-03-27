@@ -81,7 +81,7 @@ const mainSliderHandler = (data) => {
           ${item.latestNews
             .map(
               (news) => `
-            <li><i class="fa-solid fa-circle fa-2xs" style="color:var(--chart-${item.id});"></i><span> ${news} </span></li>
+            <li><i class="fa-solid fa-circle fa-2xs" style="color:var(--chart-${item.id}); font-size:8px"></i><span> ${news} </span></li>
             `
             )
             .join("")}

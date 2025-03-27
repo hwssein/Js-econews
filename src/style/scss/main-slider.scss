@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixin" as *;
+@use "sass:color";
 
 .main {
   &__slider {
@@ -370,7 +371,7 @@
   max-width: 400px;
   min-width: 200px;
   height: 100%;
-  color: darken($hover-chart-5, 10%);
+  color: color.scale($hover-chart-5, $lightness: -10%);
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;

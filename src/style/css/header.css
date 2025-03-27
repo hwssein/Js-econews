@@ -796,10 +796,10 @@
   background-color: var(--primary);
 }
 .bottom__slider--item:nth-child(2) .bottom__item--name:hover {
-  background-color: rgb(195.9, 195.9, 195.9);
+  background-color: rgb(196.98, 196.98, 196.98);
 }
 .bottom__slider--item:nth-child(6) .bottom__item--name:hover {
-  background-color: rgb(195.9, 195.9, 195.9);
+  background-color: rgb(196.98, 196.98, 196.98);
 }
 .bottom__slider--item:nth-child(10) .bottom__item--name:hover {
   background-color: var(--hover-chart-1);

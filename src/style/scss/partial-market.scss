@@ -66,7 +66,7 @@
 
         &.active {
           color: var(--primary);
-          border-top: 3px solid lighten($primary, 10%);
+          border-top: 3px solid color.scale($primary, $lightness: 10%);
           box-shadow: none;
 
           &:hover {
@@ -128,7 +128,7 @@
       }
 
       &:first-child {
-        background-color: darken($bg-color, 3%);
+        background-color: color.scale($bg-color, $lightness: -5%);
         span {
           font-size: 16px;
           font-family: nassim-normal;
