@@ -358,10 +358,10 @@
     padding: 2px;
   }
   .main__slider--topics-top span {
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
   }
   .main__slider--topics-top span:hover {
-    transform: translateX(-10px);
+    transform: translateX(-6px);
   }
   .main__slider--topics-content {
     width: 100%;

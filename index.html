@@ -2188,73 +2188,350 @@
         </div>
       </section>
 
-      <section class="partial__market--container-responsive">
-        <div class="partial__market--title-responsive">
-          <span
-            ><i class="fa-regular fa-gem fa-lg"></i>
-            <span> قیمت طلا،سکه و ارز </span>
-          </span>
+      <section class="partial">
+        <div class="partial__market--wrapper-responsive">
+          <div class="partial__market--title">
+            <span
+              ><i class="fa-regular fa-gem fa-lg"></i>
+              <span> قیمت طلا،سکه و ارز </span>
+            </span>
 
-          <span>اطلاعات بیشتر</span>
+            <span>اطلاعات بیشتر</span>
+          </div>
+
+          <div
+            class="nav nav-tabs partial__market--table-btn"
+            id="nav-tab"
+            role="tablist"
+          >
+            <button
+              class="nav-link active"
+              id="nav-gold-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-gold"
+              type="button"
+              role="tab"
+              aria-controls="nav-gold"
+              aria-selected="true"
+            >
+              طلا
+            </button>
+
+            <button
+              class="nav-link"
+              id="nav-coin-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-coin"
+              type="button"
+              role="tab"
+              aria-controls="nav-coin"
+              aria-selected="false"
+            >
+              سکه
+            </button>
+
+            <button
+              class="nav-link"
+              id="nav-currency-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-currency"
+              type="button"
+              role="tab"
+              aria-controls="nav-currency"
+              aria-selected="false"
+            >
+              ارز مبادله‌ای
+            </button>
+
+            <button
+              class="nav-link"
+              id="nav-equal-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-equal"
+              type="button"
+              role="tab"
+              aria-controls="nav-equal"
+              aria-selected="false"
+            >
+              برابری ارز
+            </button>
+          </div>
+
+          <div
+            class="tab-content partial__market--table-rows"
+            id="nav-tabContent"
+          >
+            <div
+              class="tab-pane show active"
+              id="nav-gold"
+              role="tabpanel"
+              aria-labelledby="nav-gold-tab"
+              tabindex="0"
+            >
+              <ul class="partial__market--rows-container">
+                <li class="partial__market--rows-item">
+                  <span>طلا</span>
+                  <span>قیمت</span>
+                  <span>تغییر</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>اونس طلا</span>
+                  <span class="price-up">
+                    <span> ۳۰۲۰.۹۴ </span>
+                    <i class="fa-solid fa-caret-up fa-xs"></i
+                  ></span>
+                  <span>۱.۰۸ (۰.۰۴٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>مثقال طلا</span>
+                  <span>۳۴۷۲۹</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>طلا ۱۸ عیار</span>
+                  <span>۸۰۱۷۳۰۰</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>طلا ۲۴ عیار</span>
+                  <span>۱۰۶۸۹۵۲۱</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>اونس نقره</span>
+                  <span class="price-down">
+                    <span> ۳۳.۷۳۷۵ </span>
+                    <i class="fa-solid fa-caret-down fa-xs"></i
+                  ></span>
+                  <span>۰.۰۱ (۰.۰۳٪)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="tab-pane"
+              id="nav-coin"
+              role="tabpanel"
+              aria-labelledby="nav-coin-tab"
+              tabindex="0"
+            >
+              <ul class="partial__market--rows-container">
+                <li class="partial__market--rows-item">
+                  <span>سکه</span>
+                  <span>قیمت</span>
+                  <span>تغییر</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>سکه امامی</span>
+                  <span>۹۷٬۰۰۰٬۰۰۰</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>سکه بهار آزادی</span>
+                  <span>۹۰٬۰۰۰٬۰۰۰</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>سکه نیم</span>
+                  <span>۶۰٬۰۰۰٬۰۰۰</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>سکه ربع</span>
+                  <span>۳۳٬۰۰۰٬۰۰۰</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>سکه گرمی</span>
+                  <span>۱۵٬۵۰۰٬۰۰۰</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="tab-pane"
+              id="nav-currency"
+              role="tabpanel"
+              aria-labelledby="nav-currency-tab"
+              tabindex="0"
+            >
+              <ul class="partial__market--rows-container">
+                <li class="partial__market--rows-item">
+                  <span>ارز</span>
+                  <span>قیمت</span>
+                  <span>تغییر</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/us.svg" alt="flag" />
+
+                    دلار</span
+                  >
+                  <span>۲۸۵,۰۰۰</span>
+                  <span>۰.۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/eu.svg" alt="flag" />
+
+                    یورو</span
+                  >
+                  <span>۳۰۰,۳۲۵</span>
+                  <span>۰.۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/sh.svg" alt="flag" />
+
+                    پوند</span
+                  >
+                  <span>۵۷۱۱۸</span>
+                  <span>۰.۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/ae.svg" alt="flag" />
+
+                    درهم امارات</span
+                  >
+                  <span>۷۷,۶۰۴</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/cn.svg" alt="flag" />
+
+                    یوآن چین</span
+                  >
+                  <span>۴۱,۱۳۳</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/tr.svg" alt="flag" />
+
+                    لیر ترکیه</span
+                  >
+                  <span>۱۶,۹۷۷</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/jp.svg" alt="flag" />
+
+                    صد ین ژاپن</span
+                  >
+                  <span>۳۶۲۳۳</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="tab-pane"
+              id="nav-equal"
+              role="tabpanel"
+              aria-labelledby="nav-equal-tab"
+              tabindex="0"
+            >
+              <ul class="partial__market--rows-container">
+                <li class="partial__market--rows-item">
+                  <span>ارز</span>
+                  <span>قیمت</span>
+                  <span>تغییر</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/eu.svg" alt="flag" />
+
+                    یورو</span
+                  >
+                  <span>۱٫۰۸</span>
+                  <span>۰٫۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/sh.svg" alt="flag" />
+
+                    پوند</span
+                  >
+                  <span>۱٫۲۶</span>
+                  <span>۰٫۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/ae.svg" alt="flag" />
+
+                    درهم امارات</span
+                  >
+                  <span>۰٫۲۷</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/cn.svg" alt="flag" />
+
+                    یوآن چین</span
+                  >
+                  <span>۰٫۱۴</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/tr.svg" alt="flag" />
+
+                    لیر ترکیه</span
+                  >
+                  <span>۰٫۰۶</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+
+                <li class="partial__market--rows-item">
+                  <span>
+                    <img src="./public/images/4x3/jp.svg" alt="flag" />
+
+                    صد ین ژاپن</span
+                  >
+                  <span>۰٫۶۷</span>
+                  <span>۰ (۰٪)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div
-          class="nav nav-tabs partial__market--table-responsive"
-          id="nav-tab"
-          role="tablist"
-        >
-          <button
-            class="nav-link active"
-            id="nav-gold-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#nav-gold"
-            type="button"
-            role="tab"
-            aria-controls="nav-gold"
-            aria-selected="true"
-          >
-            طلا
-          </button>
+        <div class="partial__converter--wrapper">
+          <div class="partial__market--title">
+            <span
+              ><i class="fa-solid fa-rotate fa-lg"></i>
+              <span>مبدل ارز و طلا</span>
+            </span>
 
-          <button
-            class="nav-link"
-            id="nav-coin-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#nav-coin"
-            type="button"
-            role="tab"
-            aria-controls="nav-coin"
-            aria-selected="false"
-          >
-            سکه
-          </button>
-
-          <button
-            class="nav-link"
-            id="nav-currency-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#nav-currency"
-            type="button"
-            role="tab"
-            aria-controls="nav-currency"
-            aria-selected="false"
-          >
-            ارز مبادله‌ای
-          </button>
-
-          <button
-            class="nav-link"
-            id="nav-equal-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#nav-equal"
-            type="button"
-            role="tab"
-            aria-controls="nav-equal"
-            aria-selected="false"
-            disabled
-          >
-            برابری ارز
-          </button>
+            <span>اطلاعات بیشتر</span>
+          </div>
         </div>
       </section>
     </main>

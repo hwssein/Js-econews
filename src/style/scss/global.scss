@@ -156,3 +156,13 @@ footer {
     background-color: inherit;
   }
 }
+
+.price {
+  &-up {
+    color: green;
+  }
+
+  &-down {
+    color: red;
+  }
+}

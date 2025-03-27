@@ -137,4 +137,11 @@ main, footer {
   background-color: inherit;
 }
 
+.price-up {
+  color: green;
+}
+.price-down {
+  color: red;
+}
+
 /*# sourceMappingURL=global.css.map */
