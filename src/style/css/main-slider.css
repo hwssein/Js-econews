@@ -80,6 +80,7 @@
   width: 100%;
   cursor: pointer;
   transition: all 0.9s ease-in-out;
+  transform-origin: center;
 }
 .main__slider--image img:hover {
   transform: scale(1.02);

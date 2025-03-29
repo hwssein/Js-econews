@@ -1,0 +1,58 @@
+const partialCardData = [
+  {
+    id: "1",
+    icon: "fa-solid fa-comment",
+    title: "گفتگو",
+    image: "../../public/images/partial-cards/conversation.jpg",
+    headline: "برای رشد ۸ درصدی اقتصادی ایران؛",
+    description: "لزوم انتخاب سبد بهینه تأمین مالی برای دولت",
+    color: "--menu-color",
+  },
+  {
+    id: "2",
+    icon: "fa-solid fa-file",
+    title: "یادداشت",
+    image: "../../public/images/partial-cards/note.jpg",
+    headline: "",
+    description: "رشد ۸ درصدی اقتصاد ایران آرزو است یا واقعیت؟",
+    color: "--chart-4",
+  },
+  {
+    id: "3",
+    icon: "fa-brands fa-twitter",
+    title: "توئیت",
+    image: "../../public/images/partial-cards/tweet.jpg",
+    headline: "یادداشت دکتر عراقچی|",
+    description: "آشفتگی در کاخ سفید؛ سرگیجه در سیاست جهانی",
+    color: "--hover-chart-3",
+  },
+  {
+    id: "4",
+    icon: "fa-brands fa-instagram",
+    title: "اینستاگرام",
+    image: "../../public/images/partial-cards/instagram.jpg",
+    headline: "",
+    description: "الزامات مهم «سرمایه گذاری برای تولید»",
+    color: "--hover-chart-2",
+  },
+  {
+    id: "5",
+    icon: "fa-solid fa-download",
+    title: "پرونده",
+    image: "../../public/images/partial-cards/file.jpg",
+    headline: "اقتصاد اسلامی' ـ ۳۸ | ",
+    description: "نقدی بر اسلامیزه شدن اقتصاد متعارف",
+    color: "--chart-5",
+  },
+  {
+    id: "6",
+    icon: "fa-solid fa-file",
+    title: "پژوهش",
+    image: "../../public/images/partial-cards/research.jpg",
+    headline: "",
+    description: "توسعه و پیشرفت در گرو مشارکت بخش خصوصی است",
+    color: "--chart-8",
+  },
+];
+
+export default partialCardData;

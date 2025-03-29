@@ -2,7 +2,7 @@ const mainSliderData = [
   {
     id: 1,
     subject: "اقتصاد",
-    image: "../../../public/images/main-slider/economy.jpg",
+    image: "../../public/images/main-slider/economy.jpg",
     imageTitle: " ۱۴۰۴ سالی مبارک برای بازار سرمایه است",
     headlineNews: [
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
@@ -85,7 +85,7 @@ const mainSliderData = [
   {
     id: 2,
     subject: "اقتصاد",
-    image: "../../../public/images/main-slider/politic.jpg",
+    image: "../../public/images/main-slider/politic.jpg",
     imageTitle: "احدی جز من نمی‌تواند جلوی پوتین را بگیرد",
     headlineNews: [
       "«امام اوغلو» رسما بازداشت و راهی زندان شد",
@@ -168,7 +168,7 @@ const mainSliderData = [
   {
     id: 3,
     subject: "فرهنگ",
-    image: "../../../public/images/main-slider/culture.jpg",
+    image: "../../public/images/main-slider/culture.jpg",
     imageTitle: "رکورد شکنی جدید در سیینمای ایران",
     headlineNews: [
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
@@ -251,7 +251,7 @@ const mainSliderData = [
   {
     id: 4,
     subject: "فناوری",
-    image: "../../../public/images/main-slider/IT.jpg",
+    image: "../../public/images/main-slider/IT.jpg",
     imageTitle: "افزایش سرمایه صندوق نوآوری به ۵۰ همت",
     headlineNews: [
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
@@ -334,7 +334,7 @@ const mainSliderData = [
   {
     id: 5,
     subject: "جامعه",
-    image: "../../../public/images/main-slider/society.png",
+    image: "../../public/images/main-slider/society.png",
     imageTitle: "سرمایه گذاری 775میلیون دلاری برای آموزش کارگران",
     headlineNews: [
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
@@ -417,7 +417,7 @@ const mainSliderData = [
   {
     id: 6,
     subject: "ورزش",
-    image: "../../../public/images/main-slider/exercise.jpg",
+    image: "../../public/images/main-slider/exercise.jpg",
     imageTitle: "درآمد ۱۰۰ میلیون یورویی میلان از تبلیغ روی پیراهن",
     headlineNews: [
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
@@ -500,7 +500,7 @@ const mainSliderData = [
   {
     id: 7,
     subject: "سلامت",
-    image: "../../../public/images/main-slider/health.jpg",
+    image: "../../public/images/main-slider/health.jpg",
     imageTitle: "جایگاه به یادآوردن کلمات در مغز کشف شد",
     headlineNews: [
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
@@ -583,7 +583,7 @@ const mainSliderData = [
   {
     id: 8,
     subject: "استان ها",
-    image: "../../../public/images/main-slider/province.jpg",
+    image: "../../public/images/main-slider/province.jpg",
     imageTitle: "واگذاری زمین برای احداث نیروگاه‌های خورشیدی",
     headlineNews: [
       "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",

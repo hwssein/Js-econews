@@ -12,6 +12,34 @@
   }
 }
 
+@mixin card-title {
+  width: 100%;
+  @include flex(row, nowrap, center, space-between, 8px);
+  padding: 4px 0;
+
+  & > span:first-child {
+    font-family: nassim-normal;
+    font-size: 15px;
+    color: var(--secondary);
+    transition: all 0.4s ease;
+    @include flex(row, nowrap, center, start, 8px);
+  }
+
+  & > span:last-child {
+    background-color: var(--stroke);
+    font-family: yekan;
+    font-size: 11px;
+    border-radius: 0 0 2px 2px;
+    padding: 1px 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--secondary);
+      color: var(--bg-color);
+    }
+  }
+}
+
 @mixin respond-to($breakpoint) {
   @if map.has-key($breakpoints, $breakpoint) {
     @media (min-width: map.get($breakpoints, $breakpoint)) {
@@ -33,6 +61,7 @@
 
 @mixin image-zoom {
   transition: all 0.9s ease-in-out;
+  transform-origin: center;
 
   &:hover {
     transform: scale(1.02);
