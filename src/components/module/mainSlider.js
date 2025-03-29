@@ -50,7 +50,7 @@ const mainSliderHandler = (data) => {
           .map(
             (card) => `
             <div class="main__slider--card">
-              <div class="main__slide--card-image">
+              <div class="main__slider--card-image">
                 <img src="${card.cardsImage}" />
               </div>
 
@@ -69,15 +69,15 @@ const mainSliderHandler = (data) => {
     <div class="main__slider--left">
      
         <div class="main__slider--latest-news">
-          <div class="main__slider--latest-top" style="border-bottom: 3px solid var(--chart-${
-            item.id
-          });">
+          <div class="main__slider--latest-top">
               <i class="fa-solid fa-bookmark fa-sm" style="color:var(--secondary)"></i>
               <span>تازه‌های</span>
               <span style="color:var(--chart-${item.id})">${item.subject}</span>
           </div>
 
-          <ul class="main__slider--latest-bottom">
+          <ul class="main__slider--latest-bottom" style="border-top: 3px solid var(--chart-${
+            item.id
+          });">
           ${item.latestNews
             .map(
               (news) => `
