@@ -7,7 +7,18 @@
   max-width: 1246px;
   padding: 8px;
   margin: 0 auto;
-  @include flex(column, nowrap, center, start, 10px);
+  @include flex(column, nowrap, center, start, 16px);
+
+  & .container {
+    width: 100%;
+    padding: 0;
+    max-width: 1246px;
+
+    @include respond-to(tablet) {
+      @include flex(row, wrap, start, center, 0px);
+      row-gap: 16px;
+    }
+  }
 
   &__title {
     @include card-title;
@@ -145,8 +156,13 @@
     }
 
     &--wrapper {
-      width: 100%;
-      @include flex(row, nowrap, center, space-between, 8px);
+      display: none;
+
+      @include respond-to(tablet) {
+        width: 100%;
+        @include flex(row, nowrap, center, space-between, 16px);
+        padding: 0 8px;
+      }
     }
 
     &--gold,
@@ -167,6 +183,7 @@
   &__converter {
     &--wrapper {
       width: 100%;
+      padding: 0 8px;
 
       &:hover .partial__title > span:first-child {
         transform: translateX(-6px);
@@ -180,7 +197,7 @@
 
     &--operation-input {
       width: 100%;
-      height: 58px;
+      height: 60px;
       text-align: center;
       font-size: 17px;
       font-weight: bold;
@@ -196,9 +213,15 @@
       width: 100%;
       @include flex(row, nowrap, center, space-between, 32px);
 
+      @include respond-to(tablet) {
+        flex-direction: column;
+        gap: 0;
+      }
+
       & #converter-origin,
       #converter-destination {
         width: 100%;
+        height: 60px;
         border-radius: 0;
         padding: 15px 8px;
         text-align: center;
@@ -210,7 +233,7 @@
         appearance: none;
         background-image: url("../../../public/images/down-chevron.png");
         background-repeat: no-repeat;
-        background-position: 20% center;
+        background-position: 10px center;
         background-size: 1.1rem;
       }
     }
