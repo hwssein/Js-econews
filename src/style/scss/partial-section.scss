@@ -7,16 +7,28 @@
   max-width: 1246px;
   padding: 8px;
   margin: 0 auto;
-  @include flex(column, nowrap, center, start, 16px);
+  @include flex(column, nowrap, center, start, 8px);
+
+  @include respond-to(desktop) {
+    @include flex(row, nowrap, start, center, 16px);
+  }
 
   & .container {
     width: 100%;
     padding: 0;
     max-width: 1246px;
+    @include flex(column, nowrap, center, start, 8px);
 
     @include respond-to(tablet) {
       @include flex(row, wrap, start, center, 0px);
       row-gap: 16px;
+    }
+    @include respond-to(desktop) {
+      width: calc(100% - 240px);
+      justify-content: start;
+    }
+    @include respond-to(desktop) {
+      width: calc(100% - 295px);
     }
   }
 
@@ -50,7 +62,6 @@
         font-family: nassim-normal;
         color: var(--secondary);
         font-size: clamp(14px, 30vw, 16px);
-        border-radius: 0px;
         box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.36),
           inset 0 0 8px 1px rgba(165, 164, 164, 0.5);
         transition: none;
@@ -60,6 +71,7 @@
           color: var(--primary);
           border-top: 3px solid color.scale($primary, $lightness: 10%);
           box-shadow: none;
+          background-color: var(--bg-color);
 
           &:hover {
             box-shadow: none;
@@ -80,6 +92,9 @@
       border-left: 1px solid var(--stroke);
 
       @include respond-to(tablet) {
+        height: 220px;
+      }
+      @include respond-to(large) {
         height: 245px;
       }
 
@@ -96,6 +111,9 @@
         overflow-y: scroll;
 
         @include respond-to(tablet) {
+          height: 220px;
+        }
+        @include respond-to(large) {
           height: 245px;
         }
       }
@@ -117,6 +135,7 @@
           font-family: yekan;
           font-size: 12px;
           padding: 8px 8px 8px 0;
+          white-space: nowrap;
 
           & > img {
             width: 16px;
@@ -152,6 +171,17 @@
         &:hover {
           background-color: #fff0e5;
         }
+
+        @include respond-to(tablet) {
+          & > span:last-child {
+            display: none;
+          }
+        }
+        @include respond-to(large) {
+          & > span:last-child {
+            display: block;
+          }
+        }
       }
     }
 
@@ -161,7 +191,7 @@
       @include respond-to(tablet) {
         width: 100%;
         @include flex(row, nowrap, center, space-between, 16px);
-        padding: 0 8px;
+        padding-left: 8px;
       }
     }
 
@@ -183,10 +213,13 @@
   &__converter {
     &-wrapper {
       width: 100%;
-      padding: 0 8px;
 
       &:hover .partial__title > span:first-child {
         transform: translateX(-6px);
+      }
+
+      @include respond-to(tablet) {
+        padding-right: 8px;
       }
     }
 
@@ -207,10 +240,19 @@
       border-bottom: 1px solid var(--stroke);
       border-left: 1px solid var(--stroke);
       border-top: 3px solid var(--primary);
+
+      @include respond-to(tablet) {
+        height: 58px;
+      }
+      @include respond-to(large) {
+        height: 60px;
+      }
     }
 
     &-operation-select {
       width: 100%;
+      border-left: 1px solid var(--stroke);
+      border-radius: 0;
       @include flex(row, nowrap, center, space-between, 32px);
 
       @include respond-to(tablet) {
@@ -235,6 +277,13 @@
         background-repeat: no-repeat;
         background-position: 10px center;
         background-size: 1.1rem;
+
+        @include respond-to(tablet) {
+          height: 58px;
+        }
+        @include respond-to(large) {
+          height: 60px;
+        }
       }
     }
 
@@ -251,6 +300,15 @@
         font-size: 17px;
         font-weight: bold;
         font-family: yekan;
+
+        @include respond-to(tablet) {
+          height: 44px;
+          padding: 8px;
+        }
+        @include respond-to(large) {
+          height: auto;
+          padding: 14px 10px;
+        }
       }
 
       & > :last-child {
@@ -263,6 +321,13 @@
         font-size: 17px;
         font-weight: bold;
         cursor: pointer;
+
+        @include respond-to(tablet) {
+          height: 45px;
+        }
+        @include respond-to(large) {
+          height: auto;
+        }
       }
     }
   }
@@ -271,16 +336,41 @@
     &-wrapper {
       width: 100%;
       @include flex(column, wrap, center, start, 4px);
+
+      @include respond-to(tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
     }
   }
 
   &__ads-container {
     width: 100%;
     @include flex(column, nowrap, center, start, 8px);
-    margin-top: 16px;
+
+    @include respond-to(tablet) {
+      @include flex();
+      gap: 16px;
+    }
+    @include respond-to(desktop) {
+      width: 240px;
+      @include flex(column, nowrap, start, start, 8px);
+      margin-top: 31px;
+    }
+    @include respond-to(large) {
+      width: 295px;
+    }
 
     img {
       width: 100%;
+
+      @include respond-to(tablet) {
+        width: 31.6%;
+      }
+      @include respond-to(desktop) {
+        width: 100%;
+      }
     }
   }
 }
