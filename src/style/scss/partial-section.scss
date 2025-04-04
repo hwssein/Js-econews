@@ -25,7 +25,7 @@
   }
 
   &__market {
-    &--wrapper-responsive {
+    &-wrapper--responsive {
       width: 100%;
       @include flex(column, nowrap, center, start, 0px);
 
@@ -38,7 +38,7 @@
       }
     }
 
-    &--table-btn {
+    &-tabs {
       width: 100%;
       @include flex(row, nowrap, center, space-between, 0);
 
@@ -73,7 +73,7 @@
       }
     }
 
-    &--table-rows {
+    &-tab-content {
       width: 100%;
       height: 224px;
       border-bottom: 1px solid var(--stroke);
@@ -101,61 +101,61 @@
       }
     }
 
-    &--rows-container {
+    &-list {
       width: 100%;
       @include flex(column, nowrap, center, start, 0);
-    }
 
-    &--rows-item {
-      width: 100%;
-      @include flex(row, nowrap, center, space-between, 0px);
-      background-color: #fff;
-      border-bottom: 1px solid var(--stroke);
-
-      & > span {
+      &-item {
         width: 100%;
-        @include flex(row, nowrap, center, start, 4px);
-        font-family: yekan;
-        font-size: 12px;
-        padding: 8px 8px 8px 0;
+        @include flex(row, nowrap, center, space-between, 0px);
+        background-color: #fff;
+        border-bottom: 1px solid var(--stroke);
 
-        & > img {
-          width: 16px;
-          height: 11px;
+        & > span {
+          width: 100%;
+          @include flex(row, nowrap, center, start, 4px);
+          font-family: yekan;
+          font-size: 12px;
+          padding: 8px 8px 8px 0;
+
+          & > img {
+            width: 16px;
+            height: 11px;
+          }
+
+          &:first-child {
+            font-family: nassim-normal;
+            font-size: 13px;
+          }
         }
 
         &:first-child {
-          font-family: nassim-normal;
-          font-size: 13px;
+          background-color: color.scale($bg-color, $lightness: -5%);
+          span {
+            font-size: 16px;
+            font-family: nassim-normal;
+          }
         }
-      }
 
-      &:first-child {
-        background-color: color.scale($bg-color, $lightness: -5%);
-        span {
-          font-size: 16px;
-          font-family: nassim-normal;
+        & span .fa-chart-column {
+          padding: 3px 4px 3px 5px;
+          border: 1px solid var(--stroke);
+          font-size: 1rem;
+          color: var(--primary);
+
+          &:hover {
+            background-color: var(--primary);
+            color: var(--bg-color);
+          }
         }
-      }
-
-      & span .fa-chart-column {
-        padding: 3px 4px 3px 5px;
-        border: 1px solid var(--stroke);
-        font-size: 1rem;
-        color: var(--primary);
 
         &:hover {
-          background-color: var(--primary);
-          color: var(--bg-color);
+          background-color: #fff0e5;
         }
-      }
-
-      &:hover {
-        background-color: #fff0e5;
       }
     }
 
-    &--wrapper {
+    &-wrapper {
       display: none;
 
       @include respond-to(tablet) {
@@ -165,8 +165,8 @@
       }
     }
 
-    &--gold,
-    &--currency {
+    &-gold,
+    &-currency {
       display: none;
 
       @include respond-to(tablet) {
@@ -181,7 +181,7 @@
   }
 
   &__converter {
-    &--wrapper {
+    &-wrapper {
       width: 100%;
       padding: 0 8px;
 
@@ -190,12 +190,12 @@
       }
     }
 
-    &--operation-container {
+    &-operation-container {
       width: 100%;
       @include flex(column, nowrap, center, start, 0px);
     }
 
-    &--operation-input {
+    &-operation-input {
       width: 100%;
       height: 60px;
       text-align: center;
@@ -209,7 +209,7 @@
       border-top: 3px solid var(--primary);
     }
 
-    &--operation-select {
+    &-operation-select {
       width: 100%;
       @include flex(row, nowrap, center, space-between, 32px);
 
@@ -238,7 +238,7 @@
       }
     }
 
-    &--result-container {
+    &-result-container {
       width: 100%;
       @include flex(column, nowrap, center, start, 0px);
 
@@ -268,13 +268,13 @@
   }
 
   &__cards {
-    &--wrapper {
+    &-wrapper {
       width: 100%;
       @include flex(column, wrap, center, start, 4px);
     }
   }
 
-  &__ads--container {
+  &__ads-container {
     width: 100%;
     @include flex(column, nowrap, center, start, 8px);
     margin-top: 16px;

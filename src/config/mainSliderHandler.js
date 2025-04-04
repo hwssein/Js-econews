@@ -1,0 +1,23 @@
+let mainSliderConfig = null;
+
+const mainSliderHandler = (status) => {
+  if (status !== true) return;
+
+  mainSliderConfig = new Splide("#main-slider", {
+    autoplay: true,
+    direction: "rtl",
+    pagination: false,
+    type: "loop",
+
+    breakpoints: {
+      768: {
+        arrows: false,
+      },
+    },
+  });
+
+  mainSliderConfig.mount();
+};
+
+export default mainSliderHandler;
+export { mainSliderConfig };

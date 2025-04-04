@@ -1,0 +1,71 @@
+@use "variables" as *;
+@use "mixin" as *;
+@use "sass:color" as *;
+
+.category-news {
+  width: 100%;
+  height: 100%;
+  @include flex(column, nowrap, start, start, 0px);
+
+  &__title {
+    &-container {
+      width: 100%;
+      height: 27px;
+      @include flex(row, nowrap, center, start, 4px);
+      transition: all 0.4s ease;
+
+      i {
+        margin-left: 4px;
+        color: var(--secondary);
+      }
+
+      span {
+        &:last-child {
+          color: var(--custom-color);
+        }
+      }
+    }
+  }
+
+  &__content {
+    &-container {
+      width: 100%;
+      @include flex(column, nowrap, start, start, 0px);
+      background-color: #fff;
+      padding: 0px 8px;
+      border-top: 3px solid var(--custom-color);
+      border-left: 1px solid var(--stroke);
+      border-bottom: 1px solid var(--stroke);
+
+      li {
+        width: 100%;
+        @include flex(row, nowrap, center, start, 4px);
+        max-height: 33px;
+        border-bottom: 1px solid var(--stroke);
+        padding: 7px 0px 5px;
+        cursor: pointer;
+
+        span {
+          font-family: nassim-normal;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
+        }
+
+        i {
+          color: var(--custom-color);
+          font-size: 8px;
+        }
+
+        &:hover {
+          color: var(--primary);
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

@@ -1,43 +1,86 @@
 @use "variables" as *;
+@use "mixin" as *;
+@use "sass:color";
+@use "sass:map";
 
-// Bottom Slider Hover States
-.bottom__slider--item {
-  @for $i from 1 through 17 {
-    $nth: $i * 2;
+#header-bottom-slider-container.header__bottom-slider {
+  .header__bottom-slider-item {
+    // حالت hover دکمه برای آیتم دوم (قانون خاص)
+    &:nth-child(2):hover .header__bottom-item-btn {
+      color: #000;
+    }
 
-    &:nth-child(#{$nth}):hover {
-      .bottom__item--btn {
+    // تغییر رنگ دکمه‌ها در حالت hover برای آیتم‌های مشخص
+    $button-hover-items: (
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    );
+    @each $item in $button-hover-items {
+      &:nth-child(#{$item}):hover .header__bottom-item-btn {
         color: var(--bg-color);
       }
+    }
 
-      @if $i == 1 {
-        background-color: var(--header-bottom-color);
-      } @else if $i == 2 {
-        background-color: var(--hover-chart-1);
-      } @else if $i == 3 {
-        background-color: var(--hover-chart-2);
-      } @else if $i == 4 {
-        background-color: var(--hover-chart-3);
-      } @else if $i == 5 {
-        background-color: var(--hover-chart-4);
-      } @else if $i == 6 {
-        background-color: var(--hover-chart-5);
-      } @else if $i == 7 {
-        background-color: var(--hover-chart-6);
-      } @else if $i == 8 {
-        background-color: var(--hover-chart-7);
-      } @else if $i == 9 {
-        background-color: var(--hover-chart-8);
-      } @else if $i == 10 {
-        background-color: var(--hover-chart-9);
-      } @else if $i == 13 {
-        background-color: var(--hover-chart-10);
-      } @else if $i == 14 {
-        background-color: var(--hover-chart-11);
-      } @else if $i == 15 {
-        background-color: var(--hover-chart-10);
-      } @else if $i == 17 {
-        background-color: var(--primary);
+    // تغییر رنگ span داخل نام در حالت hover برای آیتم‌های مشخص
+    $name-hover-items: (6, 8, 10, 12, 14, 18);
+    @each $item in $name-hover-items {
+      &:nth-child(#{$item}) .header__bottom-item-name:hover span {
+        color: var(--bg-color);
+      }
+    }
+
+    // تنظیم رنگ‌های پس‌زمینه آیتم‌ها در حالت hover
+    $bg-colors: (
+      2: var(--header-bottom-color),
+      4: var(--hover-chart-1),
+      6: var(--header-bottom-color),
+      8: var(--hover-chart-2),
+      10: var(--hover-chart-1),
+      12: var(--hover-chart-3),
+      14: var(--hover-chart-4),
+      16: var(--hover-chart-5),
+      18: var(--hover-chart-6),
+      20: var(--hover-chart-7),
+      22: var(--hover-chart-8),
+      24: var(--hover-chart-9),
+      26: var(--hover-chart-1),
+      28: var(--hover-chart-10),
+      30: var(--hover-chart-11),
+      32: var(--hover-chart-10),
+      34: var(--primary),
+    );
+    @each $item, $color in $bg-colors {
+      &:nth-child(#{$item}):hover {
+        background-color: $color;
+      }
+    }
+
+    // تنظیم رنگ پس‌زمینه برای نام آیتم‌ها در حالت hover
+    $name-bg-colors: (
+      2: color.scale($header-bottom-color, $lightness: -2%),
+      6: color.scale($header-bottom-color, $lightness: -2%),
+      10: var(--hover-chart-1),
+      12: var(--hover-chart-3),
+      14: var(--hover-chart-4),
+      18: var(--hover-chart-6),
+    );
+    @each $item, $color in $name-bg-colors {
+      &:nth-child(#{$item}) .header__bottom-item-name:hover {
+        background-color: $color;
       }
     }
   }

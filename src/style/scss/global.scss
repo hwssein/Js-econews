@@ -94,6 +94,22 @@ footer {
   @extend main;
 }
 
+.error-alert {
+  &-container {
+    width: 100%;
+    @include flex(row, nowrap, center, center, 0);
+    background-color: var(--primary);
+    margin-top: 20px;
+  }
+  &-content {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: var(--bg-color);
+    padding: 8px;
+  }
+}
+
 .splide {
   &__arrow {
     width: 1rem;

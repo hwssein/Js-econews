@@ -84,6 +84,23 @@ main, footer {
   margin: 0 auto;
 }
 
+.error-alert-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  margin-top: 20px;
+}
+.error-alert-content {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: var(--bg-color);
+  padding: 8px;
+}
+
 .splide__arrow {
   width: 1rem;
   height: 1rem;

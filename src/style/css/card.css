@@ -7,7 +7,7 @@
   gap: 4px;
   cursor: pointer;
 }
-.cards__title--container {
+.cards__title-container {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -16,7 +16,7 @@
   gap: 8px;
   padding: 4px 0;
 }
-.cards__title--container > span:first-child {
+.cards__title-container > span:first-child {
   font-family: nassim-normal;
   font-size: 15px;
   color: var(--secondary);
@@ -27,7 +27,7 @@
   justify-content: start;
   gap: 8px;
 }
-.cards__title--container > span:last-child {
+.cards__title-container > span:last-child {
   background-color: var(--stroke);
   font-family: yekan;
   font-size: 11px;
@@ -35,11 +35,11 @@
   padding: 1px 8px;
   cursor: pointer;
 }
-.cards__title--container > span:last-child:hover {
+.cards__title-container > span:last-child:hover {
   background-color: var(--secondary);
   color: var(--bg-color);
 }
-.cards__content--container {
+.cards__content-container {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -52,26 +52,26 @@
   border-bottom: 1px solid var(--stroke);
   border-top: 3px solid var(--custom-color);
 }
-.cards__content--container:hover .cards__content--text span {
+.cards__content-container:hover .cards__content--text span {
   color: var(--custom-color) !important;
 }
-.cards__content--image {
+.cards__content-image {
   width: 100px;
   height: 75px;
   overflow: hidden;
 }
-.cards__content--image img {
+.cards__content-image img {
   width: 100%;
   height: 100%;
 }
-.cards__content--image img:hover {
+.cards__content-image img:hover {
   transition: all 0.9s ease-in-out;
   transform-origin: center;
 }
-.cards__content--image img:hover:hover {
+.cards__content-image img:hover:hover {
   transform: scale(1.02);
 }
-.cards__content--text {
+.cards__content-text {
   width: calc(100% - 100px);
   display: flex;
   flex-flow: column nowrap;
@@ -79,7 +79,7 @@
   justify-content: start;
   gap: 0px;
 }
-.cards__content--text span:first-child {
+.cards__content-text span:first-child {
   width: 150px;
   color: var(--secondary);
   font-size: 13px;
@@ -88,7 +88,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cards__content--text span:last-child {
+.cards__content-text span:last-child {
   width: 100%;
   font-size: clamp(14px, 10vw, 16px);
   line-height: 19px;
@@ -96,7 +96,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cards:hover .cards__title--container > span:first-child {
+.cards:hover .cards__title-container > span:first-child {
   transform: translateX(-6px);
 }
 

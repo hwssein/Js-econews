@@ -2,263 +2,222 @@
 @use "mixin" as *;
 @use "sass:color";
 
-.main {
-  &__slider {
-    &--section {
-      width: 100%;
-      max-width: 1246px;
-      padding: 4px 8px;
-      margin: 0 auto;
-      @include respond-to(tablet) {
-        max-width: 87%;
-      }
-      @include respond-to(large) {
-        max-width: 1246px;
-      }
+$pagination-Btn: (
+  1: $chart-1,
+  2: $chart-2,
+  3: $chart-3,
+  4: $chart-4,
+  5: $chart-5,
+  6: $chart-6,
+  7: $chart-7,
+  8: $chart-8,
+);
 
-      .splide__arrow {
-        width: 5rem;
-        height: 5rem;
-        opacity: 0.6;
+@each $key, $color in $pagination-Btn {
+  .main-slider__pagination-item[data-id="#{$key}"] {
+    --pagination-color: #{$color};
+  }
+}
 
-        &--prev {
-          right: -60px;
-        }
+.main-slider {
+  width: 100%;
+  padding: 4px 8px;
+  margin: 0 auto;
+  @include respond-to(tablet) {
+    max-width: 87%;
+  }
+  @include respond-to(large) {
+    max-width: 1246px;
+  }
 
-        &--next {
-          left: -60px;
-        }
+  .splide__arrow {
+    width: 5rem;
+    height: 5rem;
+    opacity: 0.6;
 
-        svg {
-          fill: var(--primary);
-        }
-      }
+    &--prev {
+      right: -60px;
     }
 
-    &--right {
-      width: 100%;
-      @include flex(column, nowrap, start, start);
-
-      @include respond-to(tablet) {
-        width: 70%;
-      }
-
-      @include respond-to(desktop) {
-        width: 50%;
-      }
+    &--next {
+      left: -60px;
     }
 
-    &--headline-news {
+    svg {
+      fill: var(--primary);
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    @include flex(column, nowrap, start, start, 16px);
+
+    @include respond-to(tablet) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    overflow: hidden;
+    @include flex(column, nowrap, start, start);
+
+    @include respond-to(tablet) {
+      width: 70%;
+    }
+
+    @include respond-to(desktop) {
+      width: 50%;
+    }
+  }
+
+  &__vertical-slider {
+    &-container {
       width: 100%;
-      height: 30px;
+      height: 25px;
       padding: 0 4px;
-      @include flex(row, nowrap, start, start, 8px);
-
-      @include respond-to(desktop) {
-        height: 24px;
-      }
+      @include flex(row, nowrap, center, start, 4px);
     }
 
-    &--image {
-      width: 100%;
-      @include flex(row, nowrap, center, center);
-      position: relative;
-      background-color: #fff;
-      padding: 3px;
-      border: 1px solid var(--stroke);
-      > div {
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-      }
-      img {
-        width: 100%;
-        cursor: pointer;
-        @include image-zoom;
-      }
-    }
-
-    &--cards {
-      width: 100%;
-      margin-top: 14px;
-      @include flex(row, wrap, start, start, 12px);
+    &-text {
+      display: none;
 
       @include respond-to(tablet) {
-        flex-flow: row nowrap;
+        display: block;
+        min-width: 75px;
+        text-align: right;
+        color: var(--custom-color);
       }
     }
 
-    &--card {
+    &-wrapper {
       width: 100%;
-      height: 104px;
-      @include flex(row, nowrap, center, start, 4px);
-      background-color: #fff;
-      padding: 12px;
-      border-bottom: 1px solid var(--stroke);
-      border-left: 1px solid var(--stroke);
-      border-radius: 2px;
+      height: 100%;
+    }
+
+    &-content {
+      max-width: 400px;
+      min-width: 200px;
+      height: 100%;
+      color: color.scale($hover-chart-5, $lightness: -10%);
       cursor: pointer;
-
-      &-image {
-        width: 100px;
-        height: 75px;
-        overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-
-          &:hover {
-            @include image-zoom;
-          }
-        }
-      }
-
-      @include respond-to(desktop) {
-        width: 50%;
-      }
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 17px;
+      font-family: nassim-normal;
 
       &:hover {
-        .main__slider--card-content span {
-          color: var(--primary);
-        }
-      }
-
-      &-content {
-        width: calc(100% - 100px);
-        @include flex(column, nowrap, start, start);
-
-        span {
-          &:first-child {
-            width: 150px;
-            color: var(--secondary);
-            font-size: 13px;
-            font-family: nassim-normal;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
-
-          &:last-child {
-            width: 100%;
-            font-size: clamp(14px, 2vw, 16px);
-            line-height: 19px;
-          }
-        }
+        color: var(--primary);
       }
     }
+  }
 
-    &--left {
+  &__image {
+    width: 100%;
+    @include flex(row, nowrap, center, center);
+    position: relative;
+    background-color: #fff;
+    padding: 3px;
+    border: 1px solid var(--stroke);
+    > div {
       width: 100%;
-      @include flex(column, nowrap, start, start, 8px);
-
-      @include respond-to(tablet) {
-        width: 30%;
-        flex-flow: row nowrap;
-        justify-content: center;
-        gap: 16px;
-      }
-
-      @include respond-to(desktop) {
-        width: 50%;
-      }
+      position: relative;
+      overflow: hidden;
     }
-
-    &--latest {
-      &-news {
-        width: 100%;
-        @include flex(column, nowrap, start, start);
-
-        @include respond-to(tablet) {
-          display: none;
-        }
-
-        @include respond-to(desktop) {
-          width: 222px;
-          display: flex;
-        }
-
-        @include respond-to(large) {
-          width: 295px;
-        }
-
-        &:hover > .main__slider--latest-top {
-          transform: translateX(-6px);
-        }
-      }
-
-      &-top {
-        width: 100%;
-        height: 28px;
-        @include flex(row, nowrap, center, start, 4px);
-        transition: all 0.4s ease;
-
-        i {
-          margin-left: 4px;
-        }
-      }
-
-      &-bottom {
-        width: 100%;
-        @include flex(column, nowrap, start, start, 0px);
-        background-color: #fff;
-        padding: 0px 5px;
-        border-left: 1px solid var(--stroke);
-        border-bottom: 1px solid var(--stroke);
-
-        li {
-          width: 100%;
-          @include flex(row, nowrap, center, start, 4px);
-          max-height: 33.5px;
-          border-bottom: 1px solid var(--stroke);
-          padding: 7px 0px 5px;
-          cursor: pointer;
-
-          span {
-            font-family: nassim-normal;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 100%;
-          }
-
-          &:hover {
-            color: var(--primary);
-          }
-
-          &:last-child {
-            border-bottom: none;
-          }
-        }
-      }
-    }
-
-    &--ads-container {
+    img {
       width: 100%;
-      @include flex(column, nowrap, center, start, 0px);
-      padding: 0 4px;
+      cursor: pointer;
+      @include image-zoom;
+    }
 
-      @include respond-to(tablet) {
-        gap: 4px;
-      }
+    & .image-tooltip {
+      background-color: var(--custom-color);
+    }
+  }
 
-      @include respond-to(desktop) {
-        width: 222px;
-      }
+  &__cards {
+    width: 100%;
+    margin-top: 14px;
+    @include flex(row, wrap, start, start, 12px);
 
-      @include respond-to(large) {
-        width: 295px;
+    @include respond-to(tablet) {
+      flex-flow: row nowrap;
+
+      & .cards {
+        width: 49%;
       }
     }
-    &--ads {
-      width: 100%;
-      @include flex(column, nowrap, center, start, 4px);
+  }
+
+  &__left {
+    width: 100%;
+    overflow: hidden;
+    @include flex(column, nowrap, start, start, 8px);
+
+    @include respond-to(tablet) {
+      width: 30%;
+      flex-flow: row nowrap;
+      justify-content: center;
+      gap: 16px;
     }
-    &--ads-number {
+
+    @include respond-to(desktop) {
+      width: 50%;
+    }
+  }
+
+  &__category-news {
+    width: 100%;
+    @include flex();
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    @include respond-to(desktop) {
+      width: 222px;
+      display: flex;
+    }
+
+    @include respond-to(large) {
+      width: 295px;
+    }
+
+    &:hover .category-news__title-container {
+      transform: translateX(-6px);
+    }
+  }
+
+  &__ads-container {
+    width: 100%;
+    @include flex(column, nowrap, center, start, 0px);
+    padding: 0 4px;
+
+    @include respond-to(tablet) {
+      gap: 4px;
+    }
+
+    @include respond-to(desktop) {
+      width: 222px;
+    }
+
+    @include respond-to(large) {
+      width: 295px;
+    }
+  }
+
+  &__ads {
+    width: 100%;
+    @include flex(column, nowrap, center, start, 0px);
+
+    &-number {
       display: none;
 
       @include respond-to(tablet) {
         width: 100%;
-        height: 24px;
+        height: 27px;
         @include flex(row, nowrap, center, space-between, 0px);
         overflow: hidden;
         color: var(--secondary);
@@ -283,176 +242,124 @@
         &:hover span {
           color: var(--primary);
         }
-
-        @include respond-to(desktop) {
-          height: 21px;
-        }
       }
     }
-    &--ads-image {
+
+    &-image {
       width: 100%;
       @include flex(row, nowrap, center, center);
 
       img {
         width: 295px;
         height: 295px;
-
-        @include respond-to(tablet) {
-          width: 222px;
-          height: 222px;
-        }
-
-        @include respond-to(large) {
-          width: 295px;
-          height: 295px;
-        }
       }
-    }
-
-    &--topics {
-      display: none;
-
-      @include respond-to(tablet) {
-        width: 100%;
-        @include flex(column, nowrap, start, start);
-      }
-
-      &:hover > .main__slider--topics-top {
-        transform: translateX(-6px);
-      }
-
-      &-top {
-        width: 100%;
-        @include flex(row, nowrap, center, start, 8px);
-        color: var(--primary);
-        padding: 2px;
-        transition: all 0.4s ease;
-      }
-
-      &-content {
-        width: 100%;
-        height: 175px;
-        overflow: hidden;
-        text-align: justify;
-        background-color: #fff;
-        border-left: 1px solid var(--stroke);
-        border-bottom: 1px solid var(--stroke);
-        border-top: 3px solid var(--header-bottom-color);
-        padding: 8px;
-
-        li {
-          display: inline-block;
-          list-style-type: none;
-          font: {
-            family: nassim-normal;
-            size: 15px;
-          }
-          cursor: pointer;
-          color: var(--hover-chart-5);
-
-          &:hover {
-            color: var(--primary);
-          }
-
-          &:nth-child(even) {
-            color: var(--secondary);
-          }
-        }
-      }
-    }
-
-    &--pagination {
-      width: 100%;
-      margin-top: 16px;
-      padding: 4px 8px;
     }
   }
 
-  &__splide--container {
-    width: 100%;
-    @include flex(column, nowrap, start, start, 16px);
+  &__topics {
+    display: none;
 
     @include respond-to(tablet) {
-      flex-flow: row nowrap;
-      justify-content: space-between;
-    }
-  }
-
-  &-headline-slider {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.headline-slider {
-  max-width: 400px;
-  min-width: 200px;
-  height: 100%;
-  color: color.scale($hover-chart-5, $lightness: -10%);
-  cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 17px;
-  font-family: nassim-normal;
-
-  &:hover {
-    color: var(--primary);
-  }
-}
-
-.slider__pagination {
-  &--container {
-    width: 100%;
-    @include flex(row, nowrap, center, center, 8px);
-  }
-
-  &--item {
-    width: 12.5%;
-    @include flex(column, nowrap, center, start, 4px);
-    cursor: pointer;
-
-    &-btn {
       width: 100%;
-      height: 6px;
-      background-color: var(--stroke);
+      @include flex(column, nowrap, start, start);
     }
 
-    &-name {
-      font-family: nassim-normal;
-      font-size: 19px;
-      color: var(--secondary);
+    &:hover > .main-slider__topics-title {
+      transform: translateX(-6px);
+    }
+
+    &-title {
+      width: 100%;
+      @include flex(row, nowrap, center, start, 8px);
+      color: var(--primary);
+      transition: all 0.4s ease;
+    }
+
+    &-content {
+      width: 100%;
+      height: 175px;
+      overflow: hidden;
+      text-align: justify;
+      background-color: #fff;
+      border-left: 1px solid var(--stroke);
+      border-bottom: 1px solid var(--stroke);
+      border-top: 3px solid var(--header-bottom-color);
+      padding: 8px;
+
+      li {
+        display: inline-block;
+        list-style-type: none;
+        font: {
+          family: nassim-normal;
+          size: 15px;
+        }
+        cursor: pointer;
+        color: var(--hover-chart-5);
+
+        &:hover {
+          color: var(--primary);
+        }
+
+        &:nth-child(even) {
+          color: var(--secondary);
+        }
+      }
     }
   }
-}
 
-$pagination-Btn: (
-  1: $chart-1,
-  2: $chart-2,
-  3: $chart-3,
-  4: $chart-4,
-  5: $chart-5,
-  6: $chart-6,
-  7: $chart-7,
-  8: $chart-8,
-);
-
-@each $key, $color in $pagination-Btn {
-  .slider__pagination--item[data-id="#{$key}"]:hover,
-  .slider__pagination--item[data-id="#{$key}"].active-slide-btn {
-    .slider__pagination--item-btn {
-      background-color: $color;
-    }
-    .slider__pagination--item-name {
-      color: $color;
-    }
-  }
-}
-
-.slider__ads--container {
-  width: 100%;
-
-  img {
+  &__pagination {
     width: 100%;
+    margin-top: 16px;
+    padding: 4px 8px;
+
+    &-container {
+      width: 100%;
+      @include flex(row, nowrap, center, center, 8px);
+    }
+
+    &-item {
+      width: 12.5%;
+      @include flex(column, nowrap, center, start, 4px);
+      cursor: pointer;
+
+      &-btn {
+        width: 100%;
+        height: 6px;
+        background-color: var(--stroke);
+      }
+
+      &-name {
+        font-family: nassim-normal;
+        font-size: 19px;
+        color: var(--secondary);
+      }
+
+      &--active {
+        .main-slider__pagination-item-btn {
+          background-color: var(--pagination-color);
+        }
+        .main-slider__pagination-item-name {
+          color: var(--pagination-color);
+        }
+      }
+
+      &:hover {
+        .main-slider__pagination-item-btn {
+          background-color: var(--pagination-color);
+        }
+        .main-slider__pagination-item-name {
+          color: var(--pagination-color);
+        }
+      }
+    }
+
+    &-ads {
+      width: 100%;
+      padding: 0 4px;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 }

@@ -7,12 +7,12 @@
   @include flex(column, nowrap, center, start, 4px);
   cursor: pointer;
 
-  &__title--container {
+  &__title-container {
     @include card-title;
   }
 
   &__content {
-    &--container {
+    &-container {
       width: 100%;
       @include flex(row, nowrap, start, space-between, 12px);
       padding: 12px 8px;
@@ -26,7 +26,7 @@
       }
     }
 
-    &--image {
+    &-image {
       width: 100px;
       height: 75px;
       overflow: hidden;
@@ -41,7 +41,7 @@
       }
     }
 
-    &--text {
+    &-text {
       width: calc(100% - 100px);
       @include flex(column, nowrap, start, start, 0px);
 
@@ -67,7 +67,7 @@
     }
   }
 
-  &:hover .cards__title--container > span:first-child {
+  &:hover .cards__title-container > span:first-child {
     transform: translateX(-6px);
   }
 }

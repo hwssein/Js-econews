@@ -1,30 +1,33 @@
-const partialCardsContainer = document.querySelector(
-  ".partial__cards--wrapper"
-);
-
-const card = (data) => {
-  partialCardsContainer.innerHTML = "";
+const card = (data, path) => {
+  const pathElement = document.querySelector(path);
+  pathElement.innerHTML = "";
 
   data.forEach((item) => {
     const jsxData = `
         <div class="cards">
-            <div class="cards__title--container">
-                <span>
-                    <i class="${item.icon}"></i>
-                    <span>${item.title}</span>
+          ${
+            item.title &&
+            `<div class="cards__title-container">
+              <span>
+                <i class="${item.icon}"></i>
+                <span>${item.title}</span>
                 </span>
 
                 <span>اطلاعات بیشتر</span>
-            </div>
+             </div>`
+          }
 
-            <div class="cards__content--container" style="--custom-color: var(${
-              item.color
-            });">
-                <div class="cards__content--image">
+            <div class="cards__content-container" style="${
+              item.title
+                ? `--custom-color: var(${item.color})`
+                : "border-top: none"
+            }">
+             
+                <div class="cards__content-image">
                     <img src=${item.image} alt=${item.headline} />
                 </div>
 
-                <div class="cards__content--text">
+                <div class="cards__content-text">
                     <span>${item.headline ? item.headline : ""}</span>
                     <span>${item.description}</span>
                 </div>
@@ -32,10 +35,8 @@ const card = (data) => {
         </div>
 
     `;
-    partialCardsContainer.innerHTML += jsxData;
+    pathElement.innerHTML += jsxData;
   });
-
-  console.log(data[0].image);
 };
 
 export default card;
