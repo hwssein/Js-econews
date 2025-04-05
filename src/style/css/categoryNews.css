@@ -43,7 +43,7 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: start;
-  gap: 4px;
+  gap: 8px;
   max-height: 33px;
   border-bottom: 1px solid var(--stroke);
   padding: 7px 0px 5px;

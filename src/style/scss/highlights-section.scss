@@ -1,0 +1,147 @@
+@use "variables" as *;
+@use "mixin" as *;
+@use "sass:color" as *;
+
+.highlights {
+  width: 100%;
+  max-width: 1246px;
+  @include flex(column, nowrap, center, start, 16px);
+  margin-top: 16px;
+  padding: 0 8px;
+
+  &__item {
+    width: 100%;
+    border-top: 3px solid var(--custom-color);
+    @include flex(column, nowrap, center, start, 0px);
+
+    &-header {
+      width: 100%;
+      @include flex(row, wrap, center, space-between, 0px);
+
+      &:hover .highlights__item-header-title {
+        transform: translateX(-6px);
+      }
+
+      &-title {
+        width: 50%;
+        @include flex(row, nowrap, center, start, 8px);
+        color: var(--custom-color);
+        padding: 4px 0;
+        transition: all 0.4s ease;
+
+        span {
+          font-size: 20px;
+          @include flex(row, nowrap, center, start, 8px);
+          cursor: pointer;
+        }
+
+        i {
+          font-size: 15px;
+        }
+      }
+
+      &-config {
+        width: 50%;
+        @include flex(row, nowrap, center, end, 8px);
+
+        & span {
+          background-color: var(--stroke);
+          color: var(--secondary);
+          padding: 8px 16px;
+          @include flex();
+          cursor: pointer;
+
+          &:first-child:hover {
+            background-color: orange;
+            color: var(--bg-color);
+          }
+          &:last-child:hover {
+            background-color: var(--menu-color);
+            color: var(--bg-color);
+          }
+        }
+      }
+
+      &-headline {
+        width: 100%;
+
+        ul {
+          width: 100%;
+          overflow-x: auto;
+          white-space: nowrap;
+          padding: 8px;
+          background-color: var(--stroke);
+          @include flex(row, nowrap, center, start, 16px);
+
+          li {
+            @include flex(row, nowrap, center, start, 0px);
+            cursor: pointer;
+            flex-shrink: 0;
+
+            &:hover {
+              color: var(--custom-color);
+            }
+          }
+        }
+      }
+    }
+
+    &-image {
+      width: 100%;
+      background-color: #fff;
+      @include flex();
+      margin-top: 8px;
+      padding: 4px;
+      border-left: 1px solid var(--stroke);
+      border-bottom: 1px solid var(--stroke);
+
+      &:hover .highlights__item-image-content {
+        color: var(--custom-color);
+      }
+
+      &-container {
+        width: 100%;
+        overflow: hidden;
+        cursor: pointer;
+        & img {
+          width: 100%;
+          @include image-zoom;
+        }
+      }
+
+      &-content {
+        width: 100%;
+        text-align: right;
+        font-size: 17px;
+        padding: 8px;
+        margin: 0;
+      }
+    }
+
+    &-card {
+      display: none;
+    }
+
+    &-category-news {
+      width: 100%;
+
+      & .category-news__content-container {
+        padding-top: 8px;
+
+        & li {
+          &:hover {
+            color: var(--custom-color);
+            border-bottom: 1px solid var(--custom-color);
+          }
+          i {
+            color: var(--custom-color);
+          }
+        }
+      }
+    }
+
+    &-ads {
+      width: 100%;
+    }
+  }
+}

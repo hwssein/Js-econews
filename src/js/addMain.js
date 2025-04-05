@@ -13,17 +13,25 @@ import partialCardData from "../constant/partialCardDate.js";
 
 import tooltipConfig from "../config/tooltipConfig.js";
 
+import highlightsCard from "../components/module/highlights-card.js";
+import highlightsData from "../constant/highlightsData.js";
+
 const addMain = async () => {
   const mainEl = document.getElementById("main");
 
   try {
-    const [mainSliderElement, partialElement] = await Promise.all([
-      getHtmlUrl("src/components/template/mainSlider.html"),
-      getHtmlUrl("src/components/template/partial.html"),
-    ]);
+    const [mainSliderElement, partialElement, highlightsElement] =
+      await Promise.all([
+        getHtmlUrl("src/components/template/mainSlider.html"),
+        getHtmlUrl("src/components/template/partial.html"),
+        getHtmlUrl("src/components/template/highlights.html"),
+      ]);
 
     mainEl.innerHTML = "";
-    mainEl.insertAdjacentHTML("afterbegin", mainSliderElement + partialElement);
+    mainEl.insertAdjacentHTML(
+      "afterbegin",
+      mainSliderElement + partialElement + highlightsElement
+    );
 
     mainSliderSlides(mainSliderData);
     mainSliderHandler(true);
@@ -32,6 +40,8 @@ const addMain = async () => {
     card(partialCardData, ".partial__cards-wrapper");
 
     tooltipConfig();
+
+    highlightsCard(highlightsData);
   } catch (error) {
     console.log(error);
 

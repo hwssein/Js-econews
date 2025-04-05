@@ -39,7 +39,7 @@
 
       li {
         width: 100%;
-        @include flex(row, nowrap, center, start, 4px);
+        @include flex(row, nowrap, center, start, 8px);
         max-height: 33px;
         border-bottom: 1px solid var(--stroke);
         padding: 7px 0px 5px;

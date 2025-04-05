@@ -27,7 +27,7 @@ const categoryNews = (data, path) => {
                           (news) =>
                             `
                         <li>
-                          <i class="fa-solid fa-circle fa-2xs" style="--custom-color:var(--chart-${data.id})"></i>
+                          <i class="fa-solid fa-circle fa-2xs"></i>
                             <span>${news}</span>
                         </li>
                         `
