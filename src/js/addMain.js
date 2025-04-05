@@ -11,6 +11,8 @@ import mainSliderPagination from "../components/module/mainSliderPagination.js";
 import card from "../components/module/card.js";
 import partialCardData from "../constant/partialCardDate.js";
 
+import tooltipConfig from "../config/tooltipConfig.js";
+
 const addMain = async () => {
   const mainEl = document.getElementById("main");
 
@@ -28,6 +30,8 @@ const addMain = async () => {
     mainSliderPagination(mainSliderConfig);
 
     card(partialCardData, ".partial__cards-wrapper");
+
+    tooltipConfig();
   } catch (error) {
     console.log(error);
 

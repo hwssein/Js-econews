@@ -161,4 +161,52 @@ main, footer {
   color: red;
 }
 
+.tooltip__chart-custom {
+  --bs-tooltip-bg: var(--menu-color);
+  --bs-tooltip-color: var(--bg-color);
+  --bs-tooltip-border-radius: 0;
+  --bs-tooltip-opacity: 1;
+}
+.tooltip__chart-custom .tooltip-inner {
+  font-family: nassim-normal;
+  font-size: 12px;
+}
+.tooltip__price-custom {
+  --bs-tooltip-bg: #fff;
+  --bs-tooltip-border-radius: 0;
+  --bs-tooltip-opacity: 1;
+}
+.tooltip__price-custom .tooltip-inner {
+  font-family: nassim-normal;
+  font-size: 12px;
+  color: #000;
+  width: 150px;
+  border: 1px solid var(--stroke);
+}
+.tooltip__price-custom .tooltip-inner > span {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 0px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--stroke);
+}
+.tooltip__price-custom .tooltip-inner li {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--stroke);
+}
+.tooltip__price-custom .tooltip-inner li span:last-child {
+  background-color: var(--stroke);
+  padding: 4px;
+}
+
 /*# sourceMappingURL=global.css.map */

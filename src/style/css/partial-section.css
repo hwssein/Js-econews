@@ -128,7 +128,7 @@
 .partial__market-tabs .nav-link:hover {
   box-shadow: 0 0 13px #c0c0c0 inset;
   border-top: 3px solid var(--primary);
-  background-color: #eee;
+  background-color: var(--bg-color);
 }
 .partial__market-tab-content {
   width: 100%;
@@ -195,29 +195,44 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 4px;
   font-family: yekan;
   font-size: 12px;
   padding: 8px 8px 8px 0;
   white-space: nowrap;
+  cursor: default;
 }
 .partial__market-list-item > span > img {
   width: 16px;
   height: 11px;
 }
 .partial__market-list-item > span:first-child {
+  width: 100%;
   font-family: nassim-normal;
   font-size: 13px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+}
+@media (min-width: 1200px) {
+  .partial__market-list-item > span {
+    justify-content: end;
+  }
 }
 .partial__market-list-item:first-child {
-  background-color: rgb(229.9, 229.9, 229.9);
+  background-color: var(--bg-color);
 }
 .partial__market-list-item:first-child span {
   font-size: 16px;
   font-family: nassim-normal;
 }
+.partial__market-list-item:first-child:hover {
+  background-color: rgb(229.9, 229.9, 229.9);
+}
 .partial__market-list-item span .fa-chart-column {
+  width: 100%;
   padding: 3px 4px 3px 5px;
   border: 1px solid var(--stroke);
   font-size: 1rem;
@@ -238,6 +253,8 @@
 @media (min-width: 1200px) {
   .partial__market-list-item > span:last-child {
     display: block;
+    width: 40px;
+    margin: 0 5px 0 10px;
   }
 }
 .partial__market-wrapper {

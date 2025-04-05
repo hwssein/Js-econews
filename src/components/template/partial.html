@@ -12,12 +12,12 @@
     <div class="nav nav-tabs partial__market-tabs" id="nav-tab" role="tablist">
       <button
         class="nav-link active"
-        id="nav-gold-tab"
+        id="nav-gold-res-tab"
         data-bs-toggle="tab"
-        data-bs-target="#nav-gold"
+        data-bs-target="#nav-gold-res"
         type="button"
         role="tab"
-        aria-controls="nav-gold"
+        aria-controls="nav-gold-res"
         aria-selected="true"
       >
         طلا
@@ -25,12 +25,12 @@
 
       <button
         class="nav-link"
-        id="nav-coin-tab"
+        id="nav-coin-res-tab"
         data-bs-toggle="tab"
-        data-bs-target="#nav-coin"
+        data-bs-target="#nav-coin-res"
         type="button"
         role="tab"
-        aria-controls="nav-coin"
+        aria-controls="nav-coin-res"
         aria-selected="false"
       >
         سکه
@@ -66,9 +66,9 @@
     <div id="nav-tabContent" class="tab-content partial__market-tab-content">
       <div
         class="tab-pane show active"
-        id="nav-gold"
+        id="nav-gold-res"
         role="tabpanel"
-        aria-labelledby="nav-gold-tab"
+        aria-labelledby="nav-gold-res-tab"
         tabindex="0"
       >
         <ul class="partial__market-list">
@@ -118,9 +118,9 @@
 
       <div
         class="tab-pane"
-        id="nav-coin"
+        id="nav-coin-res"
         role="tabpanel"
-        aria-labelledby="nav-coin-tab"
+        aria-labelledby="nav-coin-res-tab"
         tabindex="0"
       >
         <ul class="partial__market-list">
@@ -387,41 +387,82 @@
                   <span>تغییر</span>
                   <span>نمودار</span>
                 </li>
-                <li class="partial__market-list-item">
+                <li
+                  class="partial__market-list-item"
+                  data-bs-toggle="tooltip-price"
+                  data-bs-placement="top"
+                  data-asset="اونس طلا"
+                  data-time1="3330.1"
+                  data-time2="3328.5"
+                  data-time3="3331"
+                >
                   <span>اونس طلا</span>
                   <span class="price-up">
                     <span> ۳۰۲۰.۹۴ </span>
                     <i class="fa-solid fa-caret-up fa-xs"></i>
                   </span>
                   <span>۱.۰۸ (۰.۰۴٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>مثقال طلا</span>
                   <span>۳۴۷۲۹</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>طلا ۱۸ عیار</span>
                   <span>۸۰۱۷۳۰۰</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>طلا ۲۴ عیار</span>
                   <span>۱۰۶۸۹۵۲۱</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
-                <li class="partial__market-list-item">
+                <li
+                  class="partial__market-list-item"
+                  data-bs-toggle="tooltip-price"
+                  data-bs-placement="top"
+                  data-asset="اونس نقره"
+                  data-time1="33"
+                  data-time2="32.08"
+                  data-time3="31.9"
+                >
                   <span>اونس نقره</span>
                   <span class="price-down">
                     <span> ۳۳.۷۳۷۵ </span>
                     <i class="fa-solid fa-caret-down fa-xs"></i>
                   </span>
                   <span>۰.۰۱ (۰.۰۳٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
               </ul>
             </div>
@@ -444,31 +485,56 @@
                   <span>سکه امامی</span>
                   <span>۹۷٬۰۰۰٬۰۰۰</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>سکه بهار آزادی</span>
                   <span>۹۰٬۰۰۰٬۰۰۰</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>سکه نیم</span>
                   <span>۶۰٬۰۰۰٬۰۰۰</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>سکه ربع</span>
                   <span>۳۳٬۰۰۰٬۰۰۰</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>سکه گرمی</span>
                   <span>۱۵٬۵۰۰٬۰۰۰</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
               </ul>
             </div>
@@ -540,7 +606,12 @@
                   </span>
                   <span>۲۸۵,۰۰۰</span>
                   <span>۰.۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -549,7 +620,12 @@
                   </span>
                   <span>۳۰۰,۳۲۵</span>
                   <span>۰.۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -558,7 +634,12 @@
                   </span>
                   <span>۵۷۱۱۸</span>
                   <span>۰.۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -567,7 +648,12 @@
                   </span>
                   <span>۷۷,۶۰۴</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -576,7 +662,12 @@
                   </span>
                   <span>۴۱,۱۳۳</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -585,7 +676,12 @@
                   </span>
                   <span>۱۶,۹۷۷</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -594,7 +690,12 @@
                   </span>
                   <span>۳۶۲۳۳</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
               </ul>
             </div>
@@ -620,7 +721,12 @@
                   </span>
                   <span>۱٫۰۸</span>
                   <span>۰٫۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -629,7 +735,12 @@
                   </span>
                   <span>۱٫۲۶</span>
                   <span>۰٫۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -638,7 +749,12 @@
                   </span>
                   <span>۰٫۲۷</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -647,7 +763,12 @@
                   </span>
                   <span>۰٫۱۴</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -656,7 +777,12 @@
                   </span>
                   <span>۰٫۰۶</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
                 <li class="partial__market-list-item">
                   <span>
@@ -665,7 +791,12 @@
                   </span>
                   <span>۰٫۶۷</span>
                   <span>۰ (۰٪)</span>
-                  <span><i class="fa-solid fa-chart-column"></i></span>
+                  <span
+                    data-bs-toggle="tooltip-chart"
+                    data-bs-placement="top"
+                    data-bs-title="نمودار"
+                    ><i class="fa-solid fa-chart-column"></i
+                  ></span>
                 </li>
               </ul>
             </div>

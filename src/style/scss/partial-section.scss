@@ -80,7 +80,7 @@
         &:hover {
           box-shadow: 0 0 13px #c0c0c0 inset;
           border-top: 3px solid var(--primary);
-          background-color: #eee;
+          background-color: var(--bg-color);
         }
       }
     }
@@ -131,11 +131,12 @@
 
         & > span {
           width: 100%;
-          @include flex(row, nowrap, center, start, 4px);
+          @include flex(row, nowrap, center, center, 4px);
           font-family: yekan;
           font-size: 12px;
           padding: 8px 8px 8px 0;
           white-space: nowrap;
+          cursor: default;
 
           & > img {
             width: 16px;
@@ -143,20 +144,31 @@
           }
 
           &:first-child {
+            width: 100%;
             font-family: nassim-normal;
             font-size: 13px;
+            @include flex(row, nowrap, center, start, 0);
+          }
+
+          @include respond-to(large) {
+            justify-content: end;
           }
         }
 
         &:first-child {
-          background-color: color.scale($bg-color, $lightness: -5%);
+          background-color: var(--bg-color);
           span {
             font-size: 16px;
             font-family: nassim-normal;
           }
+
+          &:hover {
+            background-color: color.scale($bg-color, $lightness: -5%);
+          }
         }
 
         & span .fa-chart-column {
+          width: 100%;
           padding: 3px 4px 3px 5px;
           border: 1px solid var(--stroke);
           font-size: 1rem;
@@ -180,6 +192,8 @@
         @include respond-to(large) {
           & > span:last-child {
             display: block;
+            width: 40px;
+            margin: 0 5px 0 10px;
           }
         }
       }
