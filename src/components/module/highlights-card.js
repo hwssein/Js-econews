@@ -1,3 +1,4 @@
+import card from "./card.js";
 import categoryNews from "./categoryNews.js";
 
 const highlightsCard = (data) => {
@@ -10,17 +11,45 @@ const highlightsCard = (data) => {
       <div class="highlights__item" style="--custom-color:var(${item.color})">
 
         <div class="highlights__item-header">
-          <div class="highlights__item-header-title">
+          <div class="highlights__item-header-title order-1 order-md-1">
             <span><i class="fa-solid fa-bars"></i> ${item.title}</span>
             <i class="fa-solid fa-angle-left"></i>
           </div>
 
-          <div class="highlights__item-header-config">
-            <span><i class="fa-solid fa-rss"></i></span>
-            <span><i class="fa-solid fa-gear"></i></span>
+          <div class="highlights__item-header-config order-2 order-md-3">
+
+            <div class="highlights__item-header-config-content">
+              <span><i class="fa-solid fa-rss"></i></span>
+              <span class="highlights__gear"><i class="fa-solid fa-gear"></i></span>
+            </div>
+
+
+            <div class="highlights__item-header-config-option">
+              <ul>
+                  <li>
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>مخفی کردن شاخه</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-angle-up"></i>
+                    <span>انتقال کادر به بالا</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <span>انتقال کادر به پپایین</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-plus"></i>
+                    <span>افزودن کادر جدید</span>
+                  </li>
+              </ul>
+            </div>
           </div>
 
-          <div class="highlights__item-header-headline">
+          <div class="highlights__item-header-headline order-3 order-md-2">
             <ul>
               ${item.headline
                 .map((headline) => `<li>${headline}</li>`)
@@ -35,28 +64,52 @@ const highlightsCard = (data) => {
             <div class="highlights__item-image-container">
               <img src="${item.image.url}" alt="${item.title} image" />
             </div>
-            <p class="highlights__item-image-content">
-              ${item.image.description}
-            </p>
-          </div>
-
-          <div class="highlights__item-card"></div>
-
-          <div id="highlights-item-category-news" class="highlights__item-category-news"></div>
-
-          <div class="highlights__item-ads">
-            <div class="highlights__item-image-container">
-              <img src="${item.ads.url}" alt="${item.title} image" />
-            </div>
 
             ${
-              item.ads.description
-                ? `<p class="highlights__item-image-content">
-                     ${item.ads.description}
-                   </p>`
+              item.image.title
+                ? `<h3 class="highlights__item-image-title">${item.image.title}</h3>`
                 : ""
             }
+
+            <h2 class="highlights__item-image-description">
+              ${item.image.description}
+            </h2>
           </div>
+
+          <div id="highlights__item-card-${
+            item.id
+          }" class="highlights__item-card"></div>
+
+          <div id="highlights-item-category-news-${
+            item.id
+          }" class="highlights__item-category-news"></div>
+
+          ${
+            item.ads.description
+              ? `
+              <div class="highlights__item-image">
+                <div class="highlights__item-image-container">
+                  <img src="${item.ads.url}" alt="${item.title} image" />
+                </div>
+
+            ${
+              item.ads.title
+                ? `<h3 class="highlights__item-image-title">${item.ads.title}</h3>`
+                : ""
+            }
+                <h2 class="highlights__item-image-description">
+                  ${item.ads.description}
+                </h2>
+              </div>
+            `
+              : `
+              <div class="highlights__item-ads">
+                <img src="${item.ads.url}" alt="${item.title} image" />
+              </div>
+              `
+          }
+
+
 
         </div>
       </div>
@@ -64,7 +117,39 @@ const highlightsCard = (data) => {
 
     highlightsCardContainer.innerHTML += jsxData;
 
-    categoryNews(item.categoryNews, "#highlights-item-category-news");
+    card(item.cards, `#highlights__item-card-${item.id}`);
+    categoryNews(
+      item.categoryNews,
+      `#highlights-item-category-news-${item.id}`
+    );
+  });
+
+  const gearIcon = document.querySelectorAll(".highlights__gear");
+
+  gearIcon.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      const cardElement = item.closest(".highlights__item");
+
+      const configOptionContainer = cardElement.querySelector(
+        ".highlights__item-header-config-option"
+      );
+
+      configOptionContainer.style.display = "flex";
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    const allConfigOptions = document.querySelectorAll(
+      ".highlights__item-header-config-option"
+    );
+
+    allConfigOptions.forEach((configOption) => {
+      if (!configOption.contains(e.target)) {
+        configOption.style.display = "none";
+      }
+    });
   });
 };
 

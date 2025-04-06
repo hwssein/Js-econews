@@ -14,12 +14,24 @@
     border-top: 3px solid var(--custom-color);
     @include flex(column, nowrap, center, start, 0px);
 
+    &:hover .highlights__item-header-title {
+      transform: translateX(-6px);
+    }
+
+    @include respond-to(desktop) {
+      &:hover .highlights__item-header-headline {
+        transform: translateX(-6px);
+      }
+    }
+
     &-header {
       width: 100%;
       @include flex(row, wrap, center, space-between, 0px);
 
-      &:hover .highlights__item-header-title {
-        transform: translateX(-6px);
+      @include respond-to(tablet) {
+        flex-wrap: nowrap;
+        justify-content: start;
+        gap: 8px;
       }
 
       &-title {
@@ -29,10 +41,16 @@
         padding: 4px 0;
         transition: all 0.4s ease;
 
+        @include respond-to(tablet) {
+          width: auto;
+          order: 1;
+        }
+
         span {
           font-size: 20px;
           @include flex(row, nowrap, center, start, 8px);
           cursor: pointer;
+          white-space: nowrap;
         }
 
         i {
@@ -42,28 +60,87 @@
 
       &-config {
         width: 50%;
-        @include flex(row, nowrap, center, end, 8px);
+        @include flex(column, nowrap, center, start, 8px);
+        position: relative;
 
-        & span {
-          background-color: var(--stroke);
-          color: var(--secondary);
-          padding: 8px 16px;
-          @include flex();
-          cursor: pointer;
+        @include respond-to(tablet) {
+          width: auto;
+          order: 3;
+          flex-grow: 1;
+        }
 
-          &:first-child:hover {
-            background-color: orange;
-            color: var(--bg-color);
+        &-content {
+          width: 100%;
+          @include flex(row, nowrap, center, end, 8px);
+
+          & span {
+            background-color: var(--stroke);
+            color: var(--secondary);
+            padding: 8px 16px;
+            @include flex();
+            cursor: pointer;
+
+            &:first-child:hover {
+              background-color: orange;
+              color: var(--bg-color);
+            }
+            &:last-child:hover {
+              background-color: var(--menu-color);
+              color: var(--bg-color);
+            }
           }
-          &:last-child:hover {
-            background-color: var(--menu-color);
-            color: var(--bg-color);
+        }
+
+        &-option {
+          display: none;
+          width: 200px;
+          background-color: #fff;
+          border: 1px solid var(--stroke);
+          position: absolute;
+          top: 35px;
+          left: 0;
+          padding: 8px 8px 8px 0;
+          z-index: 99;
+
+          ul {
+            width: 100%;
+            @include flex(column, nowrap, center, start, 4px);
+
+            li {
+              width: 100%;
+              @include flex(row, nowrap, center, start, 8px);
+              padding: 4px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: var(--stroke);
+              }
+
+              i {
+                width: 20px;
+                height: 20px;
+                @include flex;
+                color: #fff;
+                background-color: var(--menu-color);
+                border-radius: 100%;
+              }
+            }
           }
         }
       }
 
       &-headline {
         width: 100%;
+
+        @include respond-to(tablet) {
+          width: 400px;
+          order: 2;
+          transition: all 0.4s ease;
+        }
+        @include respond-to(desktop) {
+          width: auto;
+          order: 2;
+        }
 
         ul {
           width: 100%;
@@ -72,6 +149,11 @@
           padding: 8px;
           background-color: var(--stroke);
           @include flex(row, nowrap, center, start, 16px);
+
+          @include respond-to(tablet) {
+            overflow: hidden;
+            background-color: var(--bg-color);
+          }
 
           li {
             @include flex(row, nowrap, center, start, 0px);
@@ -89,7 +171,7 @@
     &-content-container {
       width: 100%;
       @include flex(column, nowrap, center, start, 0px);
-      margin: 16px 0;
+      margin: 8px 0 16px;
 
       @include respond-to(tablet) {
         height: 240px;
@@ -99,6 +181,11 @@
         align-items: start;
         justify-content: space-between;
         gap: 16px;
+      }
+
+      @include respond-to(desktop) {
+        height: 300px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
     }
 
@@ -110,8 +197,12 @@
       padding: 4px;
       border-left: 1px solid var(--stroke);
       border-bottom: 1px solid var(--stroke);
+      cursor: pointer;
 
-      &:hover .highlights__item-image-content {
+      &:hover .highlights__item-image-title {
+        color: var(--custom-color);
+      }
+      &:hover .highlights__item-image-description {
         color: var(--custom-color);
       }
 
@@ -123,28 +214,52 @@
       &-container {
         width: 100%;
         overflow: hidden;
-        cursor: pointer;
         & img {
           width: 100%;
           @include image-zoom;
         }
       }
 
-      &-content {
+      &-title {
+        width: 100%;
+        text-align: right;
+        font-size: 1rem;
+        font-family: nassim-normal;
+        color: var(--secondary);
+        padding: 8px 8px 0;
+        margin: 0;
+      }
+
+      &-description {
         width: 100%;
         text-align: right;
         font-size: 17px;
-        padding: 8px;
+        padding: 0px 8px;
         margin: 0;
+        margin-top: 8px;
 
         @include respond-to(tablet) {
           font-size: 19px;
+        }
+        @include respond-to(desktop) {
+          font-size: 23px;
         }
       }
     }
 
     &-card {
       display: none;
+
+      @include respond-to(desktop) {
+        width: 100%;
+        @include flex(column, nowrap, center, start, 0px);
+
+        & .cards {
+          &:hover .cards__content-text > span {
+            color: var(--custom-color);
+          }
+        }
+      }
     }
 
     &-category-news {
@@ -172,6 +287,9 @@
 
     &-ads {
       width: 100%;
+      img {
+        width: 100%;
+      }
 
       @include respond-to(tablet) {
         height: 100%;

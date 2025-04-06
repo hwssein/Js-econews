@@ -157,13 +157,15 @@
 
         &:first-child {
           background-color: var(--bg-color);
+          position: sticky;
+          top: 0;
           span {
             font-size: 16px;
             font-family: nassim-normal;
           }
 
           &:hover {
-            background-color: color.scale($bg-color, $lightness: -5%);
+            background-color: var(--bg-color);
           }
         }
 

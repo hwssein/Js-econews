@@ -223,13 +223,15 @@
 }
 .partial__market-list-item:first-child {
   background-color: var(--bg-color);
+  position: sticky;
+  top: 0;
 }
 .partial__market-list-item:first-child span {
   font-size: 16px;
   font-family: nassim-normal;
 }
 .partial__market-list-item:first-child:hover {
-  background-color: rgb(229.9, 229.9, 229.9);
+  background-color: var(--bg-color);
 }
 .partial__market-list-item span .fa-chart-column {
   width: 100%;
