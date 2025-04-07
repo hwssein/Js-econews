@@ -13,7 +13,7 @@ import partialCardData from "../constant/partialCardDate.js";
 
 import tooltipConfig from "../config/tooltipConfig.js";
 
-import highlightsCard from "../components/module/highlightsCard.js";
+import highlightsItemCard from "../components/module/highlightsItemCard.js";
 import highlightsData from "../constant/highlightsData.js";
 
 const addMain = async () => {
@@ -41,7 +41,7 @@ const addMain = async () => {
 
     tooltipConfig();
 
-    highlightsCard(highlightsData);
+    highlightsItemCard(highlightsData);
   } catch (error) {
     console.log(error);
 

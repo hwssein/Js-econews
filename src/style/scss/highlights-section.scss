@@ -11,6 +11,11 @@
 
   &__item {
     width: 100%;
+    @include flex(column, nowrap, center, start, 16px);
+  }
+
+  &__item-container {
+    width: 100%;
     border-top: 3px solid var(--custom-color);
     @include flex(column, nowrap, center, start, 0px);
 
@@ -23,7 +28,9 @@
         transform: translateX(-6px);
       }
     }
+  }
 
+  &__item {
     &-header {
       width: 100%;
       @include flex(row, wrap, center, space-between, 0px);
@@ -184,7 +191,7 @@
       }
 
       @include respond-to(desktop) {
-        height: 300px;
+        height: 306px;
         grid-template-columns: repeat(4, minmax(0, 1fr));
       }
     }
@@ -247,13 +254,12 @@
       &-description {
         width: 100%;
         text-align: right;
-        font-size: 17px;
         padding: 0px 8px;
         margin: 0;
         margin-top: 8px;
 
         @include respond-to(tablet) {
-          font-size: 19px;
+          font-size: 1rem;
         }
         @include respond-to(desktop) {
           font-size: 23px;
@@ -261,39 +267,75 @@
       }
     }
 
-    &-card {
+    &-card-container {
       display: none;
 
       @include respond-to(desktop) {
         width: 100%;
-        @include flex(column, nowrap, center, start, 0px);
+        display: block;
+        height: calc(100% - 1px);
+        padding: 0 8px;
+        overflow: hidden;
+        background-color: #fff;
+        border-bottom: 1px solid var(--stroke);
+        border-left: 1px solid var(--stroke);
+      }
+    }
 
-        & .cards {
-          &:hover .cards__content-text > span {
-            color: var(--custom-color);
-          }
+    &-card {
+      width: 100%;
+      height: 100%;
+      @include flex(column, nowrap, center, space-between, 0px);
+
+      & .cards {
+        &:hover .cards__content-text > span {
+          color: var(--custom-color);
+        }
+
+        &:last-child .cards__content-container {
+          border-bottom: none;
+        }
+
+        .cards__content-container {
+          border-left: none;
         }
       }
     }
 
+    &-category-news-container {
+      width: 100%;
+      height: calc(100% - 1px);
+      overflow: hidden;
+      border-bottom: 1px solid var(--stroke);
+      border-left: 1px solid var(--stroke);
+    }
+
     &-category-news {
       width: 100%;
+      height: 100%;
 
       @include respond-to(tablet) {
         height: 100%;
         overflow: hidden;
       }
 
-      & .category-news__content-container {
-        padding-top: 8px;
+      & .category-news {
+        justify-content: center;
+        .category-news__content-container {
+          padding-top: 8px;
 
-        & li {
-          &:hover {
-            color: var(--custom-color);
-            border-bottom: 1px solid var(--custom-color);
-          }
-          i {
-            color: var(--custom-color);
+          & li {
+            &:hover {
+              color: var(--custom-color);
+              border-bottom: 1px solid var(--custom-color);
+
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+            i {
+              color: var(--custom-color);
+            }
           }
         }
       }

@@ -253,9 +253,21 @@
       font-family: yekan;
       padding: 10px 16px;
       background-color: #fff;
-      border-bottom: 1px solid var(--stroke);
-      border-left: 1px solid var(--stroke);
+      border: 1px solid var(--stroke);
       border-top: 3px solid var(--primary);
+      appearance: none;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+      &::placeholder {
+        color: color.scale($secondary, $lightness: 30%);
+      }
+
+      &:focus {
+        border-top-width: 4px;
+        border-color: var(--primary);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 3px 8px var(--primary);
+      }
 
       @include respond-to(tablet) {
         height: 58px;
@@ -337,6 +349,10 @@
         font-size: 17px;
         font-weight: bold;
         cursor: pointer;
+
+        &:hover {
+          background-color: color.scale($primary, $lightness: -10%);
+        }
 
         @include respond-to(tablet) {
           height: 45px;

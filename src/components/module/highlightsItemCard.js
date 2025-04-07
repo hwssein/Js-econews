@@ -2,13 +2,16 @@ import card from "./card.js";
 import categoryNews from "./categoryNews.js";
 import highlightsImageCard from "./highlightsImageCard.js";
 
-const highlightsCard = (data) => {
-  const highlightsCardContainer = document.querySelector(".highlights");
-  highlightsCardContainer.innerHTML = "";
+const highlightsItemCard = (data) => {
+  const highlightsItemCardContainer =
+    document.querySelector(".highlights__item");
+  highlightsItemCardContainer.innerHTML = "";
 
   data.forEach((item) => {
     const jsxData = `
-      <div class="highlights__item" style="--custom-color:var(${item.color})">
+      <div class="highlights__item-container" style="--custom-color:var(${
+        item.color
+      })">
         <div class="highlights__item-header">
 
           <div class="highlights__item-header-title order-1 order-md-1">
@@ -56,13 +59,19 @@ const highlightsCard = (data) => {
         <div class="highlights__item-content-container">
         ${highlightsImageCard(item.image)}
 
-          <div id="highlights__item-card-${
-            item.id
-          }" class="highlights__item-card"></div>
+          <div class="highlights__item-card-container">
+            <div id="highlights__item-card-${
+              item.id
+            }" class="highlights__item-card"></div>
+          </div>
 
-          <div id="highlights-item-category-news-${
-            item.id
-          }" class="highlights__item-category-news"></div>
+ 
+          <div class="highlights__item-category-news-container">
+            <div id="highlights-item-category-news-${
+              item.id
+            }" class="highlights__item-category-news"></div>
+          </div>
+
 
           ${
             item.ads.description
@@ -77,7 +86,7 @@ const highlightsCard = (data) => {
       </div>
     `;
 
-    highlightsCardContainer.innerHTML += jsxData;
+    highlightsItemCardContainer.innerHTML += jsxData;
 
     card(item.cards, `#highlights__item-card-${item.id}`);
     categoryNews(
@@ -111,4 +120,4 @@ const highlightsCard = (data) => {
   });
 };
 
-export default highlightsCard;
+export default highlightsItemCard;
