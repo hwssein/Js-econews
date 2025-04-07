@@ -56,9 +56,13 @@
   text-overflow: ellipsis;
   width: 100%;
 }
-.category-news__content-container li i {
+.category-news__content-container li i.fa-circle {
   color: var(--custom-color);
   font-size: 8px;
+}
+.category-news__content-container li i.fa-play {
+  color: var(--custom-color);
+  font-size: 10px;
 }
 .category-news__content-container li:hover {
   color: var(--primary);

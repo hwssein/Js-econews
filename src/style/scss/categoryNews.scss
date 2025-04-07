@@ -53,9 +53,13 @@
           width: 100%;
         }
 
-        i {
+        i.fa-circle {
           color: var(--custom-color);
           font-size: 8px;
+        }
+        i.fa-play {
+          color: var(--custom-color);
+          font-size: 10px;
         }
 
         &:hover {

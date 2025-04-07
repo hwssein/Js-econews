@@ -1,50 +1,45 @@
 import card from "./card.js";
 import categoryNews from "./categoryNews.js";
+import highlightsImageCard from "./highlightsImageCard.js";
 
 const highlightsCard = (data) => {
   const highlightsCardContainer = document.querySelector(".highlights");
-
   highlightsCardContainer.innerHTML = "";
 
   data.forEach((item) => {
     const jsxData = `
       <div class="highlights__item" style="--custom-color:var(${item.color})">
-
         <div class="highlights__item-header">
+
           <div class="highlights__item-header-title order-1 order-md-1">
             <span><i class="fa-solid fa-bars"></i> ${item.title}</span>
             <i class="fa-solid fa-angle-left"></i>
           </div>
 
           <div class="highlights__item-header-config order-2 order-md-3">
-
             <div class="highlights__item-header-config-content">
               <span><i class="fa-solid fa-rss"></i></span>
               <span class="highlights__gear"><i class="fa-solid fa-gear"></i></span>
             </div>
 
-
             <div class="highlights__item-header-config-option">
               <ul>
-                  <li>
-                    <i class="fa-solid fa-xmark"></i>
-                    <span>مخفی کردن شاخه</span>
-                  </li>
-
-                  <li>
-                    <i class="fa-solid fa-angle-up"></i>
-                    <span>انتقال کادر به بالا</span>
-                  </li>
-
-                  <li>
-                    <i class="fa-solid fa-angle-down"></i>
-                    <span>انتقال کادر به پپایین</span>
-                  </li>
-
-                  <li>
-                    <i class="fa-solid fa-plus"></i>
-                    <span>افزودن کادر جدید</span>
-                  </li>
+                <li>
+                  <i class="fa-solid fa-xmark"></i>
+                  <span>مخفی کردن شاخه</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-angle-up"></i>
+                  <span>انتقال کادر به بالا</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-angle-down"></i>
+                  <span>انتقال کادر به پایین</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-plus"></i>
+                  <span>افزودن کادر جدید</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -59,22 +54,7 @@ const highlightsCard = (data) => {
         </div>
 
         <div class="highlights__item-content-container">
-
-          <div class="highlights__item-image">
-            <div class="highlights__item-image-container">
-              <img src="${item.image.url}" alt="${item.title} image" />
-            </div>
-
-            ${
-              item.image.title
-                ? `<h3 class="highlights__item-image-title">${item.image.title}</h3>`
-                : ""
-            }
-
-            <h2 class="highlights__item-image-description">
-              ${item.image.description}
-            </h2>
-          </div>
+        ${highlightsImageCard(item.image)}
 
           <div id="highlights__item-card-${
             item.id
@@ -86,31 +66,13 @@ const highlightsCard = (data) => {
 
           ${
             item.ads.description
-              ? `
-              <div class="highlights__item-image">
-                <div class="highlights__item-image-container">
+              ? highlightsImageCard(item.ads)
+              : `
+                <div class="highlights__item-ads">
                   <img src="${item.ads.url}" alt="${item.title} image" />
                 </div>
-
-            ${
-              item.ads.title
-                ? `<h3 class="highlights__item-image-title">${item.ads.title}</h3>`
-                : ""
-            }
-                <h2 class="highlights__item-image-description">
-                  ${item.ads.description}
-                </h2>
-              </div>
-            `
-              : `
-              <div class="highlights__item-ads">
-                <img src="${item.ads.url}" alt="${item.title} image" />
-              </div>
               `
           }
-
-
-
         </div>
       </div>
     `;
@@ -125,17 +87,13 @@ const highlightsCard = (data) => {
   });
 
   const gearIcon = document.querySelectorAll(".highlights__gear");
-
   gearIcon.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.stopPropagation();
-
       const cardElement = item.closest(".highlights__item");
-
       const configOptionContainer = cardElement.querySelector(
         ".highlights__item-header-config-option"
       );
-
       configOptionContainer.style.display = "flex";
     });
   });

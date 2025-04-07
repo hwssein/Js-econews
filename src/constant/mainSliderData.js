@@ -32,6 +32,7 @@ const mainSliderData = [
     categoryNews: {
       id: 1,
       title: "اقتصاد",
+      video: false,
       content: [
         "کاهش ۲۸ درصدی ورودی سدها",
         "هواشناسی ایران۱۴۰۳/۱۲/۲۶؛ورود سامانه جدید بارشی از چهارشنبه",
@@ -94,6 +95,7 @@ const mainSliderData = [
       "بریتانیا",
     ],
   },
+
   {
     id: 2,
     subject: "سیاست",
@@ -127,6 +129,7 @@ const mainSliderData = [
     categoryNews: {
       id: 2,
       title: "سیاست",
+      video: false,
       content: [
         "تحریم‌های آمریکا علیه صنعت نفت ایران مبنا و اعتبار قانونی ندارد",
         "مهاجرانی: نیروهای متعهد هلال احمر خدمات حیاتی ارائه می‌دهند",
@@ -189,6 +192,7 @@ const mainSliderData = [
       "ویزای آمریکا",
     ],
   },
+
   {
     id: 3,
     subject: "فرهنگ",
@@ -222,6 +226,7 @@ const mainSliderData = [
     categoryNews: {
       id: 3,
       title: "فرهنگ",
+      video: false,
       content: [
         "کاهش ۲۸ درصدی ورودی سدها",
         "هواشناسی ایران۱۴۰۳/۱۲/۲۶؛ورود سامانه جدید بارشی از چهارشنبه",
@@ -284,6 +289,7 @@ const mainSliderData = [
       "بریتانیا",
     ],
   },
+
   {
     id: 4,
     subject: "فناوری",
@@ -317,6 +323,7 @@ const mainSliderData = [
     categoryNews: {
       id: 4,
       title: "فناوری",
+      video: false,
       content: [
         "تحریم‌های آمریکا علیه صنعت نفت ایران مبنا و اعتبار قانونی ندارد",
         "مهاجرانی: نیروهای متعهد هلال احمر خدمات حیاتی ارائه می‌دهند",
@@ -379,6 +386,7 @@ const mainSliderData = [
       "بریتانیا",
     ],
   },
+
   {
     id: 5,
     subject: "جامعه",
@@ -412,6 +420,7 @@ const mainSliderData = [
     categoryNews: {
       id: 5,
       title: "جامعه",
+      video: false,
       content: [
         "کاهش ۲۸ درصدی ورودی سدها",
         "هواشناسی ایران۱۴۰۳/۱۲/۲۶؛ورود سامانه جدید بارشی از چهارشنبه",
@@ -474,6 +483,7 @@ const mainSliderData = [
       "بریتانیا",
     ],
   },
+
   {
     id: 6,
     subject: "ورزش",
@@ -507,6 +517,7 @@ const mainSliderData = [
     categoryNews: {
       id: 6,
       title: "ورزش",
+      video: false,
       content: [
         "تحریم‌های آمریکا علیه صنعت نفت ایران مبنا و اعتبار قانونی ندارد",
         "مهاجرانی: نیروهای متعهد هلال احمر خدمات حیاتی ارائه می‌دهند",
@@ -569,6 +580,7 @@ const mainSliderData = [
       "بریتانیا",
     ],
   },
+
   {
     id: 7,
     subject: "سلامت",
@@ -602,6 +614,7 @@ const mainSliderData = [
     categoryNews: {
       id: 7,
       title: "سلامت",
+      video: false,
       content: [
         "کاهش ۲۸ درصدی ورودی سدها",
         "هواشناسی ایران۱۴۰۳/۱۲/۲۶؛ورود سامانه جدید بارشی از چهارشنبه",
@@ -664,6 +677,7 @@ const mainSliderData = [
       "بریتانیا",
     ],
   },
+
   {
     id: 8,
     subject: "استان ها",
@@ -697,6 +711,7 @@ const mainSliderData = [
     categoryNews: {
       id: 8,
       title: "استان‌ها",
+      video: false,
       content: [
         "تحریم‌های آمریکا علیه صنعت نفت ایران مبنا و اعتبار قانونی ندارد",
         "مهاجرانی: نیروهای متعهد هلال احمر خدمات حیاتی ارائه می‌دهند",

@@ -59,6 +59,7 @@
   width: 100px;
   height: 75px;
   overflow: hidden;
+  position: relative;
 }
 .cards__content-image img {
   width: 100%;
@@ -67,9 +68,24 @@
 .cards__content-image img:hover {
   transition: all 0.9s ease-in-out;
   transform-origin: center;
+  transform: scale(1.01);
 }
 .cards__content-image img:hover:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+}
+.cards__content-image .cards-tooltip {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--tooltip);
+  padding: 4px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-color);
+  opacity: 0.9;
+  font-size: 0.9rem;
 }
 .cards__content-text {
   width: calc(100% - 100px);

@@ -152,9 +152,10 @@
   cursor: pointer;
   transition: all 0.9s ease-in-out;
   transform-origin: center;
+  transform: scale(1.01);
 }
 .main-slider__image img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 .main-slider__image .image-tooltip {
   background-color: var(--custom-color);

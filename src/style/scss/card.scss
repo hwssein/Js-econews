@@ -30,6 +30,7 @@
       width: 100px;
       height: 75px;
       overflow: hidden;
+      position: relative;
 
       img {
         width: 100%;
@@ -38,6 +39,18 @@
         &:hover {
           @include image-zoom;
         }
+      }
+
+      & .cards-tooltip {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: var(--tooltip);
+        padding: 4px;
+        @include flex;
+        color: var(--bg-color);
+        opacity: 0.9;
+        font-size: 0.9rem;
       }
     }
 

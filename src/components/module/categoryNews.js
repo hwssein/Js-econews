@@ -27,7 +27,11 @@ const categoryNews = (data, path) => {
                           (news) =>
                             `
                         <li>
-                          <i class="fa-solid fa-circle fa-2xs"></i>
+                          ${
+                            data.video
+                              ? `<i class="fa-solid fa-play 2xs"></i>`
+                              : `<i class="fa-solid fa-circle fa-2xs"></i>`
+                          }
                             <span>${news}</span>
                         </li>
                         `

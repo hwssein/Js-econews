@@ -13,7 +13,7 @@ import partialCardData from "../constant/partialCardDate.js";
 
 import tooltipConfig from "../config/tooltipConfig.js";
 
-import highlightsCard from "../components/module/highlights-card.js";
+import highlightsCard from "../components/module/highlightsCard.js";
 import highlightsData from "../constant/highlightsData.js";
 
 const addMain = async () => {

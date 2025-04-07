@@ -25,6 +25,12 @@ const card = (data, path) => {
              
                 <div class="cards__content-image">
                     <img src=${item.image} alt=${item.headline} />
+
+                    ${
+                      item.video
+                        ? `<span class="cards-tooltip" style="--tooltip:var(${item.color})"><i class="fa-solid fa-play"></i></span>`
+                        : ""
+                    }
                 </div>
 
                 <div class="cards__content-text">
