@@ -212,4 +212,8 @@ main, footer {
   padding: 4px;
 }
 
+.ads-hover-custom {
+  color: var(--primary) !important;
+}
+
 /*# sourceMappingURL=global.css.map */

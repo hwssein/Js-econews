@@ -58,8 +58,8 @@ const mainSliderSlides = (data) => {
         <div class="main-slider__ads-container">
           <div class="main-slider__ads">
             <div class="main-slider__ads-number">
-              <span><i class="fa-solid fa-table-columns"></i> تبلیغات در سایت:</span>
-              <span>۸۸۹۳۰۲۷۰</span>
+              <span class="main-slider__ads-number-item1"><i class="fa-solid fa-table-columns"></i> تبلیغات در سایت:</span>
+              <span class="main-slider__ads-number-item2">۸۸۹۳۰۲۷۰</span>
             </div>
 
             <div class="main-slider__ads-image">
@@ -92,6 +92,23 @@ const mainSliderSlides = (data) => {
 
     card(item.cards, `#main-slider-cards-${item.id}`);
     categoryNews(item.categoryNews, `#main-slider-category-news-${item.id}`);
+  });
+
+  const adsNumberText = document.querySelectorAll(
+    ".main-slider__ads-number-item1"
+  );
+  const adsNumberPhone = document.querySelectorAll(
+    ".main-slider__ads-number-item2"
+  );
+
+  adsNumberPhone.forEach((phone, index) => {
+    phone.addEventListener("mouseenter", () => {
+      adsNumberText[index].classList.add("ads-hover-custom");
+    });
+
+    phone.addEventListener("mouseleave", () => {
+      adsNumberText[index].classList.remove("ads-hover-custom");
+    });
   });
 
   setTimeout(() => {

@@ -185,6 +185,18 @@ $pagination-Btn: (
       width: 295px;
     }
 
+    & .category-news__title-container {
+      width: auto;
+      cursor: pointer;
+
+      &:hover {
+        & span:nth-child(2),
+        i:nth-child(1) {
+          color: var(--primary);
+        }
+      }
+    }
+
     &:hover .category-news__title-container {
       transform: translateX(-6px);
     }
@@ -220,26 +232,27 @@ $pagination-Btn: (
         height: 27px;
         @include flex(row, nowrap, center, space-between, 0px);
         overflow: hidden;
-        color: var(--secondary);
-        cursor: pointer;
 
         span {
+          white-space: nowrap;
+          width: auto;
+          color: var(--secondary);
+          cursor: pointer;
+
           &:first-child {
-            width: 100%;
             @include flex(row, nowrap, center, start, 8px);
             font-size: 15px;
-            white-space: nowrap;
           }
           &:last-child {
-            width: 100%;
-            color: var(--secondary);
             font-size: 20px;
-            @include flex(row, nowrap, center, end, 0px);
-            margin-left: 8px;
+          }
+
+          &:hover {
+            color: var(--primary);
           }
         }
 
-        &:hover span {
+        & span:first-child:hover ~ span:last-child {
           color: var(--primary);
         }
       }
