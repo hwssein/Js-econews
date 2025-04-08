@@ -20,11 +20,12 @@ const addMain = async () => {
   const mainEl = document.getElementById("main");
 
   try {
-    const [mainSliderElement, partialElement, highlightsElement] =
+    const [mainSliderElement, partialElement, highlightsElement, mapElement] =
       await Promise.all([
         getHtmlUrl("src/components/template/mainSlider.html"),
         getHtmlUrl("src/components/template/partial.html"),
         getHtmlUrl("src/components/template/highlights.html"),
+        getHtmlUrl("src/components/template/map.html"),
       ]);
 
     mainEl.innerHTML = "";
@@ -42,6 +43,10 @@ const addMain = async () => {
     tooltipConfig();
 
     highlightsItemCard(highlightsData);
+
+    const mapContainer = document.querySelector(".highlights__provinces-map");
+
+    mapContainer.insertAdjacentHTML("afterbegin", mapElement);
   } catch (error) {
     console.log(error);
 
