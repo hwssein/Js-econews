@@ -15,7 +15,11 @@ const highlightsItemCard = (data) => {
         <div class="highlights__header">
 
           <div class="highlights__header-title order-1 order-md-1">
-            <span><i class="fa-solid fa-bars"></i> ${item.title}</span>
+            <span>${
+              item.categoryNews.video
+                ? `<i class="fa-solid fa-video-camera"></i>`
+                : `<i class="fa-solid fa-bars"></i>`
+            } ${item.title}</span>
             <i class="fa-solid fa-angle-left"></i>
           </div>
 

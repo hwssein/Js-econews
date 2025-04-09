@@ -162,12 +162,12 @@
       border-top: 3px solid var(--custom-color);
       @include flex(column, nowrap, center, start, 0px);
 
-      &:hover .highlights__item-header-title {
+      &:hover .highlights__header-title {
         transform: translateX(-6px);
       }
 
       @include respond-to(desktop) {
-        &:hover .highlights__item-header-headline {
+        &:hover .highlights__header-headline {
           transform: translateX(-6px);
         }
       }
@@ -352,8 +352,7 @@
   }
 
   &__provinces {
-    width: 100%;
-    @include flex(column, nowrap, center, start, 0px);
+    @extend .highlights__item-container;
     border-top: 3px solid color.scale($menu-color, $lightness: 20%);
 
     .highlights__header-title {
@@ -490,6 +489,79 @@
 
       & img {
         width: 100%;
+      }
+    }
+  }
+
+  &__need {
+    @extend .highlights__item-container;
+    border-top: 3px solid var(--hover-chart-2);
+
+    & .highlights__header-title {
+      color: var(--hover-chart-2);
+    }
+    & .highlights__header-ad {
+      width: 50%;
+      @include flex(row, nowrap, center, end, 8px);
+
+      @include respond-to(tablet) {
+        width: auto;
+        order: 3;
+        flex-grow: 1;
+      }
+
+      span {
+        width: 102px;
+        @include flex(row, nowrap, center, center, 8px);
+        background-color: var(--hover-chart-2);
+        color: var(--bg-color);
+        padding: 4px 8px;
+      }
+    }
+    & .highlights__header-headline ul li {
+      &:hover {
+        color: var(--hover-chart-2);
+      }
+    }
+
+    &-content-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+
+      @include respond-to(tablet) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    &-image-container {
+      width: 100%;
+      padding: 4px;
+      background-color: #fff;
+      cursor: pointer;
+      border-bottom: 1px solid var(--stroke);
+      border-left: 1px solid var(--stroke);
+
+      & > div {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      img {
+        width: 100%;
+
+        @include image-zoom;
+      }
+
+      span {
+        width: 100%;
+
+        &.image-overlay {
+          padding: 10px;
+          font-size: clamp(16px, 2vw, 23px);
+        }
       }
     }
   }
