@@ -379,11 +379,13 @@
 
   &__ads-container {
     width: 100%;
+    margin-top: 4px;
     @include flex(column, nowrap, center, start, 8px);
 
     @include respond-to(tablet) {
       @include flex();
       gap: 16px;
+      margin-top: 0px;
     }
     @include respond-to(desktop) {
       width: 240px;

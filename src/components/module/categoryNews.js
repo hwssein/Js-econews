@@ -9,7 +9,7 @@ const categoryNews = (data, path) => {
                       data.title
                         ? `
                         <div class="category-news__title-container">
-                          <i class="fa-solid fa-bookmark fa-sm"></i>
+                            <span><i class="fa-solid fa-bookmark fa-sm"></i></span>
                             <span>تازه‌های</span>
                             <span style="--custom-color:var(--chart-${data.id})">${data.title}</span>
                         </div>

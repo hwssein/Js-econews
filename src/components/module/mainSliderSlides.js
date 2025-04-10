@@ -11,7 +11,7 @@ const mainSliderSlides = (data) => {
   data.forEach((item) => {
     const jsxData = `
     <li class="splide__slide main-slider__slide">
-      <div class="main-slider__right">
+      <div class="main-slider__right col-12 col-md-8 col-lg-6">
         <div class="main-slider__vertical-slider-container">
           <span class="main-slider__vertical-slider-text" style="--custom-color:var(--chart-${
             item.id
@@ -50,7 +50,7 @@ const mainSliderSlides = (data) => {
         <div id="main-slider-cards-${item.id}" class="main-slider__cards"></div>
       </div>
 
-      <div class="main-slider__left">
+      <div class="main-slider__left col-12 col-md-4 col-lg-6">
         <div id="main-slider-category-news-${
           item.id
         }" class="main-slider__category-news"></div>

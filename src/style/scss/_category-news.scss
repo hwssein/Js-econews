@@ -20,6 +20,10 @@
       }
 
       span {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        min-width: 15px;
         &:last-child {
           color: var(--custom-color);
         }

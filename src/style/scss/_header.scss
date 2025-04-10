@@ -504,6 +504,12 @@
       background-color: var(--bg-color);
     }
   }
+  &-right-icon {
+    padding-left: 8px;
+  }
+  &-left-icon {
+    padding-right: 8px;
+  }
 
   &-slider {
     width: 100%;

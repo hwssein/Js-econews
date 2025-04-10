@@ -98,6 +98,10 @@
         color: var(--bg-color);
         font-size: 19px;
 
+        &::placeholder {
+          color: var(--bg-color);
+        }
+
         @include respond-to(tablet) {
           text-align: left;
         }
@@ -119,13 +123,20 @@
     width: 100%;
     background: rgb(27, 27, 27);
     background: linear-gradient(
-      130deg,
+      150deg,
       rgba(27, 27, 27, 1) 0%,
       rgba(27, 27, 27, 1) 70%,
       rgba(27, 27, 27, 0.918) 100%
     );
-    padding: 0 8px;
-    @include flex(column, nowrap, center, start, 4px);
+    @include flex;
+
+    &-container {
+      width: 100%;
+      max-width: 1246px;
+      padding: 0 8px;
+      @include flex(column, nowrap, center, start, 4px);
+      margin: 0 auto;
+    }
 
     &-title {
       width: 100%;
@@ -246,21 +257,20 @@
     width: 100%;
     background: rgb(27, 27, 27);
     background: linear-gradient(
-      130deg,
+      150deg,
       rgba(27, 27, 27, 1) 0%,
       rgba(27, 27, 27, 1) 70%,
-      rgba(27, 27, 27, 0.918) 100%
+      rgba(20, 20, 20, 0.918) 100%
     );
-    padding: 12px 8px;
 
-    & > div {
-      width: 100%;
-      max-width: 1246px;
-      @include flex(column, nowrap, center, start, 4px);
+    &-container {
+      @extend .footer__middle-container;
+      padding: 12px 8px;
 
       @include respond-to(desktop) {
         flex-direction: row;
-        justify-content: center;
+        align-items: center;
+        justify-content: start;
       }
     }
 
