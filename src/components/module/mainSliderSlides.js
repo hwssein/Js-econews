@@ -63,7 +63,7 @@ const mainSliderSlides = (data) => {
             </div>
 
             <div class="main-slider__ads-image">
-              <img src="${item.adsImage}" />
+              <img src=${item.adsImage} alt="slider ads"/>
             </div>
           </div>
 

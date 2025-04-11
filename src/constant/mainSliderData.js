@@ -342,7 +342,7 @@ const mainSliderData = [
         "جلیلی: باید «تمام مناسبات قرآن» در زندگی ما ساری و جاری شود",
       ],
     },
-    adsImage: "../../../public/images/main-slider/economy-ads.gif",
+    adsImage: "../../../public/images/main-slider/politic-ads.gif",
     hotTopics: [
       "قزاقستان",
       "ازبکستان",
@@ -536,7 +536,7 @@ const mainSliderData = [
         "جلیلی: باید «تمام مناسبات قرآن» در زندگی ما ساری و جاری شود",
       ],
     },
-    adsImage: "../../../public/images/main-slider/economy-ads.gif",
+    adsImage: "../../../public/images/main-slider/politic-ads.gif",
     hotTopics: [
       "قزاقستان",
       "ازبکستان",
@@ -730,7 +730,7 @@ const mainSliderData = [
         "جلیلی: باید «تمام مناسبات قرآن» در زندگی ما ساری و جاری شود",
       ],
     },
-    adsImage: "../../../public/images/main-slider/economy-ads.gif",
+    adsImage: "../../../public/images/main-slider/politic-ads.gif",
     hotTopics: [
       "قزاقستان",
       "ازبکستان",

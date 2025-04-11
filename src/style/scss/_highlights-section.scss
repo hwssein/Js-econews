@@ -120,34 +120,37 @@
 
     &-headline {
       width: 100%;
+      background-color: var(--stroke);
 
       @include respond-to(tablet) {
-        width: 400px;
         order: 2;
         transition: all 0.4s ease;
+        background-color: var(--bg-color);
       }
       @include respond-to(desktop) {
-        width: auto;
         order: 2;
       }
 
       ul {
         width: 100%;
         overflow-x: auto;
-        white-space: nowrap;
-        padding: 8px;
-        background-color: var(--stroke);
         @include flex(row, nowrap, center, start, 16px);
+        padding: 8px;
 
         @include respond-to(tablet) {
+          width: 94%;
           overflow: hidden;
-          background-color: var(--bg-color);
         }
 
         li {
+          font-family: nassim-normal;
           @include flex(row, nowrap, center, start, 0px);
           cursor: pointer;
           flex-shrink: 0;
+
+          @include respond-to(tablet) {
+            font-family: nassim-bold;
+          }
 
           &:hover {
             color: var(--custom-color);

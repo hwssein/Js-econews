@@ -49,7 +49,7 @@ $pagination-Btn: (
 
     @include respond-to(tablet) {
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: center;
       gap: 16px;
     }
   }
@@ -139,11 +139,11 @@ $pagination-Btn: (
 
   &__left {
     overflow: hidden;
-    @include flex(column, nowrap, start, start, 8px);
+    @include flex(column, nowrap, center, start, 8px);
 
     @include respond-to(tablet) {
       flex-flow: row nowrap;
-      justify-content: space-between;
+      align-items: start;
       gap: 16px;
     }
   }
@@ -157,12 +157,8 @@ $pagination-Btn: (
     }
 
     @include respond-to(desktop) {
-      width: 222px;
+      width: 50%;
       display: flex;
-    }
-
-    @include respond-to(large) {
-      width: 295px;
     }
 
     & .category-news__title-container {
@@ -184,11 +180,14 @@ $pagination-Btn: (
 
   &__ads-container {
     width: 100%;
-    @include flex(column, nowrap, center, start, 0px);
-    padding: 0 4px;
+    @include flex(column, nowrap, start, start, 0px);
 
     @include respond-to(tablet) {
-      gap: 4px;
+      width: 97%;
+      gap: 8px;
+    }
+    @include respond-to(desktop) {
+      width: 45%;
     }
   }
 
@@ -201,13 +200,12 @@ $pagination-Btn: (
 
       @include respond-to(tablet) {
         width: 100%;
-        height: 27px;
+        height: auto;
+        max-height: 28px;
         @include flex(row, nowrap, center, space-between, 0px);
-        overflow: hidden;
 
         span {
-          white-space: nowrap;
-          width: auto;
+          width: fit-content;
           color: var(--secondary);
           cursor: pointer;
 
@@ -232,16 +230,12 @@ $pagination-Btn: (
 
     &-image {
       width: 100%;
-
-      @include respond-to(tablet) {
-        width: 295px;
-        height: 295px;
-        @include flex;
-      }
+      @include flex;
 
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
       }
     }
   }

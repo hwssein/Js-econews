@@ -8,7 +8,7 @@ const mainSliderHandler = (status) => {
     direction: "rtl",
     pagination: false,
     type: "loop",
-    arrows: true,
+    arrows: false,
     gap: "16px",
 
     breakpoints: {
