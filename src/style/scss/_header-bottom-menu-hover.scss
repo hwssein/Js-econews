@@ -79,7 +79,7 @@
       18: var(--hover-chart-6),
     );
     @each $item, $color in $name-bg-colors {
-      &:nth-child(#{$item}) .header__bottom-item-name:hover {
+      &:nth-child(#{$item}) .header__bottom-item-name:hover > div:first-child {
         background-color: $color;
       }
     }

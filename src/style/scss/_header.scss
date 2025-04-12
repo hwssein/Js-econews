@@ -497,7 +497,6 @@
   &-right-icon,
   &-left-icon {
     cursor: pointer;
-    border-radius: 2px;
     padding: 8px 4px;
     @include flex();
     &:hover {
@@ -543,17 +542,18 @@
 
           > div {
             width: 100%;
-            max-width: 1246px;
+            max-width: 1256px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            padding: 8px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding: 8px 16px;
+            gap: 8px;
 
-            @include respond-to(desktop) {
-              grid-template-columns: repeat(4, 1fr);
+            @include respond-to(tablet) {
+              grid-template-columns: repeat(4, minmax(0, 1fr));
             }
 
-            @include respond-to(large) {
-              grid-template-columns: repeat(6, 1fr);
+            @include respond-to(desktop) {
+              grid-template-columns: repeat(6, minmax(0, 1fr));
             }
           }
         }
@@ -578,14 +578,14 @@
 
     &-name {
       width: 100%;
-      @include flex(row, nowrap, center, space-between);
-      padding: 6px 8px;
-      gap: 8px;
+      @include flex(row, nowrap, center, space-between, 8px);
       border-radius: 2px;
       margin-right: 5px;
 
-      div {
-        @include flex(row, nowrap, center, flex-start, 8px);
+      & > div:first-child {
+        padding: 6px 8px;
+        width: 100%;
+        @include flex(row, nowrap, center, start, 8px);
       }
 
       span {
