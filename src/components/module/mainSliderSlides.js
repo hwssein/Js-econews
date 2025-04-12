@@ -68,20 +68,20 @@ const mainSliderSlides = (data) => {
           </div>
 
           <div class="main-slider__topics">
-            <div class="main-slider__topics-title">
-                <i class="fa-solid fa-fire"></i>
-                <span>موضوعات داغ</span>
-            </div>
+                <div class="main-slider__topics-title">
+                  <i class="fa-solid fa-fire"></i>
+                  <span>موضوعات داغ</span>
+                </div>
 
-            <ul class="main-slider__topics-content">
-              ${item.hotTopics
-                .map(
-                  (topic) => `
-              <li>${topic}</li> <li>|</li>
-              `
-                )
-                .join("")}
-            </ul>
+                <ul class="main-slider__topics-content">
+                  ${item.hotTopics
+                    .map(
+                      (topic) => `
+                  <li>${topic}</li> <li>|</li>
+                  `
+                    )
+                    .join("")}
+                </ul>
           </div>
         </div>
       </div>

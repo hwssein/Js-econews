@@ -13,6 +13,7 @@
       height: 27px;
       @include flex(row, nowrap, center, start, 4px);
       transition: all 0.4s ease;
+      padding: 2px 0;
 
       i {
         margin-left: 4px;
@@ -44,9 +45,8 @@
       li {
         width: 100%;
         @include flex(row, nowrap, center, start, 8px);
-        max-height: 33px;
         border-bottom: 1px solid var(--stroke);
-        padding: 7px 0px 5px;
+        padding: 4px 0px;
         cursor: pointer;
 
         span {

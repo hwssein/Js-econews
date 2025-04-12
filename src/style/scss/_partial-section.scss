@@ -4,31 +4,30 @@
 
 .partial {
   width: 100%;
-  max-width: 1246px;
   padding: 8px;
   margin: 0 auto;
   @include flex(column, nowrap, center, start, 8px);
 
+  @include respond-to(tablet) {
+    max-width: 769px;
+    padding: 0;
+  }
   @include respond-to(desktop) {
+    max-width: 993px;
     @include flex(row, nowrap, start, center, 16px);
   }
+  @include respond-to(large) {
+    max-width: 1215px;
+  }
 
-  & .container {
-    width: 100%;
-    padding: 0;
-    max-width: 1246px;
+  & .row {
     @include flex(column, nowrap, center, start, 8px);
 
     @include respond-to(tablet) {
       @include flex(row, wrap, start, center, 0px);
-      row-gap: 16px;
     }
     @include respond-to(desktop) {
-      width: calc(100% - 240px);
       justify-content: start;
-    }
-    @include respond-to(desktop) {
-      width: calc(100% - 295px);
     }
   }
 
@@ -205,9 +204,7 @@
       display: none;
 
       @include respond-to(tablet) {
-        width: 100%;
         @include flex(row, nowrap, center, space-between, 16px);
-        padding-left: 8px;
       }
     }
 
@@ -228,14 +225,8 @@
 
   &__converter {
     &-wrapper {
-      width: 100%;
-
       &:hover .partial__title > span:first-child {
         transform: translateX(-6px);
-      }
-
-      @include respond-to(tablet) {
-        padding-right: 8px;
       }
     }
 
@@ -366,7 +357,6 @@
 
   &__cards {
     &-wrapper {
-      width: 100%;
       @include flex(column, wrap, center, start, 4px);
 
       @include respond-to(tablet) {
@@ -379,7 +369,6 @@
   }
 
   &__ads-container {
-    width: 100%;
     margin-top: 4px;
     @include flex(column, nowrap, center, start, 8px);
 
@@ -389,23 +378,12 @@
       margin-top: 0px;
     }
     @include respond-to(desktop) {
-      width: 240px;
       @include flex(column, nowrap, start, start, 8px);
       margin-top: 31px;
-    }
-    @include respond-to(large) {
-      width: 295px;
     }
 
     img {
       width: 100%;
-
-      @include respond-to(tablet) {
-        width: 31.6%;
-      }
-      @include respond-to(desktop) {
-        width: 100%;
-      }
     }
   }
 }

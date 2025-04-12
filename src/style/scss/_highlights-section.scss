@@ -4,13 +4,19 @@
 
 .highlights {
   width: 100%;
-  max-width: 1246px;
   @include flex(column, nowrap, center, start, 16px);
   margin-top: 8px;
   padding: 0 8px;
 
   @include respond-to(tablet) {
+    max-width: 769px;
     margin-top: 16px;
+  }
+  @include respond-to(desktop) {
+    max-width: 993px;
+  }
+  @include respond-to(large) {
+    max-width: 1215px;
   }
 
   &__header {
@@ -185,7 +191,7 @@
       @include flex(column, nowrap, center, start, 0px);
 
       @include respond-to(tablet) {
-        height: 240px;
+        height: 270px;
         overflow: hidden;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -322,7 +328,6 @@
       }
 
       & .category-news {
-        justify-content: center;
         .category-news__content-container {
           padding-top: 8px;
 
@@ -379,7 +384,7 @@
       position: relative;
 
       @include respond-to(tablet) {
-        gap: 0px;
+        gap: 12px;
       }
       @include respond-to(desktop) {
         height: 100%;
