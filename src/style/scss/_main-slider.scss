@@ -228,6 +228,9 @@ $pagination-Btn: (
     @include respond-to(desktop) {
       width: 45%;
     }
+    @include respond-to(large) {
+      width: 46%;
+    }
   }
 
   &__ads {

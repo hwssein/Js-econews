@@ -2,6 +2,8 @@
 @use "mixin" as *;
 
 :root {
+  font-size: 16px;
+
   --bg-color: #{$bg-color};
   --primary: #{$primary};
   --secondary: #{$secondary};

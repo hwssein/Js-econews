@@ -1,4 +1,5 @@
 :root {
+  font-size: 16px;
   --bg-color: #f2f2f2;
   --primary: #bb0000;
   --secondary: #656565;
@@ -1294,6 +1295,11 @@ main, footer {
     width: 45%;
   }
 }
+@media (min-width: 1200px) {
+  .main-slider__ads-container {
+    width: 46%;
+  }
+}
 .main-slider__ads {
   width: 100%;
   display: flex;
@@ -1475,17 +1481,15 @@ main, footer {
 @media (min-width: 768px) {
   .partial {
     max-width: 769px;
-    padding: 0;
+    flex-flow: row wrap;
+    row-gap: 8px;
+    column-gap: 0;
   }
 }
 @media (min-width: 992px) {
   .partial {
     max-width: 993px;
-    display: flex;
-    flex-flow: row nowrap;
     align-items: start;
-    justify-content: center;
-    gap: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -1493,25 +1497,9 @@ main, footer {
     max-width: 1215px;
   }
 }
-.partial .row {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: start;
-  gap: 8px;
-}
-@media (min-width: 768px) {
-  .partial .row {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: start;
-    justify-content: center;
-    gap: 0px;
-  }
-}
-@media (min-width: 992px) {
-  .partial .row {
-    justify-content: start;
+@media (min-width: 1300px) {
+  .partial {
+    max-width: 1256px;
   }
 }
 .partial__title {
@@ -1734,6 +1722,7 @@ main, footer {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    padding-left: 8px;
   }
 }
 .partial__market-gold, .partial__market-currency {
@@ -1754,6 +1743,11 @@ main, footer {
 }
 .partial__converter-wrapper:hover .partial__title > span:first-child {
   transform: translateX(-6px);
+}
+@media (min-width: 768px) {
+  .partial__converter-wrapper {
+    padding-right: 8px;
+  }
 }
 .partial__converter-operation-container {
   width: 100%;
@@ -1934,12 +1928,14 @@ main, footer {
 }
 @media (min-width: 992px) {
   .partial__ads-container {
+    height: 250px;
     display: flex;
     flex-flow: column nowrap;
     align-items: start;
     justify-content: start;
     gap: 8px;
     margin-top: 31px;
+    padding-right: 16px;
   }
 }
 .partial__ads-container img {
@@ -1970,6 +1966,11 @@ main, footer {
 @media (min-width: 1200px) {
   .highlights {
     max-width: 1215px;
+  }
+}
+@media (min-width: 1300px) {
+  .highlights {
+    max-width: 1256px;
   }
 }
 .highlights__header {

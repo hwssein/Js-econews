@@ -10,25 +10,19 @@
 
   @include respond-to(tablet) {
     max-width: 769px;
-    padding: 0;
+    flex-flow: row wrap;
+    row-gap: 8px;
+    column-gap: 0;
   }
   @include respond-to(desktop) {
     max-width: 993px;
-    @include flex(row, nowrap, start, center, 16px);
+    align-items: start;
   }
   @include respond-to(large) {
     max-width: 1215px;
   }
-
-  & .row {
-    @include flex(column, nowrap, center, start, 8px);
-
-    @include respond-to(tablet) {
-      @include flex(row, wrap, start, center, 0px);
-    }
-    @include respond-to(desktop) {
-      justify-content: start;
-    }
+  @include respond-to(large2) {
+    max-width: 1256px;
   }
 
   &__title {
@@ -205,6 +199,7 @@
 
       @include respond-to(tablet) {
         @include flex(row, nowrap, center, space-between, 16px);
+        padding-left: 8px;
       }
     }
 
@@ -227,6 +222,10 @@
     &-wrapper {
       &:hover .partial__title > span:first-child {
         transform: translateX(-6px);
+      }
+
+      @include respond-to(tablet) {
+        padding-right: 8px;
       }
     }
 
@@ -378,8 +377,10 @@
       margin-top: 0px;
     }
     @include respond-to(desktop) {
+      height: 250px;
       @include flex(column, nowrap, start, start, 8px);
       margin-top: 31px;
+      padding-right: 16px;
     }
 
     img {
