@@ -26,6 +26,7 @@
   --chart-8: #{$chart-8};
   --chart-9: #{$chart-9};
   --chart-10: #{$chart-10};
+  --chart-11: #{$chart-11};
 
   --hover-chart-1: #{$hover-chart-1};
   --hover-chart-2: #{$hover-chart-2};
@@ -122,22 +123,6 @@ footer {
   }
 }
 
-.splide {
-  &__arrow {
-    width: 1rem;
-    height: 1rem;
-    background-color: inherit;
-
-    &--prev {
-      left: 0;
-    }
-
-    &--next {
-      right: 4px;
-    }
-  }
-}
-
 .divider {
   display: inline-block;
   width: 1px;
@@ -153,8 +138,8 @@ footer {
     justify-content: center;
     color: var(--bg-color);
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 18px;
     border-radius: 2px;
   }
 
@@ -205,6 +190,12 @@ footer {
     .tooltip-inner {
       font-family: nassim-normal;
       font-size: 12px;
+      width: fit-content;
+      transform: translateX(-5px);
+    }
+
+    & .tooltip-arrow {
+      left: -6px !important;
     }
   }
 

@@ -8,11 +8,11 @@ const mainSliderHandler = (status) => {
     direction: "rtl",
     pagination: false,
     type: "loop",
-    arrows: false,
+    arrows: true,
     gap: "16px",
 
     breakpoints: {
-      768: {
+      1400: {
         arrows: false,
       },
     },

@@ -4,13 +4,34 @@
 @use "sass:color";
 @use "sass:map";
 
+#header {
+  @include respond-to(tablet) {
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+  }
+}
+
 // TOP
 
 .header__top {
-  @include flex(row, nowrap, center, space-between, 50px);
+  @include flex(row, nowrap, center, space-between, 100px);
   width: 100%;
-  max-width: 1246px;
   margin: 0 auto;
+
+  @include respond-to(tablet) {
+    max-width: 769px;
+  }
+  @include respond-to(desktop) {
+    max-width: 993px;
+  }
+  @include respond-to(large) {
+    max-width: 1215px;
+  }
+  @include respond-to(large2) {
+    max-width: 1256px;
+  }
 
   &-right {
     @include flex(row, nowrap, center, start, 16px);
@@ -30,6 +51,7 @@
       @include respond-to(tablet) {
         @include flex(row, nowrap, center, start, 4px);
         span {
+          white-space: nowrap;
           font-family: yekan;
           font-size: 12px;
         }
@@ -110,12 +132,12 @@
   }
 
   &-left {
-    @include flex(row, nowrap, center, end, 8px);
+    @include flex(row, nowrap, center, end, 16px);
     overflow: hidden;
     padding-left: 8px;
 
     &-menu {
-      @include flex(row, nowrap, center, start, 12px);
+      @include flex(row, nowrap, center, start, 8px);
       font-size: 11px;
       overflow-x: scroll;
       scrollbar-width: none;
@@ -123,6 +145,16 @@
 
       &::-webkit-scrollbar {
         display: none;
+      }
+
+      @include respond-to(tablet) {
+        display: none;
+      }
+
+      @include respond-to(large) {
+        overflow-x: visible;
+        display: flex;
+        font-size: 13px;
       }
 
       &-item {
@@ -138,16 +170,6 @@
         @include respond-to(desktop) {
           @include hover(var(--stroke));
         }
-      }
-
-      @include respond-to(tablet) {
-        display: none;
-      }
-
-      @include respond-to(desktop) {
-        overflow-x: visible;
-        display: flex;
-        font-size: 13px;
       }
     }
 
@@ -185,9 +207,21 @@
 
   .navbar {
     width: 100%;
-    max-width: 1256px;
     align-items: center !important;
     padding: 0;
+
+    @include respond-to(tablet) {
+      max-width: 769px;
+    }
+    @include respond-to(desktop) {
+      max-width: 993px;
+    }
+    @include respond-to(large) {
+      max-width: 1215px;
+    }
+    @include respond-to(large2) {
+      max-width: 1256px;
+    }
 
     &-collapse {
       margin: 0;
@@ -501,10 +535,22 @@
 
   &-container {
     width: 100%;
-    max-width: 1275px;
     padding: 0 4px;
     margin: 0 auto;
     @include flex(row, nowrap, center, space-between);
+
+    @include respond-to(tablet) {
+      max-width: 784px;
+    }
+    @include respond-to(desktop) {
+      max-width: 1008px;
+    }
+    @include respond-to(large) {
+      max-width: 1230px;
+    }
+    @include respond-to(large2) {
+      max-width: 1271px;
+    }
   }
 
   &-right-icon,

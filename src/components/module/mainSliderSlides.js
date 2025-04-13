@@ -77,7 +77,7 @@ const mainSliderSlides = (data) => {
                   ${item.hotTopics
                     .map(
                       (topic) => `
-                  <li>${topic}</li> <li>|</li>
+                  <li>${topic}</li> <span>|</span>
                   `
                     )
                     .join("")}

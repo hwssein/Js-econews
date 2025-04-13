@@ -41,13 +41,24 @@ $pagination-Btn: (
     width: 5rem;
     height: 5rem;
     opacity: 0.6;
+    background-color: inherit;
 
     &--prev {
-      right: -60px;
+      right: -50px;
     }
 
     &--next {
-      left: -60px;
+      left: -50px;
+    }
+
+    @include respond-to(large2) {
+      &--prev {
+        right: -60px;
+      }
+
+      &--next {
+        left: -60px;
+      }
     }
 
     svg {
@@ -129,6 +140,7 @@ $pagination-Btn: (
     position: relative;
     background-color: #fff;
     padding: 3px;
+    padding-right: 9px;
     border: 1px solid var(--stroke);
     > div {
       width: 100%;
@@ -154,7 +166,7 @@ $pagination-Btn: (
     @include respond-to(tablet) {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      gap: 16px;
       margin-top: 8px;
     }
 
@@ -164,6 +176,10 @@ $pagination-Btn: (
 
     @include respond-to(large2) {
       margin-top: 8px;
+    }
+
+    & .cards {
+      padding-right: 8px;
     }
   }
 
@@ -313,7 +329,8 @@ $pagination-Btn: (
       border-top: 3px solid var(--header-bottom-color);
       padding: 8px;
 
-      li {
+      li,
+      span {
         display: inline-block;
         list-style-type: none;
         font: {

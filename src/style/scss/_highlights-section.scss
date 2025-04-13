@@ -171,7 +171,7 @@
 
   &__item {
     width: 100%;
-    @include flex(column, nowrap, center, start, 16px);
+    @include flex(column, nowrap, center, start, 8px);
 
     &-container {
       width: 100%;
@@ -383,16 +383,16 @@
       width: 100%;
       @include flex(column, nowrap, start, start, 16px);
       background-color: color.scale($menu-color, $lightness: 10%);
-      padding: 12px;
+      padding: 16px;
       position: relative;
 
       @include respond-to(tablet) {
-        gap: 12px;
+        gap: 8px;
       }
       @include respond-to(desktop) {
         height: 100%;
-        display: grid;
-        grid-template-rows: repeat(3, minmax(0, 1fr));
+        max-height: 306px;
+        justify-content: space-between;
       }
     }
 
@@ -407,7 +407,7 @@
       }
 
       span {
-        width: 100%;
+        width: calc(100% - 110px);
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -443,10 +443,6 @@
 
         &:hover {
           color: var(--bg-color);
-        }
-
-        @include respond-to(desktop) {
-          bottom: 60px;
         }
       }
     }
@@ -511,10 +507,10 @@
 
   &__need {
     @extend .highlights__item-container;
-    border-top: 3px solid var(--hover-chart-2);
+    border-top: 3px solid var(--chart-11);
 
     & .highlights__header-title {
-      color: var(--hover-chart-2);
+      color: var(--chart-11);
     }
     & .highlights__header-ad {
       width: 50%;
@@ -529,7 +525,7 @@
       span {
         width: 102px;
         @include flex(row, nowrap, center, center, 8px);
-        background-color: var(--hover-chart-2);
+        background-color: var(--chart-11);
         color: var(--bg-color);
         padding: 4px 8px;
         cursor: pointer;
@@ -541,7 +537,7 @@
     }
     & .highlights__header-headline ul li {
       &:hover {
-        color: var(--hover-chart-2);
+        color: var(--chart-11);
       }
     }
 
