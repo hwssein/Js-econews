@@ -16,7 +16,7 @@
 // TOP
 
 .header__top {
-  @include flex(row, nowrap, center, space-between, 100px);
+  @include flex(row, nowrap, center, space-between, 75px);
   width: 100%;
   margin: 0 auto;
 
@@ -210,9 +210,6 @@
     align-items: center !important;
     padding: 0;
 
-    @include respond-to(tablet) {
-      max-width: 769px;
-    }
     @include respond-to(desktop) {
       max-width: 993px;
     }
@@ -239,6 +236,8 @@
     }
 
     &-nav {
+      width: 100%;
+
       @include respond-to(desktop) {
         width: 100%;
         padding: 0;
@@ -287,6 +286,10 @@
     font-size: 1.2rem;
     padding: 12px 8px;
 
+    @include respond-to(tablet) {
+      padding: 12px 20px;
+    }
+
     @include respond-to(desktop) {
       padding: 25px 0;
       transition: all 0.2s ease;
@@ -300,6 +303,15 @@
     &:hover,
     &:visited {
       color: var(--bg-color) !important;
+    }
+  }
+
+  &-bars {
+    @include respond-to(tablet) {
+      display: none;
+    }
+    @include respond-to(desktop) {
+      display: block;
     }
   }
 
@@ -324,6 +336,13 @@
   &-logo,
   &-logo-year {
     max-width: 135px;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+    @include respond-to(desktop) {
+      display: block;
+    }
 
     @include respond-to(large) {
       max-width: fit-content;
@@ -521,6 +540,41 @@
           background-color: #111111;
         }
       }
+    }
+  }
+
+  &-content {
+    display: none;
+
+    @include respond-to(tablet) {
+      width: 100%;
+      @include flex(row, nowrap, center, space-between, 8px);
+      margin: 0 auto;
+      max-width: 769px;
+    }
+    @include respond-to(desktop) {
+      display: none;
+    }
+
+    &-bars {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 8px;
+    }
+
+    &-bars > button {
+      @extend .header__middle-bars-button;
+    }
+
+    &-logo {
+      @extend .header__middle-logo;
+      display: block;
+    }
+
+    &-logo-year {
+      @extend .header__middle-logo-year;
+      display: block;
     }
   }
 }

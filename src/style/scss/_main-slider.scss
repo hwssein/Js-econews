@@ -97,6 +97,7 @@ $pagination-Btn: (
       width: 100%;
       height: 25px;
       padding: 0 4px;
+      padding-right: 8px;
       @include flex(row, nowrap, center, start, 4px);
     }
 
