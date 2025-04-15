@@ -462,6 +462,7 @@
 
         span {
           width: 100%;
+          padding: 2px 4px;
           border: none;
           &:hover {
             padding-right: 6px;
@@ -499,15 +500,15 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: center;
+        align-items: center;
         gap: 4px;
         padding: 8px;
         background-color: var(--menu-wrapper);
 
         @include respond-to(desktop) {
-          grid-template-columns: repeat(7, minmax(0, 1fr));
+          grid-template-columns: repeat(7, minmax(0, 110px));
           gap: 16px;
-          justify-content: center;
-          align-items: center;
           background-color: #111111;
         }
 
@@ -696,7 +697,7 @@
       margin-right: 5px;
 
       & > div:first-child {
-        padding: 6px 8px;
+        padding: 4px 8px;
         width: 100%;
         @include flex(row, nowrap, center, start, 8px);
       }

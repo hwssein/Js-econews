@@ -38,7 +38,9 @@
     // تغییر رنگ span داخل نام در حالت hover برای آیتم‌های مشخص
     $name-hover-items: (6, 8, 10, 12, 14, 18);
     @each $item in $name-hover-items {
-      &:nth-child(#{$item}) .header__bottom-item-name:hover span {
+      &:nth-child(#{$item})
+        .header__bottom-item-name:hover
+        span:not(.header__bottom-item-icon) {
         color: var(--bg-color);
       }
     }
