@@ -436,7 +436,7 @@
           transition: all 0.2s ease;
           @include flex(row, nowrap, center, start, 8px);
           padding: 4px;
-          border-left: 1px solid var(--menu-wrapper);
+          border-left: 1px solid var(--secondary);
 
           &:last-child {
             border: none;
@@ -701,18 +701,23 @@
         @include flex(row, nowrap, center, start, 8px);
       }
 
-      span {
+      span:not(.divider) {
+        width: 100%;
         color: var(--menu-wrapper);
         font-family: nassim-normal;
         font-weight: 400;
         font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
     }
 
     &-icon {
       @include flex();
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
+      max-width: 16px;
       background-color: var(--bg-color);
       border-radius: 4px;
     }
