@@ -30,9 +30,10 @@
     font-family: yekan;
     font-size: 11px;
     border-radius: 0 0 2px 2px;
-    padding: 1px 8px;
+    padding: 2px 12px;
     cursor: pointer;
     color: var(--secondary);
+    @include flex;
 
     &:hover {
       background-color: var(--secondary);

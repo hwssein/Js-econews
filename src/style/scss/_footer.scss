@@ -136,6 +136,7 @@
       padding: 0 8px;
       @include flex(column, nowrap, center, start, 4px);
       margin: 0 auto;
+      margin-bottom: 16px;
     }
 
     &-title {

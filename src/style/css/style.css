@@ -1712,9 +1712,13 @@ main, footer {
   font-family: yekan;
   font-size: 11px;
   border-radius: 0 0 2px 2px;
-  padding: 1px 8px;
+  padding: 2px 12px;
   cursor: pointer;
   color: var(--secondary);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 .partial__title > span:last-child:hover {
   background-color: var(--secondary);
@@ -2507,8 +2511,6 @@ main, footer {
   width: 100%;
   height: calc(100% - 1px);
   overflow: hidden;
-  border-bottom: 1px solid var(--stroke);
-  border-left: 1px solid var(--stroke);
 }
 .highlights__item-category-news {
   width: 100%;
@@ -2885,9 +2887,13 @@ main, footer {
   font-family: yekan;
   font-size: 11px;
   border-radius: 0 0 2px 2px;
-  padding: 1px 8px;
+  padding: 2px 12px;
   cursor: pointer;
   color: var(--secondary);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 .cards__title-container > span:last-child:hover {
   background-color: var(--secondary);
@@ -3120,6 +3126,7 @@ main, footer {
   justify-content: start;
   gap: 4px;
   margin: 0 auto;
+  margin-bottom: 16px;
 }
 .footer__middle-title {
   width: 100%;
